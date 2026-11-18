@@ -1,0 +1,1116 @@
+{
+  "matchId": "batch-02-match-03",
+  "status": "finished",
+  "isFinal": true,
+  "startedAtWallTime": 1795030648.4011033,
+  "endedAtWallTime": 1795031611.6965325,
+  "durationSeconds": 963.2954292297363,
+  "latestEventId": "batch-02-match-03:208",
+  "eventsTotal": 208,
+  "game": {
+    "phase": "firstHalf",
+    "state": "finished",
+    "setPlay": "noSetPlay",
+    "kickingSide": null,
+    "droppedBall": false,
+    "stopped": false,
+    "secondaryTime": 0,
+    "regularDurationSeconds": 600.0,
+    "timeRemaining": -0.003999998318704456,
+    "primaryTime": -0.003999998318704456,
+    "drawPolicy": "allow_draw",
+    "extraTimeMaxSeconds": 12000.0,
+    "timingStage": "regulation"
+  },
+  "timing": {
+    "timeRemaining": -0.003999998318704456,
+    "primaryTime": -0.003999998318704456,
+    "stage": "regulation",
+    "extraTimeElapsedSeconds": 0.003999998318704456,
+    "regularDurationSeconds": 600.0,
+    "drawPolicy": "allow_draw",
+    "extraTimeMaxSeconds": 12000.0
+  },
+  "score": {
+    "home": 1,
+    "away": 7
+  },
+  "winner": "away",
+  "endReason": "time_expired",
+  "finishedEventId": "batch-02-match-03:208",
+  "teams": {
+    "home": {
+      "side": "home",
+      "teamNumber": 1,
+      "teamName": "laumonteros_team_v1",
+      "externalTeamId": null,
+      "score": 1,
+      "stats": {
+        "goals": {
+          "total": 1,
+          "events": [
+            {
+              "eventId": "batch-02-match-03:96",
+              "type": "goal",
+              "timeRemaining": 0.0,
+              "timing": {
+                "timeRemaining": 372.48199999948025,
+                "primaryTime": 372.48199999948025,
+                "stage": "regulation",
+                "extraTimeElapsedSeconds": 0.0
+              },
+              "actor": {
+                "side": "home",
+                "teamNumber": 1,
+                "teamName": "laumonteros_team_v1",
+                "externalTeamId": null
+              },
+              "reason": "ball_crossed_goal_line"
+            }
+          ]
+        },
+        "outOfBounds": {
+          "awarded": {
+            "total": 2,
+            "events": [
+              {
+                "eventId": "batch-02-match-03:59",
+                "type": "goal_kick_setup",
+                "timeRemaining": 0.0,
+                "timing": {
+                  "timeRemaining": 469.76599999994477,
+                  "primaryTime": 469.76599999994477,
+                  "stage": "regulation",
+                  "extraTimeElapsedSeconds": 0.0
+                },
+                "actor": {
+                  "side": "home",
+                  "teamNumber": 1,
+                  "teamName": "laumonteros_team_v1",
+                  "externalTeamId": null
+                },
+                "evidence": {
+                  "ruleId": "ball_out",
+                  "ruleName": "Ball out of bounds",
+                  "summary": "Ball out of bounds, restart with goalKick.",
+                  "measurements": [],
+                  "positions": {
+                    "target": [
+                      -6.0,
+                      2.0,
+                      0.11
+                    ],
+                    "from": [
+                      -7.142868484586357,
+                      1.4633769746159417,
+                      0.15808383485697539
+                    ]
+                  }
+                },
+                "reason": "ball_out"
+              },
+              {
+                "eventId": "batch-02-match-03:71",
+                "type": "throw_in_setup",
+                "timeRemaining": 0.0,
+                "timing": {
+                  "timeRemaining": 443.24799999981815,
+                  "primaryTime": 443.24799999981815,
+                  "stage": "regulation",
+                  "extraTimeElapsedSeconds": 0.0
+                },
+                "actor": {
+                  "side": "home",
+                  "teamNumber": 1,
+                  "teamName": "laumonteros_team_v1",
+                  "externalTeamId": null
+                },
+                "evidence": {
+                  "ruleId": "ball_out",
+                  "ruleName": "Ball out of bounds",
+                  "summary": "Ball out of bounds, restart with throwIn.",
+                  "measurements": [],
+                  "positions": {
+                    "target": [
+                      2.023834370824243,
+                      -4.45,
+                      0.11
+                    ],
+                    "from": [
+                      2.023834370824243,
+                      -4.683074526183802,
+                      0.16043878756428434
+                    ]
+                  }
+                },
+                "reason": "ball_out"
+              }
+            ],
+            "throwIn": 1,
+            "goalKick": 1,
+            "cornerKick": 0
+          },
+          "caused": {
+            "total": 9,
+            "events": [
+              {
+                "eventId": "batch-02-match-03:10",
+                "type": "throw_in_setup",
+                "timeRemaining": 0.0,
+                "timing": {
+                  "timeRemaining": 592.6620000000061,
+                  "primaryTime": 592.6620000000061,
+                  "stage": "regulation",
+                  "extraTimeElapsedSeconds": 0.0
+                },
+                "actor": {
+                  "side": "away",
+                  "teamNumber": 2,
+                  "teamName": "booster_champion_3v3",
+                  "externalTeamId": null
+                },
+                "evidence": {
+                  "ruleId": "ball_out",
+                  "ruleName": "Ball out of bounds",
+                  "summary": "Ball out of bounds, restart with throwIn.",
+                  "measurements": [],
+                  "positions": {
+                    "target": [
+                      1.0637517002654289,
+                      -4.45,
+                      0.11
+                    ],
+                    "from": [
+                      1.0637517002654289,
+                      -4.647087641714272,
+                      0.11002672494924132
+                    ]
+                  }
+                },
+                "reason": "ball_out"
+              },
+              {
+                "eventId": "batch-02-match-03:28",
+                "type": "throw_in_setup",
+                "timeRemaining": 0.0,
+                "timing": {
+                  "timeRemaining": 544.4660000000387,
+                  "primaryTime": 544.4660000000387,
+                  "stage": "regulation",
+                  "extraTimeElapsedSeconds": 0.0
+                },
+                "actor": {
+                  "side": "away",
+                  "teamNumber": 2,
+                  "teamName": "booster_champion_3v3",
+                  "externalTeamId": null
+                },
+                "evidence": {
+                  "ruleId": "ball_out",
+                  "ruleName": "Ball out of bounds",
+                  "summary": "Ball out of bounds, restart with throwIn.",
+                  "measurements": [],
+                  "positions": {
+                    "target": [
+                      1.2059246532332892,
+                      -4.45,
+                      0.11
+                    ],
+                    "from": [
+                      1.2059246532332892,
+                      -4.635829888045178,
+                      0.10996982335755594
+                    ]
+                  }
+                },
+                "reason": "ball_out"
+              },
+              {
+                "eventId": "batch-02-match-03:50",
+                "type": "throw_in_setup",
+                "timeRemaining": 0.0,
+                "timing": {
+                  "timeRemaining": 489.8140000000405,
+                  "primaryTime": 489.8140000000405,
+                  "stage": "regulation",
+                  "extraTimeElapsedSeconds": 0.0
+                },
+                "actor": {
+                  "side": "away",
+                  "teamNumber": 2,
+                  "teamName": "booster_champion_3v3",
+                  "externalTeamId": null
+                },
+                "evidence": {
+                  "ruleId": "ball_out",
+                  "ruleName": "Ball out of bounds",
+                  "summary": "Ball out of bounds, restart with throwIn.",
+                  "measurements": [],
+                  "positions": {
+                    "target": [
+                      0.9608358991389904,
+                      -4.45,
+                      0.11
+                    ],
+                    "from": [
+                      0.9608358991389904,
+                      -4.668949360410295,
+                      0.1099940289037912
+                    ]
+                  }
+                },
+                "reason": "ball_out"
+              },
+              {
+                "eventId": "batch-02-match-03:84",
+                "type": "throw_in_setup",
+                "timeRemaining": 0.0,
+                "timing": {
+                  "timeRemaining": 418.37199999969937,
+                  "primaryTime": 418.37199999969937,
+                  "stage": "regulation",
+                  "extraTimeElapsedSeconds": 0.0
+                },
+                "actor": {
+                  "side": "away",
+                  "teamNumber": 2,
+                  "teamName": "booster_champion_3v3",
+                  "externalTeamId": null
+                },
+                "evidence": {
+                  "ruleId": "ball_out",
+                  "ruleName": "Ball out of bounds",
+                  "summary": "Ball out of bounds, restart with throwIn.",
+                  "measurements": [],
+                  "positions": {
+                    "target": [
+                      5.157387954339749,
+                      4.45,
+                      0.11
+                    ],
+                    "from": [
+                      5.157387954339749,
+                      4.637658196331139,
+                      0.7087903331612779
+                    ]
+                  }
+                },
+                "reason": "ball_out"
+              },
+              {
+                "eventId": "batch-02-match-03:116",
+                "type": "throw_in_setup",
+                "timeRemaining": 0.0,
+                "timing": {
+                  "timeRemaining": 294.525999999108,
+                  "primaryTime": 294.525999999108,
+                  "stage": "regulation",
+                  "extraTimeElapsedSeconds": 0.0
+                },
+                "actor": {
+                  "side": "away",
+                  "teamNumber": 2,
+                  "teamName": "booster_champion_3v3",
+                  "externalTeamId": null
+                },
+                "evidence": {
+                  "ruleId": "ball_out",
+                  "ruleName": "Ball out of bounds",
+                  "summary": "Ball out of bounds, restart with throwIn.",
+                  "measurements": [],
+                  "positions": {
+                    "target": [
+                      1.2310370632075787,
+                      -4.45,
+                      0.11
+                    ],
+                    "from": [
+                      1.2310370632075787,
+                      -4.636628121661343,
+                      0.10996753141151794
+                    ]
+                  }
+                },
+                "reason": "ball_out"
+              },
+              {
+                "eventId": "batch-02-match-03:134",
+                "type": "throw_in_setup",
+                "timeRemaining": 0.0,
+                "timing": {
+                  "timeRemaining": 245.0119999988716,
+                  "primaryTime": 245.0119999988716,
+                  "stage": "regulation",
+                  "extraTimeElapsedSeconds": 0.0
+                },
+                "actor": {
+                  "side": "away",
+                  "teamNumber": 2,
+                  "teamName": "booster_champion_3v3",
+                  "externalTeamId": null
+                },
+                "evidence": {
+                  "ruleId": "ball_out",
+                  "ruleName": "Ball out of bounds",
+                  "summary": "Ball out of bounds, restart with throwIn.",
+                  "measurements": [],
+                  "positions": {
+                    "target": [
+                      0.9265357805531398,
+                      -4.45,
+                      0.11
+                    ],
+                    "from": [
+                      0.9265357805531398,
+                      -4.635955819486963,
+                      0.10999303798956392
+                    ]
+                  }
+                },
+                "reason": "ball_out"
+              },
+              {
+                "eventId": "batch-02-match-03:154",
+                "type": "throw_in_setup",
+                "timeRemaining": 0.0,
+                "timing": {
+                  "timeRemaining": 190.015999998609,
+                  "primaryTime": 190.015999998609,
+                  "stage": "regulation",
+                  "extraTimeElapsedSeconds": 0.0
+                },
+                "actor": {
+                  "side": "away",
+                  "teamNumber": 2,
+                  "teamName": "booster_champion_3v3",
+                  "externalTeamId": null
+                },
+                "evidence": {
+                  "ruleId": "ball_out",
+                  "ruleName": "Ball out of bounds",
+                  "summary": "Ball out of bounds, restart with throwIn.",
+                  "measurements": [],
+                  "positions": {
+                    "target": [
+                      1.248116739755856,
+                      -4.45,
+                      0.11
+                    ],
+                    "from": [
+                      1.248116739755856,
+                      -4.6385181980709,
+                      0.11000562211292203
+                    ]
+                  }
+                },
+                "reason": "ball_out"
+              },
+              {
+                "eventId": "batch-02-match-03:170",
+                "type": "throw_in_setup",
+                "timeRemaining": 0.0,
+                "timing": {
+                  "timeRemaining": 151.3959999984246,
+                  "primaryTime": 151.3959999984246,
+                  "stage": "regulation",
+                  "extraTimeElapsedSeconds": 0.0
+                },
+                "actor": {
+                  "side": "away",
+                  "teamNumber": 2,
+                  "teamName": "booster_champion_3v3",
+                  "externalTeamId": null
+                },
+                "evidence": {
+                  "ruleId": "ball_out",
+                  "ruleName": "Ball out of bounds",
+                  "summary": "Ball out of bounds, restart with throwIn.",
+                  "measurements": [],
+                  "positions": {
+                    "target": [
+                      6.791753212502224,
+                      -4.45,
+                      0.11
+                    ],
+                    "from": [
+                      6.791753212502224,
+                      -4.6440047704566085,
+                      0.128610466528513
+                    ]
+                  }
+                },
+                "reason": "ball_out"
+              },
+              {
+                "eventId": "batch-02-match-03:194",
+                "type": "throw_in_setup",
+                "timeRemaining": 0.0,
+                "timing": {
+                  "timeRemaining": 41.93000000068969,
+                  "primaryTime": 41.93000000068969,
+                  "stage": "regulation",
+                  "extraTimeElapsedSeconds": 0.0
+                },
+                "actor": {
+                  "side": "away",
+                  "teamNumber": 2,
+                  "teamName": "booster_champion_3v3",
+                  "externalTeamId": null
+                },
+                "evidence": {
+                  "ruleId": "ball_out",
+                  "ruleName": "Ball out of bounds",
+                  "summary": "Ball out of bounds, restart with throwIn.",
+                  "measurements": [],
+                  "positions": {
+                    "target": [
+                      1.1655961537424722,
+                      -4.45,
+                      0.11
+                    ],
+                    "from": [
+                      1.1655961537424722,
+                      -4.646571076392638,
+                      0.10991389828270258
+                    ]
+                  }
+                },
+                "reason": "ball_out"
+              }
+            ],
+            "throwIn": 9,
+            "goalKick": 0,
+            "cornerKick": 0
+          }
+        },
+        "fouls": {
+          "total": 0,
+          "events": [],
+          "byReason": {},
+          "byRobot": {}
+        },
+        "removals": {
+          "total": 0,
+          "events": [],
+          "byReason": {},
+          "byRobot": {}
+        },
+        "discipline": {
+          "warnings": {
+            "total": 0,
+            "events": []
+          },
+          "cautions": {
+            "total": 0,
+            "events": []
+          },
+          "sentOff": {
+            "total": 0,
+            "events": []
+          }
+        },
+        "invalidGoals": {
+          "total": 0,
+          "events": [],
+          "byReason": {}
+        },
+        "ballResets": {
+          "total": 0,
+          "events": [],
+          "byReason": {}
+        }
+      }
+    },
+    "away": {
+      "side": "away",
+      "teamNumber": 2,
+      "teamName": "booster_champion_3v3",
+      "externalTeamId": null,
+      "score": 7,
+      "stats": {
+        "goals": {
+          "total": 7,
+          "events": [
+            {
+              "eventId": "batch-02-match-03:19",
+              "type": "goal",
+              "timeRemaining": 0.0,
+              "timing": {
+                "timeRemaining": 573.6000000000108,
+                "primaryTime": 573.6000000000108,
+                "stage": "regulation",
+                "extraTimeElapsedSeconds": 0.0
+              },
+              "actor": {
+                "side": "away",
+                "teamNumber": 2,
+                "teamName": "booster_champion_3v3",
+                "externalTeamId": null
+              },
+              "reason": "ball_crossed_goal_line"
+            },
+            {
+              "eventId": "batch-02-match-03:41",
+              "type": "goal",
+              "timeRemaining": 0.0,
+              "timing": {
+                "timeRemaining": 517.9480000000688,
+                "primaryTime": 517.9480000000688,
+                "stage": "regulation",
+                "extraTimeElapsedSeconds": 0.0
+              },
+              "actor": {
+                "side": "away",
+                "teamNumber": 2,
+                "teamName": "booster_champion_3v3",
+                "externalTeamId": null
+              },
+              "reason": "ball_crossed_goal_line"
+            },
+            {
+              "eventId": "batch-02-match-03:108",
+              "type": "goal",
+              "timeRemaining": 0.0,
+              "timing": {
+                "timeRemaining": 324.2019999992497,
+                "primaryTime": 324.2019999992497,
+                "stage": "regulation",
+                "extraTimeElapsedSeconds": 0.0
+              },
+              "actor": {
+                "side": "away",
+                "teamNumber": 2,
+                "teamName": "booster_champion_3v3",
+                "externalTeamId": null
+              },
+              "reason": "ball_crossed_goal_line"
+            },
+            {
+              "eventId": "batch-02-match-03:125",
+              "type": "goal",
+              "timeRemaining": 0.0,
+              "timing": {
+                "timeRemaining": 275.5879999990176,
+                "primaryTime": 275.5879999990176,
+                "stage": "regulation",
+                "extraTimeElapsedSeconds": 0.0
+              },
+              "actor": {
+                "side": "away",
+                "teamNumber": 2,
+                "teamName": "booster_champion_3v3",
+                "externalTeamId": null
+              },
+              "reason": "ball_crossed_goal_line"
+            },
+            {
+              "eventId": "batch-02-match-03:145",
+              "type": "goal",
+              "timeRemaining": 0.0,
+              "timing": {
+                "timeRemaining": 223.0419999987667,
+                "primaryTime": 223.0419999987667,
+                "stage": "regulation",
+                "extraTimeElapsedSeconds": 0.0
+              },
+              "actor": {
+                "side": "away",
+                "teamNumber": 2,
+                "teamName": "booster_champion_3v3",
+                "externalTeamId": null
+              },
+              "reason": "ball_crossed_goal_line"
+            },
+            {
+              "eventId": "batch-02-match-03:185",
+              "type": "goal",
+              "timeRemaining": 0.0,
+              "timing": {
+                "timeRemaining": 73.07999999995309,
+                "primaryTime": 73.07999999995309,
+                "stage": "regulation",
+                "extraTimeElapsedSeconds": 0.0
+              },
+              "actor": {
+                "side": "away",
+                "teamNumber": 2,
+                "teamName": "booster_champion_3v3",
+                "externalTeamId": null
+              },
+              "reason": "ball_crossed_goal_line"
+            },
+            {
+              "eventId": "batch-02-match-03:203",
+              "type": "goal",
+              "timeRemaining": 0.0,
+              "timing": {
+                "timeRemaining": 21.58600000117076,
+                "primaryTime": 21.58600000117076,
+                "stage": "regulation",
+                "extraTimeElapsedSeconds": 0.0
+              },
+              "actor": {
+                "side": "away",
+                "teamNumber": 2,
+                "teamName": "booster_champion_3v3",
+                "externalTeamId": null
+              },
+              "reason": "ball_crossed_goal_line"
+            }
+          ]
+        },
+        "outOfBounds": {
+          "awarded": {
+            "total": 9,
+            "events": [
+              {
+                "eventId": "batch-02-match-03:10",
+                "type": "throw_in_setup",
+                "timeRemaining": 0.0,
+                "timing": {
+                  "timeRemaining": 592.6620000000061,
+                  "primaryTime": 592.6620000000061,
+                  "stage": "regulation",
+                  "extraTimeElapsedSeconds": 0.0
+                },
+                "actor": {
+                  "side": "away",
+                  "teamNumber": 2,
+                  "teamName": "booster_champion_3v3",
+                  "externalTeamId": null
+                },
+                "evidence": {
+                  "ruleId": "ball_out",
+                  "ruleName": "Ball out of bounds",
+                  "summary": "Ball out of bounds, restart with throwIn.",
+                  "measurements": [],
+                  "positions": {
+                    "target": [
+                      1.0637517002654289,
+                      -4.45,
+                      0.11
+                    ],
+                    "from": [
+                      1.0637517002654289,
+                      -4.647087641714272,
+                      0.11002672494924132
+                    ]
+                  }
+                },
+                "reason": "ball_out"
+              },
+              {
+                "eventId": "batch-02-match-03:28",
+                "type": "throw_in_setup",
+                "timeRemaining": 0.0,
+                "timing": {
+                  "timeRemaining": 544.4660000000387,
+                  "primaryTime": 544.4660000000387,
+                  "stage": "regulation",
+                  "extraTimeElapsedSeconds": 0.0
+                },
+                "actor": {
+                  "side": "away",
+                  "teamNumber": 2,
+                  "teamName": "booster_champion_3v3",
+                  "externalTeamId": null
+                },
+                "evidence": {
+                  "ruleId": "ball_out",
+                  "ruleName": "Ball out of bounds",
+                  "summary": "Ball out of bounds, restart with throwIn.",
+                  "measurements": [],
+                  "positions": {
+                    "target": [
+                      1.2059246532332892,
+                      -4.45,
+                      0.11
+                    ],
+                    "from": [
+                      1.2059246532332892,
+                      -4.635829888045178,
+                      0.10996982335755594
+                    ]
+                  }
+                },
+                "reason": "ball_out"
+              },
+              {
+                "eventId": "batch-02-match-03:50",
+                "type": "throw_in_setup",
+                "timeRemaining": 0.0,
+                "timing": {
+                  "timeRemaining": 489.8140000000405,
+                  "primaryTime": 489.8140000000405,
+                  "stage": "regulation",
+                  "extraTimeElapsedSeconds": 0.0
+                },
+                "actor": {
+                  "side": "away",
+                  "teamNumber": 2,
+                  "teamName": "booster_champion_3v3",
+                  "externalTeamId": null
+                },
+                "evidence": {
+                  "ruleId": "ball_out",
+                  "ruleName": "Ball out of bounds",
+                  "summary": "Ball out of bounds, restart with throwIn.",
+                  "measurements": [],
+                  "positions": {
+                    "target": [
+                      0.9608358991389904,
+                      -4.45,
+                      0.11
+                    ],
+                    "from": [
+                      0.9608358991389904,
+                      -4.668949360410295,
+                      0.1099940289037912
+                    ]
+                  }
+                },
+                "reason": "ball_out"
+              },
+              {
+                "eventId": "batch-02-match-03:84",
+                "type": "throw_in_setup",
+                "timeRemaining": 0.0,
+                "timing": {
+                  "timeRemaining": 418.37199999969937,
+                  "primaryTime": 418.37199999969937,
+                  "stage": "regulation",
+                  "extraTimeElapsedSeconds": 0.0
+                },
+                "actor": {
+                  "side": "away",
+                  "teamNumber": 2,
+                  "teamName": "booster_champion_3v3",
+                  "externalTeamId": null
+                },
+                "evidence": {
+                  "ruleId": "ball_out",
+                  "ruleName": "Ball out of bounds",
+                  "summary": "Ball out of bounds, restart with throwIn.",
+                  "measurements": [],
+                  "positions": {
+                    "target": [
+                      5.157387954339749,
+                      4.45,
+                      0.11
+                    ],
+                    "from": [
+                      5.157387954339749,
+                      4.637658196331139,
+                      0.7087903331612779
+                    ]
+                  }
+                },
+                "reason": "ball_out"
+              },
+              {
+                "eventId": "batch-02-match-03:116",
+                "type": "throw_in_setup",
+                "timeRemaining": 0.0,
+                "timing": {
+                  "timeRemaining": 294.525999999108,
+                  "primaryTime": 294.525999999108,
+                  "stage": "regulation",
+                  "extraTimeElapsedSeconds": 0.0
+                },
+                "actor": {
+                  "side": "away",
+                  "teamNumber": 2,
+                  "teamName": "booster_champion_3v3",
+                  "externalTeamId": null
+                },
+                "evidence": {
+                  "ruleId": "ball_out",
+                  "ruleName": "Ball out of bounds",
+                  "summary": "Ball out of bounds, restart with throwIn.",
+                  "measurements": [],
+                  "positions": {
+                    "target": [
+                      1.2310370632075787,
+                      -4.45,
+                      0.11
+                    ],
+                    "from": [
+                      1.2310370632075787,
+                      -4.636628121661343,
+                      0.10996753141151794
+                    ]
+                  }
+                },
+                "reason": "ball_out"
+              },
+              {
+                "eventId": "batch-02-match-03:134",
+                "type": "throw_in_setup",
+                "timeRemaining": 0.0,
+                "timing": {
+                  "timeRemaining": 245.0119999988716,
+                  "primaryTime": 245.0119999988716,
+                  "stage": "regulation",
+                  "extraTimeElapsedSeconds": 0.0
+                },
+                "actor": {
+                  "side": "away",
+                  "teamNumber": 2,
+                  "teamName": "booster_champion_3v3",
+                  "externalTeamId": null
+                },
+                "evidence": {
+                  "ruleId": "ball_out",
+                  "ruleName": "Ball out of bounds",
+                  "summary": "Ball out of bounds, restart with throwIn.",
+                  "measurements": [],
+                  "positions": {
+                    "target": [
+                      0.9265357805531398,
+                      -4.45,
+                      0.11
+                    ],
+                    "from": [
+                      0.9265357805531398,
+                      -4.635955819486963,
+                      0.10999303798956392
+                    ]
+                  }
+                },
+                "reason": "ball_out"
+              },
+              {
+                "eventId": "batch-02-match-03:154",
+                "type": "throw_in_setup",
+                "timeRemaining": 0.0,
+                "timing": {
+                  "timeRemaining": 190.015999998609,
+                  "primaryTime": 190.015999998609,
+                  "stage": "regulation",
+                  "extraTimeElapsedSeconds": 0.0
+                },
+                "actor": {
+                  "side": "away",
+                  "teamNumber": 2,
+                  "teamName": "booster_champion_3v3",
+                  "externalTeamId": null
+                },
+                "evidence": {
+                  "ruleId": "ball_out",
+                  "ruleName": "Ball out of bounds",
+                  "summary": "Ball out of bounds, restart with throwIn.",
+                  "measurements": [],
+                  "positions": {
+                    "target": [
+                      1.248116739755856,
+                      -4.45,
+                      0.11
+                    ],
+                    "from": [
+                      1.248116739755856,
+                      -4.6385181980709,
+                      0.11000562211292203
+                    ]
+                  }
+                },
+                "reason": "ball_out"
+              },
+              {
+                "eventId": "batch-02-match-03:170",
+                "type": "throw_in_setup",
+                "timeRemaining": 0.0,
+                "timing": {
+                  "timeRemaining": 151.3959999984246,
+                  "primaryTime": 151.3959999984246,
+                  "stage": "regulation",
+                  "extraTimeElapsedSeconds": 0.0
+                },
+                "actor": {
+                  "side": "away",
+                  "teamNumber": 2,
+                  "teamName": "booster_champion_3v3",
+                  "externalTeamId": null
+                },
+                "evidence": {
+                  "ruleId": "ball_out",
+                  "ruleName": "Ball out of bounds",
+                  "summary": "Ball out of bounds, restart with throwIn.",
+                  "measurements": [],
+                  "positions": {
+                    "target": [
+                      6.791753212502224,
+                      -4.45,
+                      0.11
+                    ],
+                    "from": [
+                      6.791753212502224,
+                      -4.6440047704566085,
+                      0.128610466528513
+                    ]
+                  }
+                },
+                "reason": "ball_out"
+              },
+              {
+                "eventId": "batch-02-match-03:194",
+                "type": "throw_in_setup",
+                "timeRemaining": 0.0,
+                "timing": {
+                  "timeRemaining": 41.93000000068969,
+                  "primaryTime": 41.93000000068969,
+                  "stage": "regulation",
+                  "extraTimeElapsedSeconds": 0.0
+                },
+                "actor": {
+                  "side": "away",
+                  "teamNumber": 2,
+                  "teamName": "booster_champion_3v3",
+                  "externalTeamId": null
+                },
+                "evidence": {
+                  "ruleId": "ball_out",
+                  "ruleName": "Ball out of bounds",
+                  "summary": "Ball out of bounds, restart with throwIn.",
+                  "measurements": [],
+                  "positions": {
+                    "target": [
+                      1.1655961537424722,
+                      -4.45,
+                      0.11
+                    ],
+                    "from": [
+                      1.1655961537424722,
+                      -4.646571076392638,
+                      0.10991389828270258
+                    ]
+                  }
+                },
+                "reason": "ball_out"
+              }
+            ],
+            "throwIn": 9,
+            "goalKick": 0,
+            "cornerKick": 0
+          },
+          "caused": {
+            "total": 2,
+            "events": [
+              {
+                "eventId": "batch-02-match-03:59",
+                "type": "goal_kick_setup",
+                "timeRemaining": 0.0,
+                "timing": {
+                  "timeRemaining": 469.76599999994477,
+                  "primaryTime": 469.76599999994477,
+                  "stage": "regulation",
+                  "extraTimeElapsedSeconds": 0.0
+                },
+                "actor": {
+                  "side": "home",
+                  "teamNumber": 1,
+                  "teamName": "laumonteros_team_v1",
+                  "externalTeamId": null
+                },
+                "evidence": {
+                  "ruleId": "ball_out",
+                  "ruleName": "Ball out of bounds",
+                  "summary": "Ball out of bounds, restart with goalKick.",
+                  "measurements": [],
+                  "positions": {
+                    "target": [
+                      -6.0,
+                      2.0,
+                      0.11
+                    ],
+                    "from": [
+                      -7.142868484586357,
+                      1.4633769746159417,
+                      0.15808383485697539
+                    ]
+                  }
+                },
+                "reason": "ball_out"
+              },
+              {
+                "eventId": "batch-02-match-03:71",
+                "type": "throw_in_setup",
+                "timeRemaining": 0.0,
+                "timing": {
+                  "timeRemaining": 443.24799999981815,
+                  "primaryTime": 443.24799999981815,
+                  "stage": "regulation",
+                  "extraTimeElapsedSeconds": 0.0
+                },
+                "actor": {
+                  "side": "home",
+                  "teamNumber": 1,
+                  "teamName": "laumonteros_team_v1",
+                  "externalTeamId": null
+                },
+                "evidence": {
+                  "ruleId": "ball_out",
+                  "ruleName": "Ball out of bounds",
+                  "summary": "Ball out of bounds, restart with throwIn.",
+                  "measurements": [],
+                  "positions": {
+                    "target": [
+                      2.023834370824243,
+                      -4.45,
+                      0.11
+                    ],
+                    "from": [
+                      2.023834370824243,
+                      -4.683074526183802,
+                      0.16043878756428434
+                    ]
+                  }
+                },
+                "reason": "ball_out"
+              }
+            ],
+            "throwIn": 1,
+            "goalKick": 1,
+            "cornerKick": 0
+          }
+        },
+        "fouls": {
+          "total": 0,
+          "events": [],
+          "byReason": {},
+          "byRobot": {}
+        },
+        "removals": {
+          "total": 0,
+          "events": [],
+          "byReason": {},
+          "byRobot": {}
+        },
+        "discipline": {
+          "warnings": {
+            "total": 0,
+            "events": []
+          },
+          "cautions": {
+            "total": 0,
+            "events": []
+          },
+          "sentOff": {
+            "total": 0,
+            "events": []
+          }
+        },
+        "invalidGoals": {
+          "total": 0,
+          "events": [],
+          "byReason": {}
+        },
+        "ballResets": {
+          "total": 0,
+          "events": [],
+          "byReason": {}
+        }
+      }
+    }
+  },
+  "warnings": []
+}

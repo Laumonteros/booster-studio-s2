@@ -1,0 +1,11 @@
+id = "laumonteros_team_v1"
+version = "1.0.0"
+name = { en = "Deep Keeper Two Roamers", zh = "Deep Keeper Two Roamers" }
+logo = "/res/logo.png"
+description = "Dedicated deep goalkeeper and two coordinated roaming attackers"
+entry = "src/main.py:SoccerSimAgent"
+debuggable = true
+
+[requirements]
+min_api_level = 10700
+models = ["Booster T1", "Booster K1"]

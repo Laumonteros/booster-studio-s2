@@ -1,0 +1,52 @@
+test_empty_event_list (test_match_reporting.ReportingTest) ... ok
+test_fallen_penalty_count_not_every_penalty (test_match_reporting.ReportingTest) ... ok
+test_invalid_result_rejected (test_match_reporting.ReportingTest) ... ok
+test_retake_warning_belongs_to_offender_not_beneficiary (test_match_reporting.ReportingTest) ... ok
+test_retake_without_named_offender_belongs_to_defending_side (test_match_reporting.ReportingTest) ... ok
+test_score_is_relative_to_our_side (test_match_reporting.ReportingTest) ... ok
+test_empty_roster (test_team_dispatch.DispatchTest) ... ok
+test_ineligible_players_excluded (test_team_dispatch.DispatchTest) ... ok
+test_keeper_clears_and_roamers_space_out (test_team_dispatch.DispatchTest) ... ok
+test_missing_ball_stops_roamers (test_team_dispatch.DispatchTest) ... ok
+test_normal_fixed_keeper_and_two_roamers (test_team_dispatch.DispatchTest) ... ok
+test_opponent_restart_clear_players_stop (test_team_dispatch.DispatchTest) ... ok
+test_opponent_restart_near_keeper_stays_in_box (test_team_dispatch.DispatchTest) ... ok
+test_restart_origin_persists_after_referee_releases (test_team_dispatch.DispatchTest) ... ok
+test_restart_taker_locked_until_release (test_team_dispatch.DispatchTest) ... ok
+test_set_and_stop_never_attempt_recovery (test_team_dispatch.DispatchTest) ... ok
+test_unknown_pose_stops (test_team_dispatch.DispatchTest) ... ok
+test_keeper_clear_requires_box_and_closest (test_team_tactics.GeometryTest) ... ok
+test_keeper_deep_and_inside_box (test_team_tactics.GeometryTest) ... ok
+test_keeper_does_not_shuffle_when_ball_unknown_or_far (test_team_tactics.GeometryTest) ... ok
+test_keeper_retreat_stays_inside_box (test_team_tactics.GeometryTest) ... ok
+test_keeper_tracks_without_freezing_near_ball (test_team_tactics.GeometryTest) ... ok
+test_missing_keeper_cannot_clear (test_team_tactics.GeometryTest) ... ok
+test_restart_kick_low_power_override (test_team_tactics.GeometryTest) ... ok
+test_restart_no_direct_goal_before_displacement (test_team_tactics.GeometryTest) ... ok
+test_restart_ray_avoids_both_goals_across_field (test_team_tactics.GeometryTest) ... ok
+test_retreat_clearance_even_at_corners (test_team_tactics.GeometryTest) ... ok
+test_retreat_safe_or_unknown_stops (test_team_tactics.GeometryTest) ... ok
+test_shot_after_displacement (test_team_tactics.GeometryTest) ... ok
+test_support_spaced_and_in_field (test_team_tactics.GeometryTest) ... ok
+test_empty_roster (test_team_tactics.RolesTest) ... ok
+test_fixed_keeper_never_chases_midfield (test_team_tactics.RolesTest) ... ok
+test_hysteresis_holds_small_advantage (test_team_tactics.RolesTest) ... ok
+test_hysteresis_switches_large_advantage (test_team_tactics.RolesTest) ... ok
+test_invalid_coordinate_rejected (test_team_tactics.RolesTest) ... ok
+test_keeper_only (test_team_tactics.RolesTest) ... ok
+test_nearest_roamer (test_team_tactics.RolesTest) ... ok
+test_tie_deterministic (test_team_tactics.RolesTest) ... ok
+test_unavailable_attacker_replaced (test_team_tactics.RolesTest) ... ok
+test_unknown_ball (test_team_tactics.RolesTest) ... ok
+test_unknown_pose (test_team_tactics.RolesTest) ... ok
+test_restart_ownership_and_release_from_referee (test_team_tactics.SafetyTest) ... ok
+test_set_initial_finished_stop (test_team_tactics.SafetyTest) ... ok
+test_stop_zeroes_immediately (test_team_tactics.SafetyTest) ... ok
+test_stopped_overrides_ready (test_team_tactics.SafetyTest) ... ok
+test_unknown_game_stops (test_team_tactics.SafetyTest) ... ok
+test_velocity_slew_limited (test_team_tactics.SafetyTest) ... ok
+
+----------------------------------------------------------------------
+Ran 47 tests in 0.003s
+
+OK
