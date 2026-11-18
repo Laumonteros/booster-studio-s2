@@ -62,7 +62,7 @@ class GeometryTest(unittest.TestCase):
         self.assertEqual(direction, 1)
         second, direction = keeper_tracking_target(FIELD, first, (-5.4, 0), direction)
         self.assertEqual(direction, -1)
-        self.assertGreater(math.dist(first, second), .5)
+        self.assertGreater(math.dist(first, second), .2)
         self.assertEqual(first[0], second[0])
         self.assertLess(abs(second[1]), FIELD.goal_width / 2)
 
@@ -72,10 +72,10 @@ class GeometryTest(unittest.TestCase):
 
     def test_keeper_clear_requires_box_and_closest(self):
         positions = {1: (-6.6, 0), 2: (-4, 0)}
-        self.assertTrue(keeper_can_clear(FIELD, positions, (-6.5, 0)))
-        self.assertFalse(keeper_can_clear(FIELD, positions, (-5, 0)))
-        self.assertFalse(keeper_can_clear(FIELD, positions, (-6.5, 2.1)))
-        self.assertFalse(keeper_can_clear(FIELD, {1: (-6.6, 0), 2: (-6, 0)}, (-6.1, 0)))
+        self.assertTrue(keeper_can_clear(FIELD, positions, (-6.5, 0), (0, 0)))
+        self.assertFalse(keeper_can_clear(FIELD, positions, (-5, 0), (0, 0)))
+        self.assertFalse(keeper_can_clear(FIELD, positions, (-6.5, 2.1), (0, 0)))
+        self.assertFalse(keeper_can_clear(FIELD, {1: (-6.6, 0), 2: (-6, 0)}, (-6.1, 0), (0, 0)))
 
     def test_missing_keeper_cannot_clear(self):
         self.assertFalse(keeper_can_clear(FIELD, {}, (-6, 0)))

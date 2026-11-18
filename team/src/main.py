@@ -12,6 +12,7 @@ from .param import (
 from .player import Player
 from .tactics import (
     keeper_can_clear, keeper_target, keeper_tracking_target, phase, retreat_target,
+    keeper_velocity_update, keeper_intercept, keeper_waypoint, keeper_trace,
     select_roles, shot_target, support_target,
 )
 
@@ -30,11 +31,18 @@ class SoccerSimAgent(SoccerAgentMixin, AgentBase):
     def play(context, players, store):
         current = phase(context)
         ball = (context.ball.x, context.ball.y) if context.ball is not None else None
+        store.keeper_motion = keeper_velocity_update(
+            getattr(store, "keeper_motion", None), ball,
+            context.ball.last_seen_at if context.ball is not None else context.now, context.now, current,
+        )
+        keeper_velocity = None if store.keeper_motion is None else store.keeper_motion[2]
+        store.keeper_target = None
         if current == "stopped":
             for player in players:
                 player.action = "stopped"
                 player.stop()
             store.phase = current
+            keeper_trace(context, players, store, current)
             return
 
         active = []
@@ -86,12 +94,17 @@ class SoccerSimAgent(SoccerAgentMixin, AgentBase):
             if current == "our_restart" and store.restart_taker not in positions:
                 store.restart_taker = attacker
 
-            clearing = current == "normal" and keeper_can_clear(context.field, positions, ball)
+            clearing = current == "normal" and keeper_can_clear(context.field, positions, ball, keeper_velocity)
             for player in active:
-                if player.id == keeper and not clearing:
-                    player.action = "keeper:track"
-                    target, store.keeper_direction = keeper_tracking_target(context.field, positions[player.id], ball, store.keeper_direction)
-                    player.walk_to(target, face=0.0)
+                if player.id == keeper:
+                    if clearing:
+                        player.action = "keeper:clear"
+                        player.attack(shot_target(context.field, ball, store.restart_origin))
+                    else:
+                        player.action = "keeper:intercept" if keeper_intercept(context.field, ball, keeper_velocity) is not None else "keeper:track"
+                        target, store.keeper_direction = keeper_tracking_target(context.field, positions[player.id], ball, store.keeper_direction, keeper_velocity)
+                        store.keeper_target = target
+                        player.walk_to(keeper_waypoint(positions[player.id], target), face=0.0)
                 elif ball is None:
                     player.action = "ball:unknown"
                     player.stop()
@@ -110,6 +123,7 @@ class SoccerSimAgent(SoccerAgentMixin, AgentBase):
                     player.move_to_position(target)
 
         store.phase = current
+        keeper_trace(context, players, store, current)
         debugdraw.text(0, context.field.width / 2 + 0.2, f"phase={current} attacker={attacker}", ns="phase")
         for player in players:
             if player.pose is not None:
