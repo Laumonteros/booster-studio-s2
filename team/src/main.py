@@ -25,7 +25,6 @@ class SoccerSimAgent(SoccerAgentMixin, AgentBase):
         store.restart_origin = None
         store.restart_taker = None
         store.keeper_direction = 1
-        store.restart_restricted = False
 
     @staticmethod
     def play(context, players, store):
@@ -54,7 +53,6 @@ class SoccerSimAgent(SoccerAgentMixin, AgentBase):
 
         if current == "their_restart":
             store.restart_origin = None
-            store.restart_restricted = False
             for player in active:
                 target = retreat_target(context.field, positions[player.id], ball, keeper=player.id == KEEPER_ID)
                 player.action = "restart:clearance"
@@ -68,7 +66,6 @@ class SoccerSimAgent(SoccerAgentMixin, AgentBase):
                     player.walk_to(step, face=player.pose.theta)
         elif current == "ready":
             store.restart_origin = None
-            store.restart_restricted = False
             for player in active:
                 target = keeper_target(context.field, None) if player.id == KEEPER_ID else (
                     READY_TAKER_POSITION if player.id == 2 and context.game.kicking_team == context.team_id
@@ -90,8 +87,6 @@ class SoccerSimAgent(SoccerAgentMixin, AgentBase):
                 store.restart_taker = attacker
 
             clearing = current == "normal" and keeper_can_clear(context.field, positions, ball)
-            restricted = ball is not None and store.restart_origin is not None and math.dist(ball, store.restart_origin) <= RESTART_SHOOT_DISTANCE_M
-            reset_kick = ball is not None and store.restart_restricted and not restricted
             for player in active:
                 if player.id == keeper and not clearing:
                     player.action = "keeper:track"
@@ -102,10 +97,8 @@ class SoccerSimAgent(SoccerAgentMixin, AgentBase):
                     player.stop()
                 elif player.id == keeper or (player.id == attacker and not clearing):
                     player.action = "keeper:clear" if player.id == keeper else "roamer:attack"
-                    if reset_kick:
-                        player.stop()
-                    else:
-                        player.attack(shot_target(context.field, ball, store.restart_origin), power=RESTART_PASS_POWER if restricted else None)
+                    restricted = store.restart_origin is not None and math.dist(ball, store.restart_origin) <= RESTART_SHOOT_DISTANCE_M
+                    player.attack(shot_target(context.field, ball, store.restart_origin), power=RESTART_PASS_POWER if restricted else None)
                 else:
                     player.action = "roamer:support"
                     if current == "our_restart" and store.restart_origin is not None and math.dist(ball, store.restart_origin) <= RESTART_SHOOT_DISTANCE_M:
@@ -115,8 +108,6 @@ class SoccerSimAgent(SoccerAgentMixin, AgentBase):
                     if clearing and player.id == support:
                         target = target[0], -target[1]
                     player.move_to_position(target)
-            if ball is not None:
-                store.restart_restricted = restricted
 
         store.phase = current
         debugdraw.text(0, context.field.width / 2 + 0.2, f"phase={current} attacker={attacker}", ns="phase")

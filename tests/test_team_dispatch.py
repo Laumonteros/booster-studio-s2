@@ -114,8 +114,6 @@ class DispatchTest(unittest.TestCase):
         self.assertEqual(self.store.restart_origin, (0, 0))
         self.assertEqual(self.players[1].calls[-1][2]['power'], 1.5)
         self.play(ball=(1.5, 0))
-        self.assertEqual(self.players[1].calls[-1], ('stop',))
-        self.play(ball=(1.5, 0))
         self.assertIsNone(self.players[1].calls[-1][2]['power'])
         self.assertGreater(self.players[1].calls[-1][1][0], 7)
 

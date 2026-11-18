@@ -1,5 +1,7 @@
 # Team v1: deep keeper + two roamers
 
+The checked-in strategy is restored exactly to iteration 1 (batch-03); it had one disallowed set-play goal, and iteration 2's restart-margin changes (1.2 m plus kick-task reset) are the known fix to port; iteration-2 descriptions below are historical, not current behavior.
+
 This is a separate MIT-derived agent (`laumonteros_team_v1`), not a modification
 of `../sim-3v3-simple-framework`, which remains the benchmark opponent.
 The copied platform layer `src/framework/` is unchanged. The upstream MIT

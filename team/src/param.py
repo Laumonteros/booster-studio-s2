@@ -41,8 +41,8 @@ ANGULAR_GAIN = 2.0             # Rotation proportional gain
 # Player kicking and shot planning
 # ======================================================================
 
-KICK_ENTER_M = 2.0             # Enter kicking state below this ball distance
-KICK_EXIT_M = 2.5              # Leave kicking state above this ball distance
+KICK_ENTER_M = 1.5             # Enter kicking state below this ball distance
+KICK_EXIT_M = 2.1              # Leave kicking state above this ball distance
 CHASE_BEHIND_M = 0.35          # Distance behind the ball while chasing
 
 
@@ -142,17 +142,17 @@ KICK_TARGET_MARK_SIZE_M = 0.18
 KEEPER_ID = 1
 KEEPER_LINE_MARGIN_M = 0.4
 KEEPER_POST_MARGIN_M = 0.3
-SUPPORT_BACK_M = -2.6
+SUPPORT_BACK_M = 1.9
 SUPPORT_OFFSET_M = 3.3
-RESTART_SHOOT_DISTANCE_M = 1.2
+RESTART_SHOOT_DISTANCE_M = 0.7
 RESTART_PASS_DISTANCE_M = 0.9
-RESTART_PASS_FORWARD_M = 3.0
+RESTART_PASS_FORWARD_M = 1.0
 RESTART_PASS_POWER = 1.5
 KEEPER_RESTART_CLEARANCE_M = 1.95
 KEEPER_BOX_MARGIN_M = 0.05
 SHOT_RANGE_M = 4.5
 SHOT_POWER = 5.5
-DRIVE_POWER = 5.0
+DRIVE_POWER = 4.0
 SHOT_POST_MARGIN_M = 0.55
 LINEAR_ACCELERATION = 1.8
 ANGULAR_ACCELERATION = 2.0
