@@ -1,3 +1,4 @@
+import ast
 import unittest
 from pathlib import Path
 from types import SimpleNamespace as NS
@@ -11,17 +12,26 @@ from team.src import field_params, param
 
 
 class FieldV6Test(unittest.TestCase):
-    def test_sample_player_and_utils_exact_except_imports_and_shot_target(self):
+    def test_sample_player_unchanged_outside_shooting_and_predictive_movement(self):
         root=Path(__file__).parents[1]
         source=root/'sim-3v3-simple-framework/src'
         expected=(source/'player.py').read_text().replace('from .param import','from .field_params import').replace('from .utils.','from .field_utils.')
         expected=expected.replace('from .field_params import *','from .field_params import *\nfrom .field_shooting import shot_target')
         expected=expected.replace('\n        kick_target = opponent_goal(ctx)\n','\n        kick_target = shot_target(self) or opponent_goal(ctx)\n')
         expected=expected.replace("Aim from the current ball position toward the opponent's goal center.", 'Aim from the current ball position toward the selected goal-mouth point.')
-        self.assertEqual((root/'team/src/field_player.py').read_text(),expected)
+        actual = (root/'team/src/field_player.py').read_text()
+        def without_predictive_movement(text):
+            tree = ast.parse(text)
+            tree.body = [node for node in tree.body
+                         if not isinstance(node, ast.FunctionDef) or node.name != '_movement_ball']
+            player = next(node for node in tree.body if isinstance(node, ast.ClassDef))
+            player.body = [node for node in player.body
+                           if not isinstance(node, ast.FunctionDef) or node.name not in ('attack', 'support')]
+            return ast.dump(tree)
+        self.assertEqual(without_predictive_movement(actual), without_predictive_movement(expected))
         for p in (source/'utils').glob('*.py'):
             self.assertEqual((root/'team/src/field_utils'/p.name).read_text(),p.read_text().replace('from ..param import','from ..field_params import'))
-        self.assertEqual((root/'team/src/field_params.py').read_text(),(source/'param.py').read_text().replace('SUPPORT_DIST_M = 3.0','SUPPORT_DIST_M = 2.0'))
+        self.assertEqual((root/'team/src/field_params.py').read_text().split('\nBALL_PRED_WINDOW_S')[0],(source/'param.py').read_text().replace('SUPPORT_DIST_M = 3.0','SUPPORT_DIST_M = 2.0'))
 
     def test_roster_keeps_original_keeper_and_sample_field_players(self):
         self.assertIs(type(PlayerRoster(1,NS(team_id=1))),KeeperPlayer)

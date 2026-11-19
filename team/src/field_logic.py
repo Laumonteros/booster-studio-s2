@@ -5,6 +5,7 @@ from enum import Enum
 from .framework.types import KICKING_TEAM_NONE, Context, GameState, SetPlay
 from .field_params import *
 from .field_player import Player
+from .ball_prediction import BallPredictor
 from .field_utils import angle_to, clamp_inside_field, dist, opponent_goal, own_goal
 from . import throw_in
 from . import opponent_exit
@@ -259,6 +260,11 @@ def _act_ready(context: Context, players: list[Player]) -> None:
 
 def run(context, players, store):
     current = get_phase(context)
+    if not hasattr(store, "ball_predictor"):
+        store.ball_predictor = BallPredictor()
+    store.ball_predictor.observe(context.ball, context.now, current == Phase.NORMAL)
+    for player in players:
+        player._ball_predictor = store.ball_predictor
     store.prev_phase, store.cur_phase = store.cur_phase, current
     if current != Phase.NORMAL:
         _clear_normal_sticky(store)

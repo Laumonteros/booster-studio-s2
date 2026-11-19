@@ -138,3 +138,12 @@ PLAN_MAX_OFFSET = math.radians(100)     # Maximum offset from target heading (ra
 # ======================================================================
 
 KICK_TARGET_MARK_SIZE_M = 0.18
+
+BALL_PRED_WINDOW_S = 0.3
+BALL_PRED_GAP_S = 0.5
+BALL_PRED_MAX_SPEED_MPS = 12.0
+BALL_PRED_SLOW_MPS = 0.2
+BALL_PRED_HORIZON_S = 0.65
+BALL_PRED_FRICTION = 1.2               # Exponential velocity decay (1/s)
+BALL_PRED_WALK_MPS = 0.8
+BALL_PRED_MARGIN_M = 0.3
