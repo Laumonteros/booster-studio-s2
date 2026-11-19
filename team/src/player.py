@@ -189,7 +189,7 @@ class Player:
             limit = MAX_LINEAR / (1 + TURN_SPEED_REDUCTION * abs(vyaw))
             if self.context is not None and self.pose is not None:
                 others = list(self.context.teammates.values()) + list(self.context.opponents.values())
-                if any(r.pose is not None and 0.01 < dist(self.pose.x, self.pose.y, r.pose.x, r.pose.y) < CONTACT_SLOW_RADIUS_M for r in others):
+                if not (self.id == KEEPER_ID and self.action == "keeper:intercept") and any(r.pose is not None and 0.01 < dist(self.pose.x, self.pose.y, r.pose.x, r.pose.y) < CONTACT_SLOW_RADIUS_M for r in others):
                     limit *= CONTACT_SPEED_SCALE
             scale = min(1.0, limit / max(speed, 1e-6))
             desired = (vx * scale, vy * scale, vyaw)
