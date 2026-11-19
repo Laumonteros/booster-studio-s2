@@ -6,6 +6,7 @@ from .framework.types import KICKING_TEAM_NONE, Context, GameState, SetPlay
 from .field_params import *
 from .field_player import Player
 from .field_utils import angle_to, clamp_inside_field, dist, opponent_goal, own_goal
+from . import throw_in
 
 class Phase(Enum):
     """Top-level match phase controlling normal play, restarts, and stops."""
@@ -312,7 +313,10 @@ def run(context, players, store):
     store.prev_phase, store.cur_phase = store.cur_phase, current
     if current != Phase.NORMAL:
         _clear_normal_sticky(store)
-    if current == Phase.NORMAL:
+    handled = throw_in.handle(context, players, store)
+    if handled:
+        pass
+    elif current == Phase.NORMAL:
         _act_normal(context, players, store)
     elif current == Phase.OUR_KICKOFF:
         _act_our_kickoff(context, players, store)
