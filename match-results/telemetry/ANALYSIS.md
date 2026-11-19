@@ -12,9 +12,11 @@ Telemetry is **off by default**: `team/src/param.py:TELEMETRY_ENABLED=False`.
 For the observed runs, set it to `True`, build with `scripts/build_team.sh`,
 and run `scripts/run_team_batch.py --matches 2 --workers 2 --telemetry`
 with the normal package/output/work arguments. Restore `False` afterwards.
-`ROAMER_TELEMETRY_FILE` also opts in when the agent launcher preserves that
-environment variable. Container-level environment injection alone has not
-been independently verified through the proprietary agent launcher.
+`ROAMER_TELEMETRY_FILE` also opts in. This was subsequently verified in the
+v5 runtime: a package built with `TELEMETRY_ENABLED=False`, launched using the
+runner's `--telemetry`, created the container JSONL file (317 KB at the first
+live check). Thus future runs can leave the source flag off and opt in using
+`--telemetry`; there is no need to rebuild just to toggle logging.
 Default output is `/tmp/roamer-telemetry.jsonl` **inside the runtime container**.
 The runner copies it after shutdown and writes `match-XX/telemetry.jsonl.gz`.
 Raw files remain available under `/home/ubuntu/booster-studio/main-telemetry-runs/`.
@@ -187,3 +189,20 @@ Gate against the provided **main −2.0 mean GD / zero wins**, not this small pa
 8 alternating-side matches, mean GD ≥−0.5, ≥1 win, zero own fallen penalties and
 set-play warnings; run another eight if just at/near the acceptance boundary.
 Results will be recorded separately under `match-results/roamers-v5/`.
+
+### Completed v5 result: rejected
+
+The eight-game candidate finished **0W/0D/8L, 11–30, mean GD −2.375**,
+which is **0.375 worse** than the provided main baseline. It also had **two own
+fallen penalties** (one protected keeper, one roamer) and **three own warnings**.
+No second batch was warranted: this is not a marginal qualifying result.
+No v5 code was committed/promoted/pushed. The separate local v5 worktree retains
+the failed implementation, and the text source capsule preserves reproducibility.
+See `../roamers-v5/REPORT.md` for the table and warning details.
+
+This falsifies the practical claim that these target/escape changes are enough
+to improve the team. It does not disprove the measured blind-lane/virtual-ray
+geometry facts; motor outcome and secondary effects were not isolated in an
+ablation. In particular the escape change did not eliminate defender interference,
+and leaving own indirect-restart handling unchanged allowed a disallowed goal.
+Keep main; do not merge the failed candidate.
