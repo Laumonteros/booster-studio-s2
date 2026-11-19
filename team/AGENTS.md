@@ -98,7 +98,7 @@ getattr(store, "kick_cooldown", 0)           # 带默认值读取
 | 我方定位球（界外球、角球、球门球、任意球） | `main.py` 的 `_act_our_set_play`，按 `SetPlay` 加分支 | 定位球乌龙 |
 | 防守对方定位球、布置人墙 | `main.py` 的 `_act_opp_set_play` | 避让距离、抢先触球、无活动 |
 | READY 站位 | `main.py` 的 `_act_ready` | Set 站位 |
-| 门将行为 | `player.py` 的 `guard`（配合 `own_goal_area_center`） | 无活动 |
+| 门将行为 | `tactics.py` 的 `keeper_*` 和 `main.py` 的门将分支；`Player.guard()` 不是当前分派路径 | 无活动 |
 | 支援站位 | `player.py` 的 `support` | 无活动 |
 | 新个人技能（带球、封堵等） | `player.py` 新增方法，复用 `kick`、`walk_to` | 只在允许运动的阶段调用 |
 | 速度、力度、阈值、距离 | `param.py` | 规则相关距离留余量 |

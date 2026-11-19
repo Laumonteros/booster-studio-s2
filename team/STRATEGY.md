@@ -1,6 +1,6 @@
 # Team v1: deep keeper + two roamers
 
-The checked-in strategy is restored exactly to iteration 1 (batch-03); it had one disallowed set-play goal, and iteration 2's restart-margin changes (1.2 m plus kick-task reset) are the known fix to port; iteration-2 descriptions below are historical, not current behavior.
+Roamers and set plays remain at iteration 1 (batch-03); it had one disallowed set-play goal, and iteration 2's restart-margin changes (1.2 m plus kick-task reset) are the known fix to port. Iteration-2 restart descriptions below are historical, not current behavior. The keeper is now v2; see `../match-results/keeper-v2/SUMMARY.md` for acceptance evidence.
 
 This is a separate MIT-derived agent (`laumonteros_team_v1`), not a modification
 of `../sim-3v3-simple-framework`, which remains the benchmark opponent.
@@ -9,16 +9,21 @@ notice remains in `LICENSE`.
 
 ## Decisions
 
-- **Player 1** is always the goalkeeper, targeting x = −6.6 m on a 14 m pitch.
-  It tracks the observed ball y, clamped 0.3 m inside the posts. It only clears
-  in normal play when the ball is inside the actual goal-area rectangle and
-  it is no farther from the ball than any other eligible teammate. Otherwise
-  it stays deep. On opponent restarts, it retreats within its own box to
-  provide the mandatory clearance rather than chasing the ball outside it.
-  During open/own-restart play with the ball nearby but another teammate closer,
-  it gently shuffles along that line (within the posts) instead of freezing
-  beside the ball long enough to be penalized inactive. The initial batch
-  actually incurred this penalty; the shuffle does not override SET/STOP.
+- **Player 1** is always the goalkeeper. Keeper v2 normally targets x = −6.6 m
+  on a 14 m pitch, using a compressed ball-to-goal-centre angle rather than
+  following ball y. When the ball passes that line, the target backs up to
+  x = −6.85 m. Targets stay 0.3 m inside the posts. Filtered velocity from
+  recent public ball observations projects incoming goal-mouth threats onto
+  that line; stale observations, teleports and restarts reset the estimate.
+  Clearing is restricted to known slow, reachable balls in front, with the
+  keeper closest among eligible teammates and ahead of x = −6.92 m. Otherwise
+  walking releases the kick task. Short waypoints keep it facing upfield;
+  nearby-ball shuffle uses bounded ±0.35 m endpoints and is suspended during
+  incoming threats. On opponent restarts it still retreats within its own box
+  for mandatory clearance. SET/STOP still stop it. These are commanded targets,
+  not a guarantee against physical overshoot. Optional `KEEPER_TRACE_ENABLED`
+  logging defaults off; keeper functions and dispatch live in `tactics.py` and
+  `main.py`, not the older `Player.guard()` helper.
 - **Players 2 and 3** roam. The nearer eligible roamer attacks; the current
   attacker keeps its role until the other is over 0.65 m closer. Losing pose,
   being penalized or recovering removes a player from assignment immediately.

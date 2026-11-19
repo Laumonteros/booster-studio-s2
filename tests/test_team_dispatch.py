@@ -90,10 +90,30 @@ class DispatchTest(unittest.TestCase):
         self.assertEqual(self.players[1].calls[-1], ('stop',))
 
     def test_keeper_clears_and_roamers_space_out(self):
+        self.store.keeper_motion = ((-6.5, 0), -.1, (0, 0))
         self.play(ball=(-6.5, 0))
         self.assertEqual([p.calls[-1][0] for p in self.players], ['attack', 'support', 'support'])
         targets = [p.calls[-1][1] for p in self.players[1:]]
         self.assertNotEqual(targets[0], targets[1])
+
+    def test_keeper_waits_for_velocity_before_clearing(self):
+        self.play(ball=(-6.5, 0))
+        self.assertEqual(self.players[0].calls[-1][0], 'walk')
+
+    def test_keeper_aborts_clear_behind_safe_line(self):
+        self.players[0].pose = Pose2D(-7.1, 0, 1)
+        self.store.keeper_motion = ((-6.5, 0), -.1, (0, 0))
+        self.play(ball=(-6.5, 0))
+        action, target, kwargs = self.players[0].calls[-1]
+        self.assertEqual(action, 'walk')
+        self.assertGreater(target[0], -7.1)
+        self.assertEqual(kwargs['face'], 0)
+
+    def test_keeper_intercepts_instead_of_kicking_fast_ball(self):
+        self.store.keeper_motion = ((-5.8, .4), -.1, (-3, -1))
+        self.play(ball=(-6.1, .3))
+        self.assertEqual(self.players[0].action, 'keeper:intercept')
+        self.assertEqual(self.players[0].calls[-1][0], 'walk')
 
     def test_opponent_restart_clear_players_stop(self):
         self.players[1].pose = Pose2D(-4, 0, 0)
