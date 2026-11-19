@@ -1,0 +1,1771 @@
+{
+  "v11": {
+    "counts": {
+      "ticks": 367291,
+      "normal_ticks": 186889,
+      "support": 179915,
+      "attacker_switches": 304
+    },
+    "median_normal_support_ball_gap": 2.848936349215472,
+    "longest_near_ball_support_no_quarter_m_progress_wall_s": 15.110589265823364,
+    "sdk_call_errors": [
+      {
+        "match": "/home/ubuntu/repos/booster-studio-s2/match-results/scoring-v11/batch-03/match-01",
+        "event": {
+          "type": "native_stop_error",
+          "wall": 1795094971.5737,
+          "now": 67588.918932623,
+          "robot": 3,
+          "thread": "soccer_runtime",
+          "reason": "recovering/stop/release_kick",
+          "pose": [
+            0.42677870408542784,
+            2.3751879494908468,
+            -2.133589884397468
+          ],
+          "ball": [
+            0.8954447934877886,
+            2.230182673779148
+          ],
+          "action": "recovering",
+          "error": "RuntimeError('API call failed, code = 400')"
+        }
+      },
+      {
+        "match": "/home/ubuntu/repos/booster-studio-s2/match-results/scoring-v11/batch-03/match-06",
+        "event": {
+          "type": "native_stop_error",
+          "wall": 1795096422.192243,
+          "now": 69039.538232986,
+          "robot": 3,
+          "thread": "soccer_runtime",
+          "reason": "recovering/stop/release_kick",
+          "pose": [
+            -1.4661418049337862,
+            -0.5437008607830157,
+            1.6804887596113094
+          ],
+          "ball": [
+            -2.081399320325657,
+            0.16014149266907754
+          ],
+          "action": "recovering",
+          "error": "RuntimeError('API call failed, code = 400')"
+        }
+      }
+    ],
+    "incidents": [
+      {
+        "match": "/home/ubuntu/repos/booster-studio-s2/match-results/scoring-v11/batch-03/match-01",
+        "event": {
+          "eventId": "batch-03-match-01:157",
+          "sequence": 157,
+          "wallTime": 1795094918.7901983,
+          "simTime": 451.4920000014277,
+          "timing": {
+            "timeRemaining": 201.61399999864813,
+            "primaryTime": 201.61399999864813,
+            "stage": "regulation",
+            "extraTimeElapsedSeconds": 0.0
+          },
+          "source": "auto_referee",
+          "severity": "penalty",
+          "type": "penalty",
+          "message": {
+            "key": "event.penalty",
+            "fallback": "penalty"
+          },
+          "actor": {
+            "side": "home",
+            "robotName": "robot2",
+            "playerNumber": 2
+          },
+          "game": {
+            "phase": "firstHalf",
+            "state": "playing",
+            "setPlay": "noSetPlay",
+            "kickingSide": null,
+            "droppedBall": false,
+            "stopped": false,
+            "secondaryTime": 0
+          },
+          "score": {
+            "home": 1,
+            "away": 2
+          },
+          "evidence": {
+            "ruleId": "inactiveRobot",
+            "ruleName": "Inactive robot",
+            "summary": "Robot stayed inactive near the ball beyond the allowed duration.",
+            "measurements": [
+              {
+                "name": "inactiveDuration",
+                "value": 20.000000000116415,
+                "unit": "ms",
+                "threshold": 10000.0,
+                "operator": ">="
+              },
+              {
+                "name": "ballDistance",
+                "value": 1.9585214587500848,
+                "unit": "m",
+                "threshold": 3.0,
+                "operator": "<="
+              }
+            ],
+            "positions": {
+              "robot": [
+                0.6050874437614583,
+                0.728309517583397,
+                0.5457205794213079
+              ],
+              "reference": [
+                0.6055546160828366,
+                0.7290020674742202,
+                0.5456877795326811
+              ],
+              "ball": [
+                2.562672597458289,
+                0.7888625555775051,
+                0.10993077108226842
+              ]
+            }
+          },
+          "outcome": {
+            "reason": "inactiveRobot",
+            "penalty": "incapableRobot",
+            "seconds": 30.0,
+            "discipline": {
+              "warning": false,
+              "caution": false,
+              "sentOff": false
+            }
+          },
+          "_done": true
+        },
+        "latest": {
+          "wall": 1795094918.767364,
+          "action": "support",
+          "pose": [
+            0.6055546160828366,
+            0.7290020674742202,
+            0.13192808759657212
+          ],
+          "ball": [
+            2.562672597458289,
+            0.7888625555775051
+          ],
+          "game": {
+            "state": "PLAYING",
+            "set_play": "NONE",
+            "kicking_team": 255,
+            "stopped": false,
+            "remaining": 203,
+            "secondary": 0
+          },
+          "commands": [
+            {
+              "kind": "velocity_body",
+              "velocity": [
+                0.0,
+                0.0,
+                -0.20270316088154502
+              ],
+              "accepted": true
+            }
+          ]
+        },
+        "last_active": {
+          "wall": 1795094918.767364,
+          "action": "support",
+          "pose": [
+            0.6055546160828366,
+            0.7290020674742202,
+            0.13192808759657212
+          ],
+          "ball": [
+            2.562672597458289,
+            0.7888625555775051
+          ],
+          "game": {
+            "state": "PLAYING",
+            "set_play": "NONE",
+            "kicking_team": 255,
+            "stopped": false,
+            "remaining": 203,
+            "secondary": 0
+          },
+          "commands": [
+            {
+              "kind": "velocity_body",
+              "velocity": [
+                0.0,
+                0.0,
+                -0.20270316088154502
+              ],
+              "accepted": true
+            }
+          ]
+        }
+      },
+      {
+        "match": "/home/ubuntu/repos/booster-studio-s2/match-results/scoring-v11/batch-03/match-01",
+        "event": {
+          "eventId": "batch-03-match-01:208",
+          "sequence": 208,
+          "wallTime": 1795095171.5428886,
+          "simTime": 646.6679999985321,
+          "timing": {
+            "timeRemaining": 9.446000001472612,
+            "primaryTime": 9.446000001472612,
+            "stage": "regulation",
+            "extraTimeElapsedSeconds": 0.0
+          },
+          "source": "auto_referee",
+          "severity": "penalty",
+          "type": "penalty",
+          "message": {
+            "key": "event.penalty",
+            "fallback": "penalty"
+          },
+          "actor": {
+            "side": "home",
+            "robotName": "robot3",
+            "playerNumber": 3
+          },
+          "game": {
+            "phase": "firstHalf",
+            "state": "playing",
+            "setPlay": "noSetPlay",
+            "kickingSide": null,
+            "droppedBall": false,
+            "stopped": false,
+            "secondaryTime": 0
+          },
+          "score": {
+            "home": 1,
+            "away": 3
+          },
+          "evidence": {
+            "ruleId": "inactiveRobot",
+            "ruleName": "Inactive robot",
+            "summary": "Robot stayed inactive near the ball beyond the allowed duration.",
+            "measurements": [
+              {
+                "name": "inactiveDuration",
+                "value": 19.99999999953434,
+                "unit": "ms",
+                "threshold": 10000.0,
+                "operator": ">="
+              },
+              {
+                "name": "ballDistance",
+                "value": 1.995742144927685,
+                "unit": "m",
+                "threshold": 3.0,
+                "operator": "<="
+              }
+            ],
+            "positions": {
+              "robot": [
+                3.765001438875078,
+                1.07756488783901,
+                0.5453368201376553
+              ],
+              "reference": [
+                3.764957705566525,
+                1.0765886212890199,
+                0.5453457821475017
+              ],
+              "ball": [
+                5.7334788543531765,
+                1.4063252470571221,
+                0.10985418881441016
+              ]
+            }
+          },
+          "outcome": {
+            "reason": "inactiveRobot",
+            "penalty": "incapableRobot",
+            "seconds": 30.0,
+            "discipline": {
+              "warning": false,
+              "caution": false,
+              "sentOff": false
+            }
+          },
+          "_done": true
+        },
+        "latest": {
+          "wall": 1795095171.510348,
+          "action": "support",
+          "pose": [
+            3.7649403992009494,
+            1.0756286907268902,
+            0.25691642403098347
+          ],
+          "ball": [
+            5.7334788543531765,
+            1.4063252470571221
+          ],
+          "game": {
+            "state": "PLAYING",
+            "set_play": "NONE",
+            "kicking_team": 255,
+            "stopped": false,
+            "remaining": 10,
+            "secondary": 0
+          },
+          "commands": [
+            {
+              "kind": "velocity_body",
+              "velocity": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "accepted": true
+            }
+          ]
+        },
+        "last_active": {
+          "wall": 1795095171.510348,
+          "action": "support",
+          "pose": [
+            3.7649403992009494,
+            1.0756286907268902,
+            0.25691642403098347
+          ],
+          "ball": [
+            5.7334788543531765,
+            1.4063252470571221
+          ],
+          "game": {
+            "state": "PLAYING",
+            "set_play": "NONE",
+            "kicking_team": 255,
+            "stopped": false,
+            "remaining": 10,
+            "secondary": 0
+          },
+          "commands": [
+            {
+              "kind": "velocity_body",
+              "velocity": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "accepted": true
+            }
+          ]
+        }
+      },
+      {
+        "match": "/home/ubuntu/repos/booster-studio-s2/match-results/scoring-v11/batch-03/match-02",
+        "event": {
+          "eventId": "batch-03-match-02:83",
+          "sequence": 83,
+          "wallTime": 1795094600.3599927,
+          "simTime": 218.88800000031705,
+          "timing": {
+            "timeRemaining": 415.6139999997227,
+            "primaryTime": 415.6139999997227,
+            "stage": "regulation",
+            "extraTimeElapsedSeconds": 0.0
+          },
+          "source": "auto_referee",
+          "severity": "penalty",
+          "type": "penalty",
+          "message": {
+            "key": "event.penalty",
+            "fallback": "penalty"
+          },
+          "actor": {
+            "side": "away",
+            "robotName": "robot6",
+            "playerNumber": 3
+          },
+          "game": {
+            "phase": "firstHalf",
+            "state": "playing",
+            "setPlay": "throwIn",
+            "kickingSide": "home",
+            "droppedBall": false,
+            "stopped": false,
+            "secondaryTime": 44.937999999999704
+          },
+          "score": {
+            "home": 0,
+            "away": 1
+          },
+          "evidence": {
+            "ruleId": "defender_set_play_interference",
+            "subRuleId": "defender_touched_before_kick",
+            "ruleName": "Defender set play interference",
+            "summary": "Defender away:3 touched the ball before the kicking side, interfering with the throwIn.",
+            "measurements": [],
+            "positions": {
+              "robot": [
+                -6.156300931026144,
+                -4.453508127470318,
+                0.1099918900624588
+              ]
+            }
+          },
+          "outcome": {
+            "reason": "defender_set_play_interference",
+            "penalty": "illegalPosition",
+            "seconds": 30.0,
+            "discipline": {
+              "warning": false,
+              "caution": false,
+              "sentOff": false
+            }
+          },
+          "_done": true
+        },
+        "latest": {
+          "wall": 1795094600.3571005,
+          "action": "stopped",
+          "pose": [
+            6.265562192229304,
+            4.251709828124224,
+            0.7204657891483306
+          ],
+          "ball": [
+            6.156300931026144,
+            4.453508127470318
+          ],
+          "game": {
+            "state": "PLAYING",
+            "set_play": "THROW_IN",
+            "kicking_team": 1,
+            "stopped": true,
+            "remaining": 416,
+            "secondary": 45
+          },
+          "commands": [
+            {
+              "kind": "velocity_body",
+              "velocity": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "accepted": true
+            }
+          ]
+        },
+        "last_active": {
+          "wall": 1795094600.3571005,
+          "action": "stopped",
+          "pose": [
+            6.265562192229304,
+            4.251709828124224,
+            0.7204657891483306
+          ],
+          "ball": [
+            6.156300931026144,
+            4.453508127470318
+          ],
+          "game": {
+            "state": "PLAYING",
+            "set_play": "THROW_IN",
+            "kicking_team": 1,
+            "stopped": true,
+            "remaining": 416,
+            "secondary": 45
+          },
+          "commands": [
+            {
+              "kind": "velocity_body",
+              "velocity": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "accepted": true
+            }
+          ]
+        }
+      },
+      {
+        "match": "/home/ubuntu/repos/booster-studio-s2/match-results/scoring-v11/batch-03/match-02",
+        "event": {
+          "eventId": "batch-03-match-02:171",
+          "sequence": 171,
+          "wallTime": 1795094983.9709575,
+          "simTime": 512.236000001711,
+          "timing": {
+            "timeRemaining": 131.31599999837198,
+            "primaryTime": 131.31599999837198,
+            "stage": "regulation",
+            "extraTimeElapsedSeconds": 0.0
+          },
+          "source": "auto_referee",
+          "severity": "penalty",
+          "type": "penalty",
+          "message": {
+            "key": "event.penalty",
+            "fallback": "penalty"
+          },
+          "actor": {
+            "side": "away",
+            "robotName": "robot5",
+            "playerNumber": 2
+          },
+          "game": {
+            "phase": "firstHalf",
+            "state": "playing",
+            "setPlay": "noSetPlay",
+            "kickingSide": null,
+            "droppedBall": false,
+            "stopped": false,
+            "secondaryTime": 0
+          },
+          "score": {
+            "home": 2,
+            "away": 2
+          },
+          "evidence": {
+            "ruleId": "fallenRobot",
+            "ruleName": "Fallen robot",
+            "summary": "Robot remained fallen beyond the allowed duration.",
+            "measurements": [
+              {
+                "name": "upDot",
+                "value": -0.18737181938287162,
+                "threshold": 0.45,
+                "operator": "<="
+              },
+              {
+                "name": "height",
+                "value": 0.10989087655334598,
+                "unit": "m",
+                "threshold": 0.25,
+                "operator": "<="
+              },
+              {
+                "name": "fallenDuration",
+                "value": 10018.000000049593,
+                "unit": "ms",
+                "threshold": 10000.0,
+                "operator": ">="
+              }
+            ],
+            "positions": {
+              "robot": [
+                -2.9962970555858695,
+                -0.912953228579949,
+                0.10989087655334598
+              ],
+              "reference": [
+                -2.9976303433981797,
+                -0.9127528116279762,
+                0.10559904180227139
+              ]
+            }
+          },
+          "outcome": {
+            "reason": "fallenRobot",
+            "penalty": "incapableRobot",
+            "seconds": 30.0,
+            "discipline": {
+              "warning": false,
+              "caution": false,
+              "sentOff": false
+            }
+          },
+          "_done": true
+        },
+        "latest": {
+          "wall": 1795094983.947696,
+          "action": "recovering",
+          "pose": [
+            2.9976303433981797,
+            0.9127528116279762,
+            -2.6496172117210293
+          ],
+          "ball": [
+            4.994704599570615,
+            2.160371278654395
+          ],
+          "game": {
+            "state": "PLAYING",
+            "set_play": "NONE",
+            "kicking_team": 255,
+            "stopped": false,
+            "remaining": 132,
+            "secondary": 0
+          },
+          "commands": [
+            {
+              "kind": "velocity_body",
+              "velocity": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "accepted": false
+            }
+          ]
+        },
+        "last_active": {
+          "wall": 1795094970.6681776,
+          "action": "attack",
+          "pose": [
+            2.784534020141134,
+            0.8643719809233135,
+            -0.7965563816527226
+          ],
+          "ball": [
+            4.9939665545674,
+            2.15963475088565
+          ],
+          "game": {
+            "state": "PLAYING",
+            "set_play": "NONE",
+            "kicking_team": 255,
+            "stopped": false,
+            "remaining": 142,
+            "secondary": 0
+          },
+          "commands": [
+            {
+              "kind": "velocity_body",
+              "velocity": [
+                0.0,
+                0.0,
+                2.0
+              ],
+              "accepted": false
+            }
+          ]
+        }
+      },
+      {
+        "match": "/home/ubuntu/repos/booster-studio-s2/match-results/scoring-v11/batch-03/match-05",
+        "event": {
+          "eventId": "batch-03-match-05:75",
+          "sequence": 75,
+          "wallTime": 1795096342.2880778,
+          "simTime": 221.06000000032742,
+          "timing": {
+            "timeRemaining": 415.7519999996777,
+            "primaryTime": 415.7519999996777,
+            "stage": "regulation",
+            "extraTimeElapsedSeconds": 0.0
+          },
+          "source": "auto_referee",
+          "severity": "penalty",
+          "type": "penalty",
+          "message": {
+            "key": "event.penalty",
+            "fallback": "penalty"
+          },
+          "actor": {
+            "side": "home",
+            "robotName": "robot3",
+            "playerNumber": 3
+          },
+          "game": {
+            "phase": "firstHalf",
+            "state": "playing",
+            "setPlay": "throwIn",
+            "kickingSide": "away",
+            "droppedBall": false,
+            "stopped": false,
+            "secondaryTime": 42.69999999998902
+          },
+          "score": {
+            "home": 0,
+            "away": 1
+          },
+          "evidence": {
+            "ruleId": "illegalPosition",
+            "subRuleId": "free_kick_avoidance_radius",
+            "ruleName": "Illegal position",
+            "summary": "Non-kicking-side robot is too close to the restart ball at the moment of the kick.",
+            "measurements": [
+              {
+                "name": "distanceToBall",
+                "value": 1.0802835034725145,
+                "unit": "m",
+                "threshold": 1.45,
+                "operator": ">="
+              }
+            ],
+            "positions": {
+              "robot": [
+                4.590363731939399,
+                3.6441108357339034,
+                0.5328391669532322
+              ]
+            }
+          },
+          "outcome": {
+            "reason": "illegalPosition",
+            "penalty": "illegalPosition",
+            "seconds": 30.0,
+            "discipline": {
+              "warning": false,
+              "caution": false,
+              "sentOff": false
+            }
+          },
+          "_done": true
+        },
+        "latest": {
+          "wall": 1795096342.2723403,
+          "action": "opp_set:retreat",
+          "pose": [
+            4.590363731939399,
+            3.6441108357339034,
+            1.998499591754806
+          ],
+          "ball": [
+            5.3088526630027975,
+            4.450823984141827
+          ],
+          "game": {
+            "state": "PLAYING",
+            "set_play": "THROW_IN",
+            "kicking_team": 2,
+            "stopped": false,
+            "remaining": 417,
+            "secondary": 43
+          },
+          "commands": [
+            {
+              "kind": "velocity_body",
+              "velocity": [
+                -0.30271828217896574,
+                0.6861935890363711,
+                0.0
+              ],
+              "accepted": true
+            }
+          ]
+        },
+        "last_active": {
+          "wall": 1795096342.2723403,
+          "action": "opp_set:retreat",
+          "pose": [
+            4.590363731939399,
+            3.6441108357339034,
+            1.998499591754806
+          ],
+          "ball": [
+            5.3088526630027975,
+            4.450823984141827
+          ],
+          "game": {
+            "state": "PLAYING",
+            "set_play": "THROW_IN",
+            "kicking_team": 2,
+            "stopped": false,
+            "remaining": 417,
+            "secondary": 43
+          },
+          "commands": [
+            {
+              "kind": "velocity_body",
+              "velocity": [
+                -0.30271828217896574,
+                0.6861935890363711,
+                0.0
+              ],
+              "accepted": true
+            }
+          ]
+        }
+      }
+    ],
+    "matches": [
+      {
+        "match": "/home/ubuntu/repos/booster-studio-s2/match-results/scoring-v11/batch-02/match-01",
+        "counts": {
+          "ticks": 23345,
+          "normal_ticks": 12285,
+          "support": 12272,
+          "attacker_switches": 24
+        },
+        "longest_near_ball_support_no_quarter_m_progress_wall_s": 6.7502121925354
+      },
+      {
+        "match": "/home/ubuntu/repos/booster-studio-s2/match-results/scoring-v11/batch-02/match-02",
+        "counts": {
+          "ticks": 22241,
+          "normal_ticks": 12055,
+          "support": 12055,
+          "attacker_switches": 20
+        },
+        "longest_near_ball_support_no_quarter_m_progress_wall_s": 11.835062503814697
+      },
+      {
+        "match": "/home/ubuntu/repos/booster-studio-s2/match-results/scoring-v11/batch-02/match-03",
+        "counts": {
+          "ticks": 22717,
+          "normal_ticks": 12159,
+          "support": 12157,
+          "attacker_switches": 19
+        },
+        "longest_near_ball_support_no_quarter_m_progress_wall_s": 8.999064445495605
+      },
+      {
+        "match": "/home/ubuntu/repos/booster-studio-s2/match-results/scoring-v11/batch-02/match-04",
+        "counts": {
+          "ticks": 23032,
+          "normal_ticks": 10761,
+          "support": 10746,
+          "attacker_switches": 16
+        },
+        "longest_near_ball_support_no_quarter_m_progress_wall_s": 6.309179306030273
+      },
+      {
+        "match": "/home/ubuntu/repos/booster-studio-s2/match-results/scoring-v11/batch-02/match-05",
+        "counts": {
+          "ticks": 22434,
+          "normal_ticks": 13649,
+          "support": 12477,
+          "attacker_switches": 17
+        },
+        "longest_near_ball_support_no_quarter_m_progress_wall_s": 7.662041425704956
+      },
+      {
+        "match": "/home/ubuntu/repos/booster-studio-s2/match-results/scoring-v11/batch-02/match-06",
+        "counts": {
+          "ticks": 22562,
+          "normal_ticks": 9259,
+          "support": 8975,
+          "attacker_switches": 17
+        },
+        "longest_near_ball_support_no_quarter_m_progress_wall_s": 8.543967247009277
+      },
+      {
+        "match": "/home/ubuntu/repos/booster-studio-s2/match-results/scoring-v11/batch-02/match-07",
+        "counts": {
+          "ticks": 22774,
+          "normal_ticks": 9337,
+          "support": 9333,
+          "attacker_switches": 16
+        },
+        "longest_near_ball_support_no_quarter_m_progress_wall_s": 10.310895204544067
+      },
+      {
+        "match": "/home/ubuntu/repos/booster-studio-s2/match-results/scoring-v11/batch-02/match-08",
+        "counts": {
+          "ticks": 22840,
+          "normal_ticks": 12303,
+          "support": 11679,
+          "attacker_switches": 15
+        },
+        "longest_near_ball_support_no_quarter_m_progress_wall_s": 5.8727405071258545
+      },
+      {
+        "match": "/home/ubuntu/repos/booster-studio-s2/match-results/scoring-v11/batch-03/match-01",
+        "counts": {
+          "ticks": 24599,
+          "normal_ticks": 12432,
+          "support": 10865,
+          "attacker_switches": 26
+        },
+        "longest_near_ball_support_no_quarter_m_progress_wall_s": 14.897440671920776
+      },
+      {
+        "match": "/home/ubuntu/repos/booster-studio-s2/match-results/scoring-v11/batch-03/match-02",
+        "counts": {
+          "ticks": 23476,
+          "normal_ticks": 12916,
+          "support": 10795,
+          "attacker_switches": 20
+        },
+        "longest_near_ball_support_no_quarter_m_progress_wall_s": 13.492120742797852
+      },
+      {
+        "match": "/home/ubuntu/repos/booster-studio-s2/match-results/scoring-v11/batch-03/match-03",
+        "counts": {
+          "ticks": 23380,
+          "normal_ticks": 11862,
+          "support": 11862,
+          "attacker_switches": 18
+        },
+        "longest_near_ball_support_no_quarter_m_progress_wall_s": 8.980289936065674
+      },
+      {
+        "match": "/home/ubuntu/repos/booster-studio-s2/match-results/scoring-v11/batch-03/match-04",
+        "counts": {
+          "ticks": 24394,
+          "normal_ticks": 11074,
+          "support": 10828,
+          "attacker_switches": 16
+        },
+        "longest_near_ball_support_no_quarter_m_progress_wall_s": 11.815215110778809
+      },
+      {
+        "match": "/home/ubuntu/repos/booster-studio-s2/match-results/scoring-v11/batch-03/match-05",
+        "counts": {
+          "ticks": 23557,
+          "normal_ticks": 11173,
+          "support": 10549,
+          "attacker_switches": 14
+        },
+        "longest_near_ball_support_no_quarter_m_progress_wall_s": 7.976795196533203
+      },
+      {
+        "match": "/home/ubuntu/repos/booster-studio-s2/match-results/scoring-v11/batch-03/match-06",
+        "counts": {
+          "ticks": 22682,
+          "normal_ticks": 13817,
+          "support": 13547,
+          "attacker_switches": 24
+        },
+        "longest_near_ball_support_no_quarter_m_progress_wall_s": 6.6169421672821045
+      },
+      {
+        "match": "/home/ubuntu/repos/booster-studio-s2/match-results/scoring-v11/batch-03/match-07",
+        "counts": {
+          "ticks": 21843,
+          "normal_ticks": 10569,
+          "support": 10537,
+          "attacker_switches": 15
+        },
+        "longest_near_ball_support_no_quarter_m_progress_wall_s": 15.110589265823364
+      },
+      {
+        "match": "/home/ubuntu/repos/booster-studio-s2/match-results/scoring-v11/batch-03/match-08",
+        "counts": {
+          "ticks": 21415,
+          "normal_ticks": 11238,
+          "support": 11238,
+          "attacker_switches": 27
+        },
+        "longest_near_ball_support_no_quarter_m_progress_wall_s": 6.428472518920898
+      }
+    ]
+  },
+  "v12": {
+    "counts": {
+      "ticks": 381584,
+      "normal_ticks": 189343,
+      "support:rebound": 174130,
+      "attacker_switches": 289,
+      "support:escape": 6222,
+      "escape_entries": 89,
+      "support": 2196
+    },
+    "median_normal_support_ball_gap": 3.171541311982255,
+    "longest_near_ball_support_no_quarter_m_progress_wall_s": 7.9841203689575195,
+    "sdk_call_errors": [
+      {
+        "match": "/home/ubuntu/repos/booster-studio-s2-roamers-v6/match-results/rebound-v12/batch-01/match-07",
+        "event": {
+          "type": "native_stop_error",
+          "wall": 1795102250.6690497,
+          "now": 74868.002859485,
+          "robot": 2,
+          "thread": "soccer_runtime",
+          "reason": "recovering/stop/release_kick",
+          "pose": [
+            -2.804596839474591,
+            -0.30909509517824835,
+            -1.0116742648016857
+          ],
+          "ball": [
+            -2.5767714321838135,
+            -1.453926423418454
+          ],
+          "action": "recovering",
+          "error": "RuntimeError('API call failed, code = 400')"
+        }
+      },
+      {
+        "match": "/home/ubuntu/repos/booster-studio-s2-roamers-v6/match-results/rebound-v12/batch-01/match-08",
+        "event": {
+          "type": "native_stop_error",
+          "wall": 1795101521.016586,
+          "now": 74138.356021679,
+          "robot": 3,
+          "thread": "soccer_runtime",
+          "reason": "recovering/stop/release_kick",
+          "pose": [
+            -2.4009058644038688,
+            -4.308500852879094,
+            -0.6857134863410028
+          ],
+          "ball": [
+            -0.647595348692675,
+            -4.45
+          ],
+          "action": "recovering",
+          "error": "RuntimeError('API call failed, code = 400')"
+        }
+      },
+      {
+        "match": "/home/ubuntu/repos/booster-studio-s2-roamers-v6/match-results/rebound-v12/batch-01/match-08",
+        "event": {
+          "type": "native_stop_error",
+          "wall": 1795102119.0431921,
+          "now": 74736.388402369,
+          "robot": 2,
+          "thread": "soccer_runtime",
+          "reason": "stopped/stop/release_kick",
+          "pose": [
+            -6.0947278103419045,
+            -1.6153954228476313,
+            0.06263232142699016
+          ],
+          "ball": [
+            -7.1840209760293545,
+            -3.159961833701422
+          ],
+          "action": "stopped",
+          "error": "RuntimeError('API call failed, code = 400')"
+        }
+      },
+      {
+        "match": "/home/ubuntu/repos/booster-studio-s2-roamers-v6/match-results/rebound-v12/batch-02/match-04",
+        "event": {
+          "type": "native_stop_error",
+          "wall": 1795103345.4250221,
+          "now": 75962.771217408,
+          "robot": 3,
+          "thread": "soccer_runtime",
+          "reason": "recovering/stop/release_kick",
+          "pose": [
+            -7.409624544689499,
+            4.176975755075053,
+            0.44448652385113707
+          ],
+          "ball": [
+            -4.935987362939232,
+            4.45
+          ],
+          "action": "recovering",
+          "error": "RuntimeError('API call failed, code = 400')"
+        }
+      },
+      {
+        "match": "/home/ubuntu/repos/booster-studio-s2-roamers-v6/match-results/rebound-v12/batch-02/match-04",
+        "event": {
+          "type": "native_stop_error",
+          "wall": 1795103355.8705106,
+          "now": 75973.21418246,
+          "robot": 3,
+          "thread": "soccer_runtime",
+          "reason": "recovering/stop/release_kick",
+          "pose": [
+            -7.524733308805099,
+            4.2825993697716775,
+            0.09927294507113649
+          ],
+          "ball": [
+            -4.935987362939232,
+            4.45
+          ],
+          "action": "recovering",
+          "error": "RuntimeError('API call failed, code = 400')"
+        }
+      },
+      {
+        "match": "/home/ubuntu/repos/booster-studio-s2-roamers-v6/match-results/rebound-v12/batch-02/match-04",
+        "event": {
+          "type": "native_stop_error",
+          "wall": 1795103366.249567,
+          "now": 75983.595962234,
+          "robot": 3,
+          "thread": "soccer_runtime",
+          "reason": "recovering/stop/release_kick",
+          "pose": [
+            -7.626355167921894,
+            4.398711390595181,
+            0.05200944875673752
+          ],
+          "ball": [
+            -4.935987362939232,
+            4.45
+          ],
+          "action": "recovering",
+          "error": "RuntimeError('API call failed, code = 400')"
+        }
+      },
+      {
+        "match": "/home/ubuntu/repos/booster-studio-s2-roamers-v6/match-results/rebound-v12/batch-02/match-04",
+        "event": {
+          "type": "native_stop_error",
+          "wall": 1795103376.5663521,
+          "now": 75993.911465561,
+          "robot": 3,
+          "thread": "soccer_runtime",
+          "reason": "recovering/stop/release_kick",
+          "pose": [
+            -7.717376776494718,
+            4.523407172037445,
+            -0.0313503542963538
+          ],
+          "ball": [
+            -4.935987362939232,
+            4.45
+          ],
+          "action": "recovering",
+          "error": "RuntimeError('API call failed, code = 400')"
+        }
+      },
+      {
+        "match": "/home/ubuntu/repos/booster-studio-s2-roamers-v6/match-results/rebound-v12/batch-02/match-04",
+        "event": {
+          "type": "native_stop_error",
+          "wall": 1795103559.300005,
+          "now": 76176.64472005,
+          "robot": 3,
+          "thread": "soccer_runtime",
+          "reason": "recovering/stop/release_kick",
+          "pose": [
+            -5.912595597306401,
+            -1.8004407863570007,
+            0.489379015668991
+          ],
+          "ball": [
+            -6.608449598312841,
+            -2.24731789995912
+          ],
+          "action": "recovering",
+          "error": "RuntimeError('API call failed, code = 400')"
+        }
+      }
+    ],
+    "incidents": [
+      {
+        "match": "/home/ubuntu/repos/booster-studio-s2-roamers-v6/match-results/rebound-v12/batch-01/match-04",
+        "event": {
+          "eventId": "batch-01-match-04:149",
+          "sequence": 149,
+          "wallTime": 1795100266.4195578,
+          "simTime": 522.4500000014694,
+          "timing": {
+            "timeRemaining": 124.33999999852051,
+            "primaryTime": 124.33999999852051,
+            "stage": "regulation",
+            "extraTimeElapsedSeconds": 0.0
+          },
+          "source": "auto_referee",
+          "severity": "penalty",
+          "type": "penalty",
+          "message": {
+            "key": "event.penalty",
+            "fallback": "penalty"
+          },
+          "actor": {
+            "side": "away",
+            "robotName": "robot6",
+            "playerNumber": 3
+          },
+          "game": {
+            "phase": "firstHalf",
+            "state": "playing",
+            "setPlay": "goalKick",
+            "kickingSide": "home",
+            "droppedBall": false,
+            "stopped": false,
+            "secondaryTime": 44.960000000000946
+          },
+          "score": {
+            "home": 3,
+            "away": 0
+          },
+          "evidence": {
+            "ruleId": "defender_set_play_interference",
+            "subRuleId": "defender_touched_before_kick",
+            "ruleName": "Defender set play interference",
+            "summary": "Defender away:3 touched the ball before the kicking side, interfering with the goalKick.",
+            "measurements": [],
+            "positions": {
+              "robot": [
+                -6.00869952925809,
+                -2.0010768789838314,
+                0.12078935424796612
+              ]
+            }
+          },
+          "outcome": {
+            "reason": "defender_set_play_interference",
+            "penalty": "illegalPosition",
+            "seconds": 30.0,
+            "discipline": {
+              "warning": false,
+              "caution": false,
+              "sentOff": false
+            }
+          },
+          "_done": true
+        },
+        "latest": {
+          "wall": 1795100266.410973,
+          "action": "stopped",
+          "pose": [
+            5.784626998286941,
+            1.9505420001034717,
+            1.3200656832751223
+          ],
+          "ball": [
+            6.00227067468884,
+            2.003546802176164
+          ],
+          "game": {
+            "state": "PLAYING",
+            "set_play": "GOAL_KICK",
+            "kicking_team": 1,
+            "stopped": true,
+            "remaining": 125,
+            "secondary": 45
+          },
+          "commands": [
+            {
+              "kind": "velocity_body",
+              "velocity": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "accepted": true
+            }
+          ]
+        },
+        "last_active": {
+          "wall": 1795100266.410973,
+          "action": "stopped",
+          "pose": [
+            5.784626998286941,
+            1.9505420001034717,
+            1.3200656832751223
+          ],
+          "ball": [
+            6.00227067468884,
+            2.003546802176164
+          ],
+          "game": {
+            "state": "PLAYING",
+            "set_play": "GOAL_KICK",
+            "kicking_team": 1,
+            "stopped": true,
+            "remaining": 125,
+            "secondary": 45
+          },
+          "commands": [
+            {
+              "kind": "velocity_body",
+              "velocity": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "accepted": true
+            }
+          ]
+        }
+      },
+      {
+        "match": "/home/ubuntu/repos/booster-studio-s2-roamers-v6/match-results/rebound-v12/batch-01/match-08",
+        "event": {
+          "eventId": "batch-01-match-08:26",
+          "sequence": 26,
+          "wallTime": 1795101532.5754607,
+          "simTime": 67.35400000002443,
+          "timing": {
+            "timeRemaining": 558.0140000000024,
+            "primaryTime": 558.0140000000024,
+            "stage": "regulation",
+            "extraTimeElapsedSeconds": 0.0
+          },
+          "source": "auto_referee",
+          "severity": "penalty",
+          "type": "penalty",
+          "message": {
+            "key": "event.penalty",
+            "fallback": "penalty"
+          },
+          "actor": {
+            "side": "away",
+            "robotName": "robot6",
+            "playerNumber": 3
+          },
+          "game": {
+            "phase": "firstHalf",
+            "state": "playing",
+            "setPlay": "throwIn",
+            "kickingSide": "away",
+            "droppedBall": false,
+            "stopped": false,
+            "secondaryTime": 18.407999999979424
+          },
+          "score": {
+            "home": 0,
+            "away": 0
+          },
+          "evidence": {
+            "ruleId": "fallenRobot",
+            "ruleName": "Fallen robot",
+            "summary": "Robot remained fallen beyond the allowed duration.",
+            "measurements": [
+              {
+                "name": "upDot",
+                "value": 0.5753089017285611,
+                "threshold": 0.45,
+                "operator": "<="
+              },
+              {
+                "name": "height",
+                "value": 0.12546765108967167,
+                "unit": "m",
+                "threshold": 0.25,
+                "operator": "<="
+              },
+              {
+                "name": "fallenDuration",
+                "value": 10016.000000000298,
+                "unit": "ms",
+                "threshold": 10000.0,
+                "operator": ">="
+              }
+            ],
+            "positions": {
+              "robot": [
+                2.451901142796977,
+                4.215888728906306,
+                0.12546765108967167
+              ],
+              "reference": [
+                4.507930726490503,
+                2.0945294789081985,
+                0.5374118139604803
+              ]
+            }
+          },
+          "outcome": {
+            "reason": "fallenRobot",
+            "penalty": "incapableRobot",
+            "seconds": 30.0,
+            "discipline": {
+              "warning": false,
+              "caution": false,
+              "sentOff": false
+            }
+          },
+          "_done": true
+        },
+        "latest": {
+          "wall": 1795101532.559789,
+          "action": "recovering",
+          "pose": [
+            -2.451899026674202,
+            -4.2158731320504055,
+            0.12813146935502173
+          ],
+          "ball": [
+            -0.647595348692675,
+            -4.45
+          ],
+          "game": {
+            "state": "PLAYING",
+            "set_play": "THROW_IN",
+            "kicking_team": 2,
+            "stopped": false,
+            "remaining": 559,
+            "secondary": 19
+          },
+          "commands": [
+            {
+              "kind": "velocity_body",
+              "velocity": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "accepted": false
+            }
+          ]
+        },
+        "last_active": {
+          "wall": 1795101520.9723217,
+          "action": "restart:short_pass",
+          "pose": [
+            -2.395234439025961,
+            -4.307673710801076,
+            -0.7247267584388553
+          ],
+          "ball": [
+            -0.647595348692675,
+            -4.45
+          ],
+          "game": {
+            "state": "PLAYING",
+            "set_play": "THROW_IN",
+            "kicking_team": 2,
+            "stopped": false,
+            "remaining": 569,
+            "secondary": 29
+          },
+          "commands": [
+            {
+              "kind": "kick_body",
+              "direction": 2.295523085233752,
+              "power": 1.5,
+              "ball": [
+                1.4027759601134693,
+                1.0520070191713669
+              ],
+              "mode": "walk"
+            }
+          ]
+        }
+      },
+      {
+        "match": "/home/ubuntu/repos/booster-studio-s2-roamers-v6/match-results/rebound-v12/batch-02/match-04",
+        "event": {
+          "eventId": "batch-02-match-04:57",
+          "sequence": 57,
+          "wallTime": 1795103475.0087,
+          "simTime": 228.6400000003636,
+          "timing": {
+            "timeRemaining": 411.3339999996356,
+            "primaryTime": 411.3339999996356,
+            "stage": "regulation",
+            "extraTimeElapsedSeconds": 0.0
+          },
+          "source": "auto_referee",
+          "severity": "penalty",
+          "type": "penalty",
+          "message": {
+            "key": "event.penalty",
+            "fallback": "penalty"
+          },
+          "actor": {
+            "side": "away",
+            "robotName": "robot6",
+            "playerNumber": 3
+          },
+          "game": {
+            "phase": "firstHalf",
+            "state": "set",
+            "setPlay": "kickOff",
+            "kickingSide": "away",
+            "droppedBall": false,
+            "stopped": false,
+            "secondaryTime": 0
+          },
+          "score": {
+            "home": 1,
+            "away": 0
+          },
+          "evidence": {
+            "ruleId": "illegalPosition",
+            "subRuleId": "field_boundary",
+            "ruleName": "Illegal position",
+            "summary": "Robot position is outside the field boundary tolerance.",
+            "measurements": [
+              {
+                "name": "absX",
+                "value": 7.718154048637288,
+                "unit": "m",
+                "threshold": 7.05,
+                "operator": "<="
+              },
+              {
+                "name": "absY",
+                "value": 5.096581936020463,
+                "unit": "m",
+                "threshold": 5.5,
+                "operator": "<="
+              }
+            ],
+            "positions": {
+              "robot": [
+                7.718154048637288,
+                -5.096581936020463,
+                0.5270662596933663
+              ]
+            }
+          },
+          "outcome": {
+            "reason": "illegalPosition",
+            "penalty": "illegalPosition",
+            "seconds": 30.0,
+            "discipline": {
+              "warning": false,
+              "caution": false,
+              "sentOff": false
+            }
+          },
+          "_done": true
+        },
+        "latest": {
+          "wall": 1795103474.9927146,
+          "action": "ready",
+          "pose": [
+            -7.718154048637288,
+            5.096581936020463,
+            2.2585899451318143
+          ],
+          "ball": [
+            -6.926029933638589,
+            0.8071010170895919
+          ],
+          "game": {
+            "state": "READY",
+            "set_play": "NONE",
+            "kicking_team": 2,
+            "stopped": false,
+            "remaining": 412,
+            "secondary": 19
+          },
+          "commands": [
+            {
+              "kind": "velocity_body",
+              "velocity": [
+                0.0,
+                0.0,
+                -2.0
+              ],
+              "accepted": true
+            }
+          ]
+        },
+        "last_active": {
+          "wall": 1795103474.9927146,
+          "action": "ready",
+          "pose": [
+            -7.718154048637288,
+            5.096581936020463,
+            2.2585899451318143
+          ],
+          "ball": [
+            -6.926029933638589,
+            0.8071010170895919
+          ],
+          "game": {
+            "state": "READY",
+            "set_play": "NONE",
+            "kicking_team": 2,
+            "stopped": false,
+            "remaining": 412,
+            "secondary": 19
+          },
+          "commands": [
+            {
+              "kind": "velocity_body",
+              "velocity": [
+                0.0,
+                0.0,
+                -2.0
+              ],
+              "accepted": true
+            }
+          ]
+        }
+      }
+    ],
+    "matches": [
+      {
+        "match": "/home/ubuntu/repos/booster-studio-s2-roamers-v6/match-results/rebound-v12/batch-01/match-01",
+        "counts": {
+          "ticks": 23724,
+          "normal_ticks": 11933,
+          "support:rebound": 11784,
+          "attacker_switches": 18,
+          "support:escape": 149,
+          "escape_entries": 2
+        },
+        "longest_near_ball_support_no_quarter_m_progress_wall_s": 5.141896486282349
+      },
+      {
+        "match": "/home/ubuntu/repos/booster-studio-s2-roamers-v6/match-results/rebound-v12/batch-01/match-02",
+        "counts": {
+          "ticks": 23380,
+          "normal_ticks": 10099,
+          "support:rebound": 9650,
+          "attacker_switches": 23,
+          "support": 145,
+          "support:escape": 124,
+          "escape_entries": 3
+        },
+        "longest_near_ball_support_no_quarter_m_progress_wall_s": 4.502338886260986
+      },
+      {
+        "match": "/home/ubuntu/repos/booster-studio-s2-roamers-v6/match-results/rebound-v12/batch-01/match-03",
+        "counts": {
+          "ticks": 23039,
+          "normal_ticks": 11369,
+          "support:rebound": 10921,
+          "attacker_switches": 18,
+          "support:escape": 448,
+          "escape_entries": 6
+        },
+        "longest_near_ball_support_no_quarter_m_progress_wall_s": 6.314637660980225
+      },
+      {
+        "match": "/home/ubuntu/repos/booster-studio-s2-roamers-v6/match-results/rebound-v12/batch-01/match-04",
+        "counts": {
+          "ticks": 23081,
+          "normal_ticks": 11065,
+          "support:rebound": 9490,
+          "support:escape": 402,
+          "escape_entries": 7,
+          "support": 169,
+          "attacker_switches": 7
+        },
+        "longest_near_ball_support_no_quarter_m_progress_wall_s": 5.310815095901489
+      },
+      {
+        "match": "/home/ubuntu/repos/booster-studio-s2-roamers-v6/match-results/rebound-v12/batch-01/match-05",
+        "counts": {
+          "ticks": 26084,
+          "normal_ticks": 12025,
+          "support:rebound": 11565,
+          "attacker_switches": 16,
+          "support:escape": 460,
+          "escape_entries": 8
+        },
+        "longest_near_ball_support_no_quarter_m_progress_wall_s": 5.681482553482056
+      },
+      {
+        "match": "/home/ubuntu/repos/booster-studio-s2-roamers-v6/match-results/rebound-v12/batch-01/match-06",
+        "counts": {
+          "ticks": 25841,
+          "normal_ticks": 15363,
+          "support:rebound": 14297,
+          "attacker_switches": 21,
+          "support:escape": 1041,
+          "escape_entries": 13,
+          "support": 24
+        },
+        "longest_near_ball_support_no_quarter_m_progress_wall_s": 7.2620689868927
+      },
+      {
+        "match": "/home/ubuntu/repos/booster-studio-s2-roamers-v6/match-results/rebound-v12/batch-01/match-07",
+        "counts": {
+          "ticks": 23726,
+          "normal_ticks": 10423,
+          "support:rebound": 8707,
+          "attacker_switches": 14,
+          "support": 600,
+          "support:escape": 4,
+          "escape_entries": 1
+        },
+        "longest_near_ball_support_no_quarter_m_progress_wall_s": 3.02873158454895
+      },
+      {
+        "match": "/home/ubuntu/repos/booster-studio-s2-roamers-v6/match-results/rebound-v12/batch-01/match-08",
+        "counts": {
+          "ticks": 23904,
+          "normal_ticks": 10940,
+          "support:rebound": 9099,
+          "attacker_switches": 13,
+          "support": 656,
+          "support:escape": 521,
+          "escape_entries": 8
+        },
+        "longest_near_ball_support_no_quarter_m_progress_wall_s": 7.231462240219116
+      },
+      {
+        "match": "/home/ubuntu/repos/booster-studio-s2-roamers-v6/match-results/rebound-v12/batch-02/match-01",
+        "counts": {
+          "ticks": 24546,
+          "normal_ticks": 11852,
+          "support:rebound": 11367,
+          "attacker_switches": 20,
+          "support:escape": 446,
+          "escape_entries": 5,
+          "support": 30
+        },
+        "longest_near_ball_support_no_quarter_m_progress_wall_s": 6.330279350280762
+      },
+      {
+        "match": "/home/ubuntu/repos/booster-studio-s2-roamers-v6/match-results/rebound-v12/batch-02/match-02",
+        "counts": {
+          "ticks": 22637,
+          "normal_ticks": 11086,
+          "support:rebound": 11013,
+          "support:escape": 51,
+          "escape_entries": 3,
+          "attacker_switches": 21,
+          "support": 18
+        },
+        "longest_near_ball_support_no_quarter_m_progress_wall_s": 3.5805883407592773
+      },
+      {
+        "match": "/home/ubuntu/repos/booster-studio-s2-roamers-v6/match-results/rebound-v12/batch-02/match-03",
+        "counts": {
+          "ticks": 19698,
+          "normal_ticks": 10908,
+          "support:rebound": 10908,
+          "attacker_switches": 22
+        },
+        "longest_near_ball_support_no_quarter_m_progress_wall_s": 2.749850273132324
+      },
+      {
+        "match": "/home/ubuntu/repos/booster-studio-s2-roamers-v6/match-results/rebound-v12/batch-02/match-04",
+        "counts": {
+          "ticks": 23219,
+          "normal_ticks": 13510,
+          "support:rebound": 9768,
+          "attacker_switches": 12,
+          "support:escape": 361,
+          "escape_entries": 6
+        },
+        "longest_near_ball_support_no_quarter_m_progress_wall_s": 6.139636278152466
+      },
+      {
+        "match": "/home/ubuntu/repos/booster-studio-s2-roamers-v6/match-results/rebound-v12/batch-02/match-05",
+        "counts": {
+          "ticks": 25124,
+          "normal_ticks": 11494,
+          "support:rebound": 10190,
+          "attacker_switches": 13,
+          "support:escape": 721,
+          "escape_entries": 9,
+          "support": 394
+        },
+        "longest_near_ball_support_no_quarter_m_progress_wall_s": 6.497753381729126
+      },
+      {
+        "match": "/home/ubuntu/repos/booster-studio-s2-roamers-v6/match-results/rebound-v12/batch-02/match-06",
+        "counts": {
+          "ticks": 25466,
+          "normal_ticks": 14108,
+          "support:rebound": 13706,
+          "support:escape": 269,
+          "escape_entries": 6,
+          "support": 92,
+          "attacker_switches": 25
+        },
+        "longest_near_ball_support_no_quarter_m_progress_wall_s": 4.454043388366699
+      },
+      {
+        "match": "/home/ubuntu/repos/booster-studio-s2-roamers-v6/match-results/rebound-v12/batch-02/match-07",
+        "counts": {
+          "ticks": 26670,
+          "normal_ticks": 13425,
+          "support:rebound": 12421,
+          "attacker_switches": 23,
+          "support:escape": 1004,
+          "escape_entries": 9
+        },
+        "longest_near_ball_support_no_quarter_m_progress_wall_s": 7.9841203689575195
+      },
+      {
+        "match": "/home/ubuntu/repos/booster-studio-s2-roamers-v6/match-results/rebound-v12/batch-02/match-08",
+        "counts": {
+          "ticks": 21445,
+          "normal_ticks": 9743,
+          "support:rebound": 9244,
+          "attacker_switches": 23,
+          "support:escape": 221,
+          "escape_entries": 3,
+          "support": 68
+        },
+        "longest_near_ball_support_no_quarter_m_progress_wall_s": 4.711108684539795
+      }
+    ]
+  }
+}

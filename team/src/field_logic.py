@@ -8,6 +8,7 @@ from .field_player import Player
 from .field_utils import angle_to, clamp_inside_field, dist, opponent_goal, own_goal
 from . import throw_in
 from . import opponent_exit
+from . import rebound_support
 
 class Phase(Enum):
     """Top-level match phase controlling normal play, restarts, and stops."""
@@ -138,7 +139,8 @@ def _act_normal(context: Context, players: list[Player], store) -> None:
     # All other players support.
     for p in rest:
         p.action = "support"
-        p.support()
+        if not rebound_support.handle(context, p, attacker):
+            p.support()
 
 def _act_our_kickoff(context: Context, players: list[Player], store) -> None:
     """Lock the nearest kickoff taker, assign a guard, and leave others in support."""
