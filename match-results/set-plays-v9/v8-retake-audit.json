@@ -1,0 +1,234 @@
+[
+  {
+    "match": "match-03",
+    "sim_time": 41.28400000000449,
+    "player": 2,
+    "classification": "ineffective endline exit into post corridor",
+    "phase": {
+      "state": "PLAYING",
+      "set_play": "GOAL_KICK",
+      "kicking_team": 2,
+      "stopped": false,
+      "remaining": 582,
+      "secondary": 41
+    },
+    "action": "opp_set:retreat",
+    "pose": [
+      7.161828585534541,
+      1.7254352588385877,
+      2.92589866050309
+    ],
+    "ball": [
+      6.0,
+      2.0
+    ],
+    "distance": 1.1938305823081534,
+    "calls": [
+      {
+        "method": "walk_to",
+        "args": [
+          [
+            6.98476116761889,
+            1.2578380716008066
+          ]
+        ],
+        "kwargs": {
+          "face": 2.909528994135235
+        }
+      },
+      {
+        "method": "release_kick",
+        "args": [],
+        "kwargs": {}
+      }
+    ],
+    "commands": [
+      {
+        "kind": "velocity_body",
+        "velocity": [
+          0.10933013664943672,
+          0.7419884912990335,
+          -0.03273933273571039
+        ],
+        "accepted": true
+      }
+    ],
+    "native_active": false,
+    "world_velocity": [
+      -0.2656011268734759,
+      -0.7013957808566718
+    ],
+    "initial_commanded_radial_speed": -0.0971699269965834
+  },
+  {
+    "match": "match-05",
+    "sim_time": 62.22400000003008,
+    "player": 2,
+    "classification": "ineffective endline exit into post corridor",
+    "phase": {
+      "state": "PLAYING",
+      "set_play": "GOAL_KICK",
+      "kicking_team": 2,
+      "stopped": false,
+      "remaining": 562,
+      "secondary": 22
+    },
+    "action": "opp_set:retreat",
+    "pose": [
+      7.101027996437436,
+      1.5072479573745092,
+      2.7708129466575513
+    ],
+    "ball": [
+      6.0,
+      2.0
+    ],
+    "distance": 1.2062616732909273,
+    "calls": [
+      {
+        "method": "walk_to",
+        "args": [
+          [
+            6.915146188422803,
+            1.0430842433153305
+          ]
+        ],
+        "kwargs": {
+          "face": 2.7207878813705335
+        }
+      },
+      {
+        "method": "release_kick",
+        "args": [],
+        "kwargs": {}
+      }
+    ],
+    "commands": [
+      {
+        "kind": "velocity_body",
+        "velocity": [
+          0.0075961482144821235,
+          0.749961531368312,
+          -0.10005013057403556
+        ],
+        "accepted": true
+      }
+    ],
+    "native_active": false,
+    "world_velocity": [
+      -0.2788227120219497,
+      -0.6962455710887682
+    ],
+    "initial_commanded_radial_speed": 0.02991458333059335
+  },
+  {
+    "match": "match-05",
+    "sim_time": 65.63200000002844,
+    "player": 3,
+    "classification": "insufficient waiting margin plus late legal opportunity after stopped retake",
+    "phase": {
+      "state": "PLAYING",
+      "set_play": "GOAL_KICK",
+      "kicking_team": 2,
+      "stopped": false,
+      "remaining": 562,
+      "secondary": 45
+    },
+    "action": "opp_set:retreat",
+    "pose": [
+      4.394121109335122,
+      1.8830866175894445,
+      -0.028464064068436455
+    ],
+    "ball": [
+      5.818389431617975,
+      1.980135063097749
+    ],
+    "distance": 1.427570893032634,
+    "calls": [
+      {
+        "method": "walk_to",
+        "args": [
+          [
+            4.172206574264784,
+            1.8679655478251773
+          ]
+        ],
+        "kwargs": {
+          "face": 0.06803399623445648
+        }
+      },
+      {
+        "method": "release_kick",
+        "args": [],
+        "kwargs": {}
+      }
+    ],
+    "commands": [
+      {
+        "kind": "velocity_body",
+        "velocity": [
+          -0.3320914413805114,
+          -0.032146021853239524,
+          0.19299612060578586
+        ],
+        "accepted": true
+      }
+    ],
+    "native_active": false,
+    "world_velocity": [
+      -0.33287180260550603,
+      -0.02268160464640079
+    ],
+    "initial_commanded_radial_speed": 0.3336436604510486
+  },
+  {
+    "match": "match-07",
+    "sim_time": 285.61400000063566,
+    "player": 3,
+    "classification": "unavailable: recovery filter, not dispatched to opponent exit",
+    "phase": {
+      "state": "PLAYING",
+      "set_play": "THROW_IN",
+      "kicking_team": 2,
+      "stopped": false,
+      "remaining": 349,
+      "secondary": 38
+    },
+    "action": "recovering",
+    "pose": [
+      0.2858526861267606,
+      4.428612643620567,
+      -0.09727370798407223
+    ],
+    "ball": [
+      -0.48360780151025484,
+      4.4183193270534895
+    ],
+    "distance": 0.7695293330345139,
+    "calls": [
+      {
+        "method": "stop",
+        "args": [],
+        "kwargs": {}
+      },
+      {
+        "method": "release_kick",
+        "args": [],
+        "kwargs": {}
+      }
+    ],
+    "commands": [
+      {
+        "kind": "velocity_body",
+        "velocity": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "accepted": false
+      }
+    ],
+    "native_active": false
+  }
+]

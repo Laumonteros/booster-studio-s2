@@ -7,6 +7,7 @@ from .field_params import *
 from .field_player import Player
 from .field_utils import angle_to, clamp_inside_field, dist, opponent_goal, own_goal
 from . import throw_in
+from . import opponent_exit
 
 class Phase(Enum):
     """Top-level match phase controlling normal play, restarts, and stops."""
@@ -189,59 +190,7 @@ def _act_our_set_play(context: Context, players: list[Player], store) -> None:
     _act_normal(context, players, store)
 
 def _act_opp_set_play(context: Context, players: list[Player], store) -> None:
-    """Retreat directly from the ball; wait until the official phase changes."""
-    ball = context.ball
-    # Account for walk_to's arrival tolerance when targeting the 1.5 m boundary.
-    radius = OPP_SET_PLAY_CLEARANCE_M + ARRIVE_DIST
-    half_l = context.field.length / 2.0 - OPP_SET_PLAY_FIELD_MARGIN_M
-    half_w = context.field.width / 2.0 - OPP_SET_PLAY_FIELD_MARGIN_M
-    for p in players:
-        pose = p.pose
-        p.action = "opp_set:wait"
-        if ball is None or pose is None:
-            p.stop()
-            continue
-        if dist(pose.x, pose.y, ball.x, ball.y) >= OPP_SET_PLAY_CLEARANCE_M:
-            p.stop()
-            continue
-
-        # The radial exit is shortest. At the field edge, also consider the
-        # retreat circle's intersections with the in-field boundary.
-        outward = angle_to(ball.x, ball.y, pose.x, pose.y)
-        candidates = [(
-            ball.x + math.cos(outward) * radius,
-            ball.y + math.sin(outward) * radius,
-        )]
-        for x in (-half_l, half_l):
-            remaining = radius ** 2 - (x - ball.x) ** 2
-            if remaining >= 0.0:
-                offset = math.sqrt(remaining)
-                candidates.extend((x, ball.y + sign * offset) for sign in (-1.0, 1.0))
-        for y in (-half_w, half_w):
-            remaining = radius ** 2 - (y - ball.y) ** 2
-            if remaining >= 0.0:
-                offset = math.sqrt(remaining)
-                candidates.extend((ball.x + sign * offset, y) for sign in (-1.0, 1.0))
-        candidates = [
-            t for t in candidates
-            if t == clamp_inside_field(context, *t, margin=OPP_SET_PLAY_FIELD_MARGIN_M)
-        ]
-        if not candidates:
-            p.stop()
-            continue
-
-        px, py = pose.x, pose.y
-        target = min(candidates, key=lambda t: dist(px, py, *t))
-        # Short omnidirectional steps follow the retreat line directly.
-        # Do not invoke path avoidance: the movement is away from the ball.
-        length = dist(pose.x, pose.y, *target)
-        ratio = min(1.0, OMNI_DIST / (2.0 * length))
-        step = (
-            pose.x + (target[0] - pose.x) * ratio,
-            pose.y + (target[1] - pose.y) * ratio,
-        )
-        p.action = "opp_set:retreat"
-        p.walk_to(step, face=angle_to(pose.x, pose.y, ball.x, ball.y))
+    opponent_exit.clear(context, players)
 
 def _act_ready(context: Context, players: list[Player]) -> None:
     """Move each player to a ready position."""
