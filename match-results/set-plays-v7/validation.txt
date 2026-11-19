@@ -1,0 +1,26 @@
+PASS: match-results/set-plays-v7/batch-01/match-01/evidence: 13 actual frames, 11.7s, 139532 bytes; three distinct 960x540 PNGs
+# Team v1 benchmark summary
+
+Scores are **home–away**, not always ours first. Fouls and fallen-robot
+penalties are **ours/opponent**. Warnings count the whole match.
+Fall penalties are not a count of all physical falls.
+
+| Batch | Match | Our side | Score H–A | Winner | GF | GA | Fouls | Warnings | Fallen penalties |
+|---|---|---|---|---|---:|---:|---|---:|---|
+| batch-01 | match-01 | home | 4-3 | home | 4 | 3 | 1/1 | 0 | 0/1 |
+| batch-01 | match-02 | away | 3-2 | home | 2 | 3 | 0/0 | 0 | 0/0 |
+| batch-01 | match-03 | home | 3-4 | away | 3 | 4 | 1/2 | 0 | 1/2 |
+| batch-01 | match-04 | away | 6-1 | home | 1 | 6 | 6/0 | 0 | 1/0 |
+| batch-01 | match-05 | home | 2-5 | away | 2 | 5 | 1/0 | 0 | 0/0 |
+| batch-01 | match-06 | away | 5-1 | home | 1 | 5 | 3/0 | 1 | 2/0 |
+| batch-01 | match-07 | home | 2-0 | home | 2 | 0 | 0/0 | 1 | 0/0 |
+| batch-01 | match-08 | away | 3-2 | home | 2 | 3 | 0/2 | 1 | 0/0 |
+
+## Aggregates
+
+- **batch-01: 2W/0D/6L**, GF–GA **17–29**, mean goal difference -1.50/match; 0 failures.
+
+Every completed game finished naturally after 600 regulation simulation seconds.
+See REPORT.md for interpretation, iteration details, limitations and evidence paths.
+
+PASS: 8 complete regulation results/event timelines, 0 recorded failed launches; source provenance and summary counts match; 1 animations verified

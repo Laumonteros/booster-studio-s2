@@ -6,6 +6,7 @@ from .framework.types import KICKING_TEAM_NONE, Context, GameState, SetPlay
 from .field_params import *
 from .field_player import Player
 from .field_utils import angle_to, clamp_inside_field, dist, opponent_goal, own_goal
+from . import field_safety
 
 class Phase(Enum):
     """Top-level match phase controlling normal play, restarts, and stops."""
@@ -136,7 +137,7 @@ def _act_normal(context: Context, players: list[Player], store) -> None:
     # All other players support.
     for p in rest:
         p.action = "support"
-        p.support()
+        field_safety.support(context, p, store)
 
 def _act_our_kickoff(context: Context, players: list[Player], store) -> None:
     """Lock the nearest kickoff taker, assign a guard, and leave others in support."""
@@ -312,7 +313,12 @@ def run(context, players, store):
     store.prev_phase, store.cur_phase = store.cur_phase, current
     if current != Phase.NORMAL:
         _clear_normal_sticky(store)
-    if current == Phase.NORMAL:
+    handled = field_safety.restart(context, players, store, current.value)
+    if current in (Phase.OPP_KICKOFF, Phase.OPP_SET_PLAY):
+        field_safety.clear_opponent(context, players)
+    elif handled:
+        pass
+    elif current == Phase.NORMAL:
         _act_normal(context, players, store)
     elif current == Phase.OUR_KICKOFF:
         _act_our_kickoff(context, players, store)

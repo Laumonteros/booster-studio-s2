@@ -45,6 +45,12 @@ class FakePlayer:
     def kick(self, direction, power):
         self.calls.append(('kick', direction, power))
 
+    def release_kick(self):
+        self.calls.append(('release',))
+
+    def set_velocity(self, *velocity):
+        self.calls.append(('velocity', velocity))
+
 
 class DispatchTest(unittest.TestCase):
     @classmethod
@@ -140,12 +146,13 @@ class DispatchTest(unittest.TestCase):
 
     def test_restart_origin_persists_after_referee_releases(self):
         self.play(kicking_team=1, secondary_time=10)
-        self.assertEqual(self.players[1].calls[-1], ('kick', .1, 5.0))
+        self.assertEqual(self.players[1].calls[-1], ('stop',))
         self.play(ball=(.4, 0))
         self.assertEqual(self.store.restart_origin, (0, 0))
-        self.assertEqual(self.players[1].calls[-1], ('attack', None, {}))
+        self.assertNotEqual(self.players[1].calls[-1][0], 'attack')
         self.play(ball=(1.5, 0))
-        self.assertEqual(self.players[1].calls[-1], ('attack', None, {}))
+        self.assertEqual(self.players[2].calls[-1], ('attack', None, {}))
+        self.assertNotEqual(self.players[1].calls[-1][0], 'attack')
 
     def test_restart_taker_locked_until_release(self):
         self.play(kicking_team=1, secondary_time=10)
@@ -154,7 +161,8 @@ class DispatchTest(unittest.TestCase):
         self.play(kicking_team=1, secondary_time=9)
         self.assertEqual(self.store.attacker, 2)
         self.play()
-        self.assertEqual(self.store.attacker, 3)
+        self.assertEqual(self.store.attacker, 2)
+        self.assertEqual(self.store.fields.restart_pass['receiver'], 3)
 
 
 if __name__ == '__main__':
