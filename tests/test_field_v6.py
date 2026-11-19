@@ -11,10 +11,13 @@ from team.src import field_params, param
 
 
 class FieldV6Test(unittest.TestCase):
-    def test_sample_player_and_utils_exact_except_isolated_imports(self):
+    def test_sample_player_and_utils_exact_except_imports_and_shot_target(self):
         root=Path(__file__).parents[1]
         source=root/'sim-3v3-simple-framework/src'
         expected=(source/'player.py').read_text().replace('from .param import','from .field_params import').replace('from .utils.','from .field_utils.')
+        expected=expected.replace('from .field_params import *','from .field_params import *\nfrom .field_shooting import shot_target')
+        expected=expected.replace('\n        kick_target = opponent_goal(ctx)\n','\n        kick_target = shot_target(self) or opponent_goal(ctx)\n')
+        expected=expected.replace("Aim from the current ball position toward the opponent's goal center.", 'Aim from the current ball position toward the selected goal-mouth point.')
         self.assertEqual((root/'team/src/field_player.py').read_text(),expected)
         for p in (source/'utils').glob('*.py'):
             self.assertEqual((root/'team/src/field_utils'/p.name).read_text(),p.read_text().replace('from ..param import','from ..field_params import'))

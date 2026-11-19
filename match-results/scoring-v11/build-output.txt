@@ -1,0 +1,137 @@
+[0000.1s STEP] Initializing build context
+[0000.1s INFO] Detected build versions: ROS_DISTRO=humble, PYTHON=3.10, UBUNTU_CODENAME=jammy
+[0000.1s INFO] agent dir: /workspace/laumonteros-build-1795090483
+[0000.1s STEP] Loading build and runtime configs
+[0000.1s INFO] Loading runtime config: /workspace/laumonteros-build-1795090483/agent.toml
+[0000.1s WARN] Entry class 'SoccerSimAgent' in 'src/main.py' does not implement 'on_agent_close'
+[0000.1s INFO] Runtime config validation passed
+[0000.1s INFO] Loading build config: /workspace/laumonteros-build-1795090483/build.toml
+[0000.1s WARN] Using sign config from environment
+[0000.1s INFO] Build config validation passed
+[0000.1s INFO] Run: find . ( -path ./.git -o -path ./.venv -o -path ./build ) -prune -o ( -type f -o -type l ) -exec md5sum {} ;
+[0000.1s STEP] Installing ROS2 dependencies
+[0000.1s STEP] Preparing ROS2 package: laumonteros_team_v1
+[0000.1s INFO] Run: rsync -av --delete /workspace/laumonteros-build-1795090483/src/ //tmp/booster_agent_build_cache/laumonteros-build-1795090483/std_package/laumonteros_team_v1/
+sending incremental file list
+./
+__init__.py
+field_logic.py
+field_params.py
+field_player.py
+field_shooting.py
+field_shooting_params.py
+main.py
+opponent_exit.py
+opponent_exit_params.py
+param.py
+player.py
+roster.py
+tactics.py
+telemetry.py
+throw_in.py
+throw_in_params.py
+__pycache__/
+__pycache__/__init__.cpython-310.pyc
+__pycache__/field_motion.cpython-310.pyc
+__pycache__/field_motion_params.cpython-310.pyc
+__pycache__/field_params.cpython-310.pyc
+__pycache__/field_shooting.cpython-310.pyc
+__pycache__/field_shooting_params.cpython-310.pyc
+field_utils/
+field_utils/__init__.py
+field_utils/geom.py
+field_utils/obstacles.py
+field_utils/path_planner.py
+framework/
+framework/__init__.py
+framework/agent.py
+framework/config.py
+framework/debugdraw.py
+framework/field_codec.py
+framework/game_codec.py
+framework/log_publisher.py
+framework/robot_backend.py
+framework/ros_source.py
+framework/runtime.py
+framework/types.py
+framework/__pycache__/
+framework/__pycache__/__init__.cpython-310.pyc
+framework/__pycache__/types.cpython-310.pyc
+utils/
+utils/__init__.py
+utils/geom.py
+utils/obstacles.py
+utils/path_planner.py
+
+sent 224,160 bytes  received 876 bytes  450,072.00 bytes/sec
+total size is 221,013  speedup is 0.98
+[0000.2s INFO] Python obfuscation disabled, skipping...
+[0000.2s INFO] Run: find . ( -type f -o -type l ) -exec md5sum {} ;
+[0000.2s STEP] Analyzing Python API lifecycle usage
+[0000.2s INFO] Read compile_api_level: 10700 from VERSION.toml
+[0000.2s STEP] Building ROS2 package: laumonteros_team_v1
+[0000.2s INFO] Clear ROS2 build cache before rebuilding rospkg
+[0000.2s INFO] Building agent package, paths: ['//tmp/booster_agent_build_cache/laumonteros-build-1795090483/std_package']
+[0000.2s INFO] Run: colcon --log-base //tmp/booster_agent_build_cache/laumonteros-build-1795090483/log_listpkg list --base-paths /tmp/booster_agent_build_cache/laumonteros-build-1795090483/std_package
+[0000.2s INFO] Run: /usr/bin/python3 /usr/bin/colcon --log-base //tmp/booster_agent_build_cache/laumonteros-build-1795090483/log build --build-base //tmp/booster_agent_build_cache/laumonteros-build-1795090483/build --install-base //tmp/booster_agent_build_cache/laumonteros-build-1795090483/install --base-paths //tmp/booster_agent_build_cache/laumonteros-build-1795090483/std_package
+Starting >>> laumonteros_team_v1
+Finished <<< laumonteros_team_v1 [0.64s]
+
+Summary: 1 package finished [0.85s]
+[0001.2s INFO] Run: find . ( -type f -o -type l ) -exec md5sum {} ;
+[0001.3s INFO] Run: find . ( -type f -o -type l ) -exec md5sum {} ;
+[0001.4s STEP] Installing Python dependencies
+[0001.4s INFO] Target platforms: ['sim_x86_64', 'sim_aarch64', 'real_jetson', 'real_qcom']
+[0001.4s INFO] Run: /usr/bin/python3 -m pip list --path //tmp/booster_agent_build_cache/laumonteros-build-1795090483/libs/python-x86_64 --format json
+[0001.6s INFO] Install python dependencies for x86_64 to //tmp/booster_agent_build_cache/laumonteros-build-1795090483/libs/python-x86_64: py_trees==2.4.0 (missing py_trees)
+[0001.6s INFO] Run: /usr/bin/python3 -m pip install --upgrade py_trees==2.4.0 --target //tmp/booster_agent_build_cache/laumonteros-build-1795090483/libs/python-x86_64 --timeout 60 --retries 10
+Collecting py_trees==2.4.0
+  Using cached py_trees-2.4.0-py3-none-any.whl.metadata (13 kB)
+Collecting pydot>=1.4 (from py_trees==2.4.0)
+  Using cached pydot-4.0.1-py3-none-any.whl.metadata (11 kB)
+Collecting pyparsing>=3.1.0 (from pydot>=1.4->py_trees==2.4.0)
+  Using cached pyparsing-3.3.3-py3-none-any.whl.metadata (5.9 kB)
+Using cached py_trees-2.4.0-py3-none-any.whl (114 kB)
+Using cached pydot-4.0.1-py3-none-any.whl (37 kB)
+Using cached pyparsing-3.3.3-py3-none-any.whl (126 kB)
+Installing collected packages: pyparsing, pydot, py_trees
+
+Successfully installed py_trees-2.4.0 pydot-4.0.1 pyparsing-3.3.3
+
+[notice] A new release of pip is available: 26.1.2 -> 26.3
+[notice] To update, run: python3 -m pip install --upgrade pip
+[0002.2s INFO] Run: /usr/bin/python3 -m pip list --path //tmp/booster_agent_build_cache/laumonteros-build-1795090483/libs/python-x86_64 --format json
+[0002.4s INFO] Run: /usr/bin/python3 -m pip list --path //tmp/booster_agent_build_cache/laumonteros-build-1795090483/libs/python-aarch64 --format json
+[0002.5s INFO] Install python dependencies for aarch64 to //tmp/booster_agent_build_cache/laumonteros-build-1795090483/libs/python-aarch64: py_trees==2.4.0 (missing py_trees)
+[0002.5s INFO] Run: /usr/bin/python3 -m pip install --upgrade py_trees==2.4.0 --target //tmp/booster_agent_build_cache/laumonteros-build-1795090483/libs/python-aarch64 --only-binary=:all: --platform manylinux_2_35_aarch64 --platform manylinux_2_34_aarch64 --platform manylinux_2_33_aarch64 --platform manylinux_2_32_aarch64 --platform manylinux_2_31_aarch64 --platform manylinux_2_30_aarch64 --platform manylinux_2_29_aarch64 --platform manylinux_2_28_aarch64 --platform manylinux_2_27_aarch64 --platform manylinux_2_26_aarch64 --platform manylinux_2_25_aarch64 --platform manylinux_2_24_aarch64 --platform manylinux_2_23_aarch64 --platform manylinux_2_22_aarch64 --platform manylinux_2_21_aarch64 --platform manylinux_2_20_aarch64 --platform manylinux_2_19_aarch64 --platform manylinux_2_18_aarch64 --platform manylinux_2_17_aarch64 --platform manylinux2014_aarch64 --platform linux_aarch64 --timeout 60 --retries 10
+Collecting py_trees==2.4.0
+  Using cached py_trees-2.4.0-py3-none-any.whl.metadata (13 kB)
+Collecting pydot>=1.4 (from py_trees==2.4.0)
+  Using cached pydot-4.0.1-py3-none-any.whl.metadata (11 kB)
+Collecting pyparsing>=3.1.0 (from pydot>=1.4->py_trees==2.4.0)
+  Using cached pyparsing-3.3.3-py3-none-any.whl.metadata (5.9 kB)
+Using cached py_trees-2.4.0-py3-none-any.whl (114 kB)
+Using cached pydot-4.0.1-py3-none-any.whl (37 kB)
+Using cached pyparsing-3.3.3-py3-none-any.whl (126 kB)
+Installing collected packages: pyparsing, pydot, py_trees
+
+Successfully installed py_trees-2.4.0 pydot-4.0.1 pyparsing-3.3.3
+
+[notice] A new release of pip is available: 26.1.2 -> 26.3
+[notice] To update, run: python3 -m pip install --upgrade pip
+[0003.3s INFO] Run: /usr/bin/python3 -m pip list --path //tmp/booster_agent_build_cache/laumonteros-build-1795090483/libs/python-aarch64 --format json
+[0003.5s INFO] Install python modules completed
+[0003.5s INFO] Exposed host python dependency paths via /usr/local/lib/python3.10/dist-packages/booster_agent_build_cache.pth: ['//tmp/booster_agent_build_cache/laumonteros-build-1795090483/libs/python-x86_64']
+[0003.5s STEP] Assembling agent image
+[0003.5s INFO] copy resource files to //tmp/booster_agent_build_cache/laumonteros-build-1795090483/image/
+[0003.5s STEP] Generating package metadata
+[0003.5s INFO] shortcut_list.json file not found, skipping...
+[0003.5s STEP] Packaging final agent: laumonteros_team_v1-1.0.0.agent
+[0003.5s INFO] Packing image cache from scratch...
+[0003.5s INFO] Run: zip -rq //tmp/booster_agent_build_cache/laumonteros-build-1795090483/image-cache.zip . -x */__pycache__/* __pycache__/* *.pyc *.pyo
+[0003.5s INFO] Sign package...
+Signer: [sign SUCCESS]: Signer-sign success
+[0003.5s INFO] Agent package sign succeed
+[0003.5s INFO] final package: /workspace/laumonteros-build-1795090483/build/laumonteros_team_v1-1.0.0.agent
+[0003.5s STEP] Build completed: laumonteros_team_v1-1.0.0.agent
+Built local-only signed package: /home/ubuntu/booster-studio/scoring-v11-final.agent

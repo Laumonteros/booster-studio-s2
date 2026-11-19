@@ -1,0 +1,78 @@
+{
+  "eventId": "batch-02-match-04:87",
+  "sequence": 87,
+  "wallTime": 1795091574.1364706,
+  "simTime": 195.4820000002053,
+  "timing": {
+    "timeRemaining": 445.3079999998043,
+    "primaryTime": 445.3079999998043,
+    "stage": "regulation",
+    "extraTimeElapsedSeconds": 0.0
+  },
+  "source": "auto_referee",
+  "severity": "warning",
+  "type": "ball_reset",
+  "message": {
+    "key": "event.ball_reset",
+    "fallback": "ball_reset"
+  },
+  "actor": {
+    "side": "away",
+    "robotName": "robot4",
+    "playerNumber": 1
+  },
+  "game": {
+    "phase": "firstHalf",
+    "state": "playing",
+    "setPlay": "noSetPlay",
+    "kickingSide": null,
+    "droppedBall": false,
+    "stopped": false,
+    "secondaryTime": 0
+  },
+  "score": {
+    "home": 1,
+    "away": 0
+  },
+  "evidence": {
+    "ruleId": "clear_stuck_ball",
+    "ruleName": "Clear stuck ball",
+    "summary": "Ball stayed in contact with a robot without moving enough.",
+    "measurements": [
+      {
+        "name": "duration",
+        "value": 712.0000000033178,
+        "unit": "ms",
+        "threshold": 700.0,
+        "operator": ">="
+      },
+      {
+        "name": "ballMoved",
+        "value": 0.0027749620390441674,
+        "unit": "m",
+        "threshold": 0.05,
+        "operator": "<="
+      }
+    ],
+    "positions": {
+      "ball": [
+        6.651318499080425,
+        0.5696887743405368,
+        0.10998191501398802
+      ],
+      "robot": [
+        6.682860850800607,
+        0.5737466448269336,
+        0.5409182234185383
+      ],
+      "target": [
+        6.23653909366378,
+        0.5163281016000666,
+        0.11
+      ]
+    }
+  },
+  "outcome": {
+    "reason": "clear_stuck_ball"
+  }
+}
