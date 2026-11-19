@@ -6,6 +6,7 @@ package. All clocks use the unmodified 600-second referee defaults.
 import argparse
 import concurrent.futures
 import csv
+import gzip
 import hashlib
 import json
 import shutil
@@ -58,7 +59,7 @@ def warning_offender(event):
 def run_match(index, args):
     side = 'home' if index % 2 else 'away'
     name = f'match-{index:02}'
-    container = f'bs-team-{args.batch}-{index:02}'
+    container = f'{args.container_prefix}-{args.batch}-{index:02}'
     port = args.base_port + index
     work = args.work / args.batch / name
     destination = args.output / args.batch / name
@@ -76,7 +77,8 @@ def run_match(index, args):
                 '-e', 'GAME_CONTROL_REQUIRE_TEAM_READY=false', '-e', 'GAME_CONTROL_AUTO_START=false',
                 '-e', 'GAME_CONTROL_EXIT_ON_FINISH=false',
                 '-e', f'GAME_CONTROL_INITIAL_HOME_TEAM_NAME={home}',
-                '-e', f'GAME_CONTROL_INITIAL_AWAY_TEAM_NAME={away}', args.image)
+                '-e', f'GAME_CONTROL_INITIAL_AWAY_TEAM_NAME={away}',
+                *(['-e', 'ROAMER_TELEMETRY_FILE=/tmp/roamer-telemetry.jsonl'] if getattr(args, 'telemetry', False) else []), args.image)
         command('docker', 'cp', args.package, f'{container}:/tmp/team.agent')
         command('docker', 'exec', container, 'python3', '-c',
                 "import zipfile;from pathlib import Path; p=Path('/opt/booster/booster_agent_data/data/agents/extract/laumonteros_team_v1'); zipfile.ZipFile('/tmp/team.agent').extractall(p); (p/'agent/laumonteros_team_v1/lib/laumonteros_team_v1/pyagent_x86_64').chmod(0o755)")
@@ -162,6 +164,8 @@ def run_match(index, args):
         print(f'{args.batch}/{name}: {row}', flush=True)
     except Exception as exc:
         row = {'match': name, 'side': side, 'status': 'failed', 'error': str(exc)}
+        if isinstance(exc, subprocess.CalledProcessError):
+            row['stderr'] = exc.stderr
         if (work / 'teams.log').exists():
             row['runner_tail'] = (work / 'teams.log').read_text().splitlines()[-20:]
         (destination / 'failure.json').write_text(json.dumps(row, indent=2))
@@ -172,6 +176,13 @@ def run_match(index, args):
         except subprocess.CalledProcessError:
             pass
         subprocess.run(['docker', 'stop', '-t', '10', container], capture_output=True)
+        if getattr(args, 'telemetry', False):
+            collected = subprocess.run(['docker', 'cp', f'{container}:/tmp/roamer-telemetry.jsonl', str(work / 'telemetry.jsonl')], capture_output=True, text=True)
+            if collected.returncode:
+                (destination / 'telemetry-collection-error.txt').write_text(collected.stderr)
+            else:
+                with (work / 'telemetry.jsonl').open('rb') as source, gzip.open(destination / 'telemetry.jsonl.gz', 'wb') as target:
+                    shutil.copyfileobj(source, target)
         for process in (runner, capture):
             if process is not None:
                 try:
@@ -191,13 +202,15 @@ def main():
     parser.add_argument('--matches', type=int, default=4)
     parser.add_argument('--workers', type=int, choices=(1, 2), default=2)
     parser.add_argument('--base-port', type=int, default=38400)
+    parser.add_argument('--container-prefix', default='bs-team')
     parser.add_argument('--timeout', type=float, default=7200)
     parser.add_argument('--no-capture', action='store_true')
+    parser.add_argument('--telemetry', action='store_true')
     args = parser.parse_args()
     args.package = args.package.resolve(strict=True)
     args.output, args.work = args.output.resolve(), args.work.resolve()
-    if args.matches < 4:
-        parser.error('At least four full matches are required')
+    if args.matches < 2:
+        parser.error('At least two full matches are required')
     if (args.output / args.batch).exists() or (args.work / args.batch).exists():
         parser.error('Batch paths already exist; use a new batch identifier')
     args.output.mkdir(parents=True, exist_ok=True)
@@ -208,9 +221,7 @@ def main():
         'team_source_sha256': {str(p.relative_to(Path('team'))): hashlib.sha256(p.read_bytes()).hexdigest() for p in sorted(Path('team').rglob('*.py'))},
         'sample_revision': '36f0d615af6fd5f7d5475570e27daa3b3ec97632',
     }
-    source_snapshot = {name: (Path('team') / name).read_text() for name in (
-        'agent.toml', 'src/main.py', 'src/player.py', 'src/param.py', 'src/tactics.py',
-    )}
+    source_snapshot = {name: (Path('team') / name).read_text() for name in ['agent.toml', *provenance['team_source_sha256']]}
     with concurrent.futures.ThreadPoolExecutor(max_workers=args.workers) as executor:
         rows = list(executor.map(lambda i: run_match(i, args), range(1, args.matches + 1)))
     batch = args.output / args.batch

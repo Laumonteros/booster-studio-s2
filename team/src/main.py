@@ -10,6 +10,7 @@ from .param import (
     RESTART_PASS_POWER, RESTART_SHOOT_DISTANCE_M,
 )
 from .player import Player
+from .telemetry import instrument_player, trace_play
 from .tactics import (
     keeper_can_clear, keeper_target, keeper_tracking_target, phase, retreat_target,
     keeper_velocity_update, keeper_intercept, keeper_waypoint, keeper_trace,
@@ -18,7 +19,7 @@ from .tactics import (
 
 
 class SoccerSimAgent(SoccerAgentMixin, AgentBase):
-    player_class = Player
+    player_class = instrument_player(Player)
 
     def init_store(self, store):
         store.attacker = None
@@ -28,6 +29,7 @@ class SoccerSimAgent(SoccerAgentMixin, AgentBase):
         store.keeper_direction = 1
 
     @staticmethod
+    @trace_play
     def play(context, players, store):
         current = phase(context)
         ball = (context.ball.x, context.ball.y) if context.ball is not None else None

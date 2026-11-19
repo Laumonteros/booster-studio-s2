@@ -1,5 +1,6 @@
 """Validate retained referee evidence and produce a Markdown benchmark table."""
 import hashlib
+import argparse
 import json
 import struct
 from pathlib import Path
@@ -9,7 +10,9 @@ from run_team_batch import summarize
 
 def main():
     root = Path(__file__).resolve().parents[1]
-    results = root / 'match-results/team-v1'
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--results', type=Path, default=root / 'match-results/team-v1')
+    results = parser.parse_args().results.resolve()
     lines = ['# Team v1 benchmark summary', '',
              'Scores are **home–away**, not always ours first. Fouls and fallen-robot',
              'penalties are **ours/opponent**. Warnings count the whole match.',
