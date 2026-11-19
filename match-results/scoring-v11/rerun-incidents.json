@@ -1,0 +1,517 @@
+[
+  {
+    "match": "match-01",
+    "event": {
+      "eventId": "batch-03-match-01:157",
+      "sequence": 157,
+      "wallTime": 1795094918.7901983,
+      "simTime": 451.4920000014277,
+      "timing": {
+        "timeRemaining": 201.61399999864813,
+        "primaryTime": 201.61399999864813,
+        "stage": "regulation",
+        "extraTimeElapsedSeconds": 0.0
+      },
+      "source": "auto_referee",
+      "severity": "penalty",
+      "type": "penalty",
+      "message": {
+        "key": "event.penalty",
+        "fallback": "penalty"
+      },
+      "actor": {
+        "side": "home",
+        "robotName": "robot2",
+        "playerNumber": 2
+      },
+      "game": {
+        "phase": "firstHalf",
+        "state": "playing",
+        "setPlay": "noSetPlay",
+        "kickingSide": null,
+        "droppedBall": false,
+        "stopped": false,
+        "secondaryTime": 0
+      },
+      "score": {
+        "home": 1,
+        "away": 2
+      },
+      "evidence": {
+        "ruleId": "inactiveRobot",
+        "ruleName": "Inactive robot",
+        "summary": "Robot stayed inactive near the ball beyond the allowed duration.",
+        "measurements": [
+          {
+            "name": "inactiveDuration",
+            "value": 20.000000000116415,
+            "unit": "ms",
+            "threshold": 10000.0,
+            "operator": ">="
+          },
+          {
+            "name": "ballDistance",
+            "value": 1.9585214587500848,
+            "unit": "m",
+            "threshold": 3.0,
+            "operator": "<="
+          }
+        ],
+        "positions": {
+          "robot": [
+            0.6050874437614583,
+            0.728309517583397,
+            0.5457205794213079
+          ],
+          "reference": [
+            0.6055546160828366,
+            0.7290020674742202,
+            0.5456877795326811
+          ],
+          "ball": [
+            2.562672597458289,
+            0.7888625555775051,
+            0.10993077108226842
+          ]
+        }
+      },
+      "outcome": {
+        "reason": "inactiveRobot",
+        "penalty": "incapableRobot",
+        "seconds": 30.0,
+        "discipline": {
+          "warning": false,
+          "caution": false,
+          "sentOff": false
+        }
+      }
+    }
+  },
+  {
+    "match": "match-01",
+    "event": {
+      "eventId": "batch-03-match-01:208",
+      "sequence": 208,
+      "wallTime": 1795095171.5428886,
+      "simTime": 646.6679999985321,
+      "timing": {
+        "timeRemaining": 9.446000001472612,
+        "primaryTime": 9.446000001472612,
+        "stage": "regulation",
+        "extraTimeElapsedSeconds": 0.0
+      },
+      "source": "auto_referee",
+      "severity": "penalty",
+      "type": "penalty",
+      "message": {
+        "key": "event.penalty",
+        "fallback": "penalty"
+      },
+      "actor": {
+        "side": "home",
+        "robotName": "robot3",
+        "playerNumber": 3
+      },
+      "game": {
+        "phase": "firstHalf",
+        "state": "playing",
+        "setPlay": "noSetPlay",
+        "kickingSide": null,
+        "droppedBall": false,
+        "stopped": false,
+        "secondaryTime": 0
+      },
+      "score": {
+        "home": 1,
+        "away": 3
+      },
+      "evidence": {
+        "ruleId": "inactiveRobot",
+        "ruleName": "Inactive robot",
+        "summary": "Robot stayed inactive near the ball beyond the allowed duration.",
+        "measurements": [
+          {
+            "name": "inactiveDuration",
+            "value": 19.99999999953434,
+            "unit": "ms",
+            "threshold": 10000.0,
+            "operator": ">="
+          },
+          {
+            "name": "ballDistance",
+            "value": 1.995742144927685,
+            "unit": "m",
+            "threshold": 3.0,
+            "operator": "<="
+          }
+        ],
+        "positions": {
+          "robot": [
+            3.765001438875078,
+            1.07756488783901,
+            0.5453368201376553
+          ],
+          "reference": [
+            3.764957705566525,
+            1.0765886212890199,
+            0.5453457821475017
+          ],
+          "ball": [
+            5.7334788543531765,
+            1.4063252470571221,
+            0.10985418881441016
+          ]
+        }
+      },
+      "outcome": {
+        "reason": "inactiveRobot",
+        "penalty": "incapableRobot",
+        "seconds": 30.0,
+        "discipline": {
+          "warning": false,
+          "caution": false,
+          "sentOff": false
+        }
+      }
+    }
+  },
+  {
+    "match": "match-02",
+    "event": {
+      "eventId": "batch-03-match-02:83",
+      "sequence": 83,
+      "wallTime": 1795094600.3599927,
+      "simTime": 218.88800000031705,
+      "timing": {
+        "timeRemaining": 415.6139999997227,
+        "primaryTime": 415.6139999997227,
+        "stage": "regulation",
+        "extraTimeElapsedSeconds": 0.0
+      },
+      "source": "auto_referee",
+      "severity": "penalty",
+      "type": "penalty",
+      "message": {
+        "key": "event.penalty",
+        "fallback": "penalty"
+      },
+      "actor": {
+        "side": "away",
+        "robotName": "robot6",
+        "playerNumber": 3
+      },
+      "game": {
+        "phase": "firstHalf",
+        "state": "playing",
+        "setPlay": "throwIn",
+        "kickingSide": "home",
+        "droppedBall": false,
+        "stopped": false,
+        "secondaryTime": 44.937999999999704
+      },
+      "score": {
+        "home": 0,
+        "away": 1
+      },
+      "evidence": {
+        "ruleId": "defender_set_play_interference",
+        "subRuleId": "defender_touched_before_kick",
+        "ruleName": "Defender set play interference",
+        "summary": "Defender away:3 touched the ball before the kicking side, interfering with the throwIn.",
+        "measurements": [],
+        "positions": {
+          "robot": [
+            -6.156300931026144,
+            -4.453508127470318,
+            0.1099918900624588
+          ]
+        }
+      },
+      "outcome": {
+        "reason": "defender_set_play_interference",
+        "penalty": "illegalPosition",
+        "seconds": 30.0,
+        "discipline": {
+          "warning": false,
+          "caution": false,
+          "sentOff": false
+        }
+      }
+    }
+  },
+  {
+    "match": "match-02",
+    "event": {
+      "eventId": "batch-03-match-02:85",
+      "sequence": 85,
+      "wallTime": 1795094600.3719318,
+      "simTime": 218.90800000031714,
+      "timing": {
+        "timeRemaining": 415.6139999997227,
+        "primaryTime": 415.6139999997227,
+        "stage": "regulation",
+        "extraTimeElapsedSeconds": 0.0
+      },
+      "source": "auto_referee",
+      "severity": "warning",
+      "type": "set_play_retake",
+      "message": {
+        "key": "event.set_play_retake",
+        "fallback": "set_play_retake"
+      },
+      "actor": {
+        "side": "home",
+        "teamNumber": 1,
+        "teamName": "booster_champion_3v3",
+        "externalTeamId": null
+      },
+      "game": {
+        "phase": "firstHalf",
+        "state": "playing",
+        "setPlay": "throwIn",
+        "kickingSide": "home",
+        "droppedBall": false,
+        "stopped": false,
+        "secondaryTime": 44.937999999999704
+      },
+      "score": {
+        "home": 0,
+        "away": 1
+      },
+      "evidence": {
+        "ruleId": "defender_set_play_interference",
+        "subRuleId": "defender_touched_before_kick",
+        "ruleName": "Defender set play interference",
+        "summary": "Defender away:3 touched the ball before the kicking side, interfering with the throwIn.",
+        "measurements": [],
+        "positions": {
+          "robot": [
+            -6.156300931026144,
+            -4.453508127470318,
+            0.1099918900624588
+          ]
+        }
+      },
+      "outcome": {
+        "reason": "defender_set_play_interference",
+        "setPlay": "throwIn",
+        "offendingActor": {
+          "side": "away",
+          "robotName": "robot6",
+          "playerNumber": 3
+        }
+      }
+    }
+  },
+  {
+    "match": "match-02",
+    "event": {
+      "eventId": "batch-03-match-02:171",
+      "sequence": 171,
+      "wallTime": 1795094983.9709575,
+      "simTime": 512.236000001711,
+      "timing": {
+        "timeRemaining": 131.31599999837198,
+        "primaryTime": 131.31599999837198,
+        "stage": "regulation",
+        "extraTimeElapsedSeconds": 0.0
+      },
+      "source": "auto_referee",
+      "severity": "penalty",
+      "type": "penalty",
+      "message": {
+        "key": "event.penalty",
+        "fallback": "penalty"
+      },
+      "actor": {
+        "side": "away",
+        "robotName": "robot5",
+        "playerNumber": 2
+      },
+      "game": {
+        "phase": "firstHalf",
+        "state": "playing",
+        "setPlay": "noSetPlay",
+        "kickingSide": null,
+        "droppedBall": false,
+        "stopped": false,
+        "secondaryTime": 0
+      },
+      "score": {
+        "home": 2,
+        "away": 2
+      },
+      "evidence": {
+        "ruleId": "fallenRobot",
+        "ruleName": "Fallen robot",
+        "summary": "Robot remained fallen beyond the allowed duration.",
+        "measurements": [
+          {
+            "name": "upDot",
+            "value": -0.18737181938287162,
+            "threshold": 0.45,
+            "operator": "<="
+          },
+          {
+            "name": "height",
+            "value": 0.10989087655334598,
+            "unit": "m",
+            "threshold": 0.25,
+            "operator": "<="
+          },
+          {
+            "name": "fallenDuration",
+            "value": 10018.000000049593,
+            "unit": "ms",
+            "threshold": 10000.0,
+            "operator": ">="
+          }
+        ],
+        "positions": {
+          "robot": [
+            -2.9962970555858695,
+            -0.912953228579949,
+            0.10989087655334598
+          ],
+          "reference": [
+            -2.9976303433981797,
+            -0.9127528116279762,
+            0.10559904180227139
+          ]
+        }
+      },
+      "outcome": {
+        "reason": "fallenRobot",
+        "penalty": "incapableRobot",
+        "seconds": 30.0,
+        "discipline": {
+          "warning": false,
+          "caution": false,
+          "sentOff": false
+        }
+      }
+    }
+  },
+  {
+    "match": "match-05",
+    "event": {
+      "eventId": "batch-03-match-05:75",
+      "sequence": 75,
+      "wallTime": 1795096342.2880778,
+      "simTime": 221.06000000032742,
+      "timing": {
+        "timeRemaining": 415.7519999996777,
+        "primaryTime": 415.7519999996777,
+        "stage": "regulation",
+        "extraTimeElapsedSeconds": 0.0
+      },
+      "source": "auto_referee",
+      "severity": "penalty",
+      "type": "penalty",
+      "message": {
+        "key": "event.penalty",
+        "fallback": "penalty"
+      },
+      "actor": {
+        "side": "home",
+        "robotName": "robot3",
+        "playerNumber": 3
+      },
+      "game": {
+        "phase": "firstHalf",
+        "state": "playing",
+        "setPlay": "throwIn",
+        "kickingSide": "away",
+        "droppedBall": false,
+        "stopped": false,
+        "secondaryTime": 42.69999999998902
+      },
+      "score": {
+        "home": 0,
+        "away": 1
+      },
+      "evidence": {
+        "ruleId": "illegalPosition",
+        "subRuleId": "free_kick_avoidance_radius",
+        "ruleName": "Illegal position",
+        "summary": "Non-kicking-side robot is too close to the restart ball at the moment of the kick.",
+        "measurements": [
+          {
+            "name": "distanceToBall",
+            "value": 1.0802835034725145,
+            "unit": "m",
+            "threshold": 1.45,
+            "operator": ">="
+          }
+        ],
+        "positions": {
+          "robot": [
+            4.590363731939399,
+            3.6441108357339034,
+            0.5328391669532322
+          ]
+        }
+      },
+      "outcome": {
+        "reason": "illegalPosition",
+        "penalty": "illegalPosition",
+        "seconds": 30.0,
+        "discipline": {
+          "warning": false,
+          "caution": false,
+          "sentOff": false
+        }
+      }
+    }
+  },
+  {
+    "match": "match-05",
+    "event": {
+      "eventId": "batch-03-match-05:77",
+      "sequence": 77,
+      "wallTime": 1795096342.3132567,
+      "simTime": 221.08000000032752,
+      "timing": {
+        "timeRemaining": 415.7519999996777,
+        "primaryTime": 415.7519999996777,
+        "stage": "regulation",
+        "extraTimeElapsedSeconds": 0.0
+      },
+      "source": "auto_referee",
+      "severity": "warning",
+      "type": "set_play_retake",
+      "message": {
+        "key": "event.set_play_retake",
+        "fallback": "set_play_retake"
+      },
+      "actor": {
+        "side": "away",
+        "teamNumber": 2,
+        "teamName": "booster_champion_3v3",
+        "externalTeamId": null
+      },
+      "game": {
+        "phase": "firstHalf",
+        "state": "playing",
+        "setPlay": "throwIn",
+        "kickingSide": "away",
+        "droppedBall": false,
+        "stopped": false,
+        "secondaryTime": 42.69999999998902
+      },
+      "score": {
+        "home": 0,
+        "away": 1
+      },
+      "evidence": {
+        "ruleId": "illegal_free_kick_avoidance",
+        "subRuleId": "free_kick_avoidance_radius"
+      },
+      "outcome": {
+        "reason": "free_kick_avoidance_radius",
+        "setPlay": "throwIn",
+        "offendingActor": null
+      }
+    }
+  }
+]

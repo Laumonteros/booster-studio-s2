@@ -1,0 +1,87 @@
+{
+  "batch-02": {
+    "games": 8,
+    "wdl": [
+      6,
+      1,
+      1
+    ],
+    "gf": 20,
+    "ga": 9,
+    "mean_gd": 1.375,
+    "gf_per_game": 2.5,
+    "ga_per_game": 1.125,
+    "falls": 0,
+    "warnings": {
+      "ball_reset:clear_stuck_ball": 1
+    },
+    "penalties": {}
+  },
+  "batch-03": {
+    "games": 8,
+    "wdl": [
+      2,
+      2,
+      4
+    ],
+    "gf": 17,
+    "ga": 20,
+    "mean_gd": -0.375,
+    "gf_per_game": 2.125,
+    "ga_per_game": 2.5,
+    "falls": 1,
+    "warnings": {
+      "set_play_retake:defender_set_play_interference": 1,
+      "set_play_retake:free_kick_avoidance_radius": 1
+    },
+    "penalties": {
+      "inactiveRobot": 2,
+      "defender_set_play_interference": 1,
+      "fallenRobot": 1,
+      "illegalPosition": 1
+    }
+  },
+  "batch-02+batch-03": {
+    "games": 16,
+    "wdl": [
+      8,
+      3,
+      5
+    ],
+    "gf": 37,
+    "ga": 29,
+    "mean_gd": 0.5,
+    "gf_per_game": 2.3125,
+    "ga_per_game": 1.8125,
+    "falls": 1,
+    "warnings": {
+      "ball_reset:clear_stuck_ball": 1,
+      "set_play_retake:defender_set_play_interference": 1,
+      "set_play_retake:free_kick_avoidance_radius": 1
+    },
+    "penalties": {
+      "inactiveRobot": 2,
+      "defender_set_play_interference": 1,
+      "fallenRobot": 1,
+      "illegalPosition": 1
+    }
+  },
+  "v9-16-games": {
+    "games": 16,
+    "wdl": [
+      8,
+      3,
+      5
+    ],
+    "gf": 37,
+    "ga": 28,
+    "mean_gd": 0.5625,
+    "falls": 3,
+    "warnings": {
+      "set_play_retake:free_kick_avoidance_radius": 1,
+      "goal_disallowed_indirect:indirect_goal_requirement_not_satisfied": 1
+    },
+    "gf_per_game": 2.3125,
+    "ga_per_game": 1.75
+  }
+}
