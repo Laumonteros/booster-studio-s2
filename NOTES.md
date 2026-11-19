@@ -1,5 +1,15 @@
 # Booster Studio Season 2 — local setup and match
 
+## V16-candidate: roamer role hysteresis
+
+Normal-play roamer selection now requires a challenger to be more than 1.0 m
+closer before replacing an eligible incumbent (previous executed margin 0.3 m).
+No hold timer or non-assignment behavior changed. Candidate only: this machine
+has no historical runtime images/containers, so the 16-match benchmark,
+switches-per-match measurement and time-lapse could not be produced. See
+`match-results/roamers-v16/REPORT.md` and `analysis/roamer-v16.md`; V14 remains
+the measured baseline. No tournament submission was made.
+
 ## Repository contents and reuse
 
 This branch adds a reproducibility snapshot to the existing repository; existing `main`, `README.md`, and `analysis/` content are unchanged.

@@ -4,6 +4,7 @@ from enum import Enum
 
 from .framework.types import KICKING_TEAM_NONE, Context, GameState, SetPlay
 from .field_params import *
+from .param import ROAMER_ROLE_SWITCH_MARGIN_M
 from .field_player import Player
 from .field_utils import angle_to, clamp_inside_field, dist, opponent_goal, own_goal
 from . import throw_in
@@ -101,6 +102,7 @@ def _select_closest_attacker(
     context: Context,
     players: list[Player],
     preferred_id: int | None = None,
+    margin: float = ATTACKER_KEEP_DIST_MARGIN_M,
 ) -> Player:
     """Select the player with the lowest effective distance to the ball.
 
@@ -112,7 +114,7 @@ def _select_closest_attacker(
     preferred = next((item for item in ranked if item[0].id == preferred_id), None)
     if (
         preferred is not None
-        and preferred[1] <= best_dist + ATTACKER_KEEP_DIST_MARGIN_M
+        and preferred[1] <= best_dist + margin
     ):
         return preferred[0]
     return best
@@ -128,6 +130,7 @@ def _act_normal(context: Context, players: list[Player], store) -> None:
 
     attacker = _select_closest_attacker(
         context, players, getattr(store, "normal_attacker", None),
+        margin=ROAMER_ROLE_SWITCH_MARGIN_M,
     )
     store.normal_attacker = attacker.id
     attacker.action = "attack"

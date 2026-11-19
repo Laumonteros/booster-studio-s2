@@ -61,6 +61,7 @@ SUPPORT_DIST_M = 3.0
 # ======================================================================
 
 ATTACKER_KEEP_DIST_MARGIN_M = 0.65  # Prevent attacker-selection oscillation
+ROAMER_ROLE_SWITCH_MARGIN_M = 1.0
 
 FALLEN_COST = 10.0  # Distance penalty assigned to a fallen player (m)
 
