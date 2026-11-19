@@ -7,12 +7,13 @@ from booster_agent_framework import AgentBase
 from .framework.agent import SoccerAgentMixin
 from .framework import debugdraw
 from .param import (
-    KEEPER_ID, OMNI_DIST, READY_TAKER_POSITION, READY_WAITING_POSITIONS,
+    KEEPER_ID, KEEPER_LINE_MARGIN_M, OMNI_DIST, READY_TAKER_POSITION, READY_WAITING_POSITIONS,
     RESTART_PASS_POWER, RESTART_SHOOT_DISTANCE_M,
 )
 from .roster import PlayerRoster
 from .telemetry import trace_play
 from .field_logic import run as run_fields
+from .keeper_geometry import guard_target
 from .tactics import (
     keeper_can_clear, keeper_target, keeper_tracking_target, phase, retreat_target,
     keeper_velocity_update, keeper_intercept, keeper_waypoint, keeper_trace,
@@ -112,8 +113,12 @@ class SoccerSimAgent(SoccerAgentMixin, AgentBase):
                         player.action = "keeper:clear"
                         player.attack(shot_target(context.field, ball, store.restart_origin))
                     else:
-                        player.action = "keeper:intercept" if keeper_intercept(context.field, ball, keeper_velocity) is not None else "keeper:track"
-                        target, store.keeper_direction = keeper_tracking_target(context.field, positions[player.id], ball, store.keeper_direction, keeper_velocity)
+                        if current == "normal":
+                            target, store.keeper_direction, intercepting = guard_target(context.field, positions[player.id], ball, store.keeper_direction, keeper_velocity, KEEPER_LINE_MARGIN_M)
+                        else:
+                            intercepting = keeper_intercept(context.field, ball, keeper_velocity) is not None
+                            target, store.keeper_direction = keeper_tracking_target(context.field, positions[player.id], ball, store.keeper_direction, keeper_velocity)
+                        player.action = "keeper:intercept" if intercepting else "keeper:track"
                         store.keeper_target = target
                         player.walk_to(keeper_waypoint(positions[player.id], target), face=0.0)
 

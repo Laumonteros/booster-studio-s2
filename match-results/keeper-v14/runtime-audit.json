@@ -1,0 +1,335 @@
+[
+  {
+    "match": "batch-01/match-01",
+    "ticks": 22626,
+    "dropped": 0,
+    "writer_errors": [],
+    "native_errors": [],
+    "keeper_waypoints_replayed": 14229,
+    "waypoint_max_error": 0,
+    "normal_targets_different_from_legacy": 8106,
+    "earlier_backstop_samples": 229
+  },
+  {
+    "match": "batch-01/match-02",
+    "ticks": 21468,
+    "dropped": 0,
+    "writer_errors": [],
+    "native_errors": [],
+    "keeper_waypoints_replayed": 12189,
+    "waypoint_max_error": 0,
+    "normal_targets_different_from_legacy": 9632,
+    "earlier_backstop_samples": 325
+  },
+  {
+    "match": "batch-01/match-03",
+    "ticks": 24189,
+    "dropped": 0,
+    "writer_errors": [],
+    "native_errors": [],
+    "keeper_waypoints_replayed": 14773,
+    "waypoint_max_error": 0,
+    "normal_targets_different_from_legacy": 11760,
+    "earlier_backstop_samples": 291
+  },
+  {
+    "match": "batch-01/match-04",
+    "ticks": 25056,
+    "dropped": 0,
+    "writer_errors": [],
+    "native_errors": [],
+    "keeper_waypoints_replayed": 16098,
+    "waypoint_max_error": 0,
+    "normal_targets_different_from_legacy": 9321,
+    "earlier_backstop_samples": 170
+  },
+  {
+    "match": "batch-01/match-05",
+    "ticks": 24164,
+    "dropped": 0,
+    "writer_errors": [],
+    "native_errors": [],
+    "keeper_waypoints_replayed": 15189,
+    "waypoint_max_error": 0,
+    "normal_targets_different_from_legacy": 11414,
+    "earlier_backstop_samples": 192
+  },
+  {
+    "match": "batch-01/match-06",
+    "ticks": 24155,
+    "dropped": 0,
+    "writer_errors": [],
+    "native_errors": [],
+    "keeper_waypoints_replayed": 13236,
+    "waypoint_max_error": 0,
+    "normal_targets_different_from_legacy": 10007,
+    "earlier_backstop_samples": 166
+  },
+  {
+    "match": "batch-01/match-07",
+    "ticks": 23753,
+    "dropped": 0,
+    "writer_errors": [],
+    "native_errors": [],
+    "keeper_waypoints_replayed": 15861,
+    "waypoint_max_error": 0,
+    "normal_targets_different_from_legacy": 10497,
+    "earlier_backstop_samples": 276
+  },
+  {
+    "match": "batch-01/match-08",
+    "ticks": 23485,
+    "dropped": 0,
+    "writer_errors": [],
+    "native_errors": [
+      {
+        "type": "native_stop_error",
+        "wall": 1795119702.801537,
+        "now": 92320.144369906,
+        "robot": 3,
+        "thread": "soccer_runtime",
+        "reason": "recovering/stop/release_kick",
+        "pose": [
+          -2.153690325078237,
+          -0.7452378636216032,
+          -0.5170131399569229
+        ],
+        "ball": [
+          -0.2996926271229768,
+          -2.0340054501433293
+        ],
+        "action": "recovering",
+        "error": "RuntimeError('API call failed, code = 400')"
+      },
+      {
+        "type": "native_stop_error",
+        "wall": 1795119756.7617707,
+        "now": 92374.09197163,
+        "robot": 3,
+        "thread": "soccer_runtime",
+        "reason": "recovering/stop/release_kick",
+        "pose": [
+          -6.7342085678000725,
+          -1.449684898175465,
+          -2.6414876658713133
+        ],
+        "ball": [
+          -6.706559028758054,
+          -2.3473821793649
+        ],
+        "action": "recovering",
+        "error": "RuntimeError('API call failed, code = 400')"
+      }
+    ],
+    "keeper_waypoints_replayed": 12954,
+    "waypoint_max_error": 0,
+    "normal_targets_different_from_legacy": 8632,
+    "earlier_backstop_samples": 93
+  },
+  {
+    "match": "batch-02/match-01",
+    "ticks": 25401,
+    "dropped": 0,
+    "writer_errors": [],
+    "native_errors": [],
+    "keeper_waypoints_replayed": 12717,
+    "waypoint_max_error": 0,
+    "normal_targets_different_from_legacy": 9054,
+    "earlier_backstop_samples": 131
+  },
+  {
+    "match": "batch-02/match-02",
+    "ticks": 23127,
+    "dropped": 0,
+    "writer_errors": [],
+    "native_errors": [],
+    "keeper_waypoints_replayed": 15994,
+    "waypoint_max_error": 0,
+    "normal_targets_different_from_legacy": 11598,
+    "earlier_backstop_samples": 268
+  },
+  {
+    "match": "batch-02/match-03",
+    "ticks": 23965,
+    "dropped": 0,
+    "writer_errors": [],
+    "native_errors": [],
+    "keeper_waypoints_replayed": 17312,
+    "waypoint_max_error": 0,
+    "normal_targets_different_from_legacy": 12255,
+    "earlier_backstop_samples": 135
+  },
+  {
+    "match": "batch-02/match-04",
+    "ticks": 23258,
+    "dropped": 0,
+    "writer_errors": [],
+    "native_errors": [],
+    "keeper_waypoints_replayed": 16098,
+    "waypoint_max_error": 0,
+    "normal_targets_different_from_legacy": 12033,
+    "earlier_backstop_samples": 278
+  },
+  {
+    "match": "batch-02/match-05",
+    "ticks": 25160,
+    "dropped": 0,
+    "writer_errors": [],
+    "native_errors": [
+      {
+        "type": "native_stop_error",
+        "wall": 1795122190.2132576,
+        "now": 94807.538811463,
+        "robot": 3,
+        "thread": "soccer_runtime",
+        "reason": "recovering/stop/release_kick",
+        "pose": [
+          3.1763988836408514,
+          2.0377229544090194,
+          0.28199637687393936
+        ],
+        "ball": [
+          1.962158101916772,
+          1.0373537215701532
+        ],
+        "action": "recovering",
+        "error": "RuntimeError('API call failed, code = 400')"
+      }
+    ],
+    "keeper_waypoints_replayed": 14766,
+    "waypoint_max_error": 0,
+    "normal_targets_different_from_legacy": 11836,
+    "earlier_backstop_samples": 370
+  },
+  {
+    "match": "batch-02/match-06",
+    "ticks": 24454,
+    "dropped": 0,
+    "writer_errors": [],
+    "native_errors": [
+      {
+        "type": "native_stop_error",
+        "wall": 1795122577.2079704,
+        "now": 95194.53118033,
+        "robot": 2,
+        "thread": "soccer_runtime",
+        "reason": "recovering/stop/release_kick",
+        "pose": [
+          -2.722931005025051,
+          -2.0309690765385824,
+          -1.810012868520177
+        ],
+        "ball": [
+          -3.0456769643227366,
+          -3.317178467094952
+        ],
+        "action": "recovering",
+        "error": "RuntimeError('API call failed, code = 400')"
+      }
+    ],
+    "keeper_waypoints_replayed": 14589,
+    "waypoint_max_error": 0,
+    "normal_targets_different_from_legacy": 9949,
+    "earlier_backstop_samples": 164
+  },
+  {
+    "match": "batch-02/match-07",
+    "ticks": 23914,
+    "dropped": 0,
+    "writer_errors": [],
+    "native_errors": [
+      {
+        "type": "native_stop_error",
+        "wall": 1795123832.7536948,
+        "now": 96450.100569287,
+        "robot": 3,
+        "thread": "soccer_runtime",
+        "reason": "recovering/stop/release_kick",
+        "pose": [
+          6.030408253143799,
+          -2.7567196648838963,
+          -2.1708013209553627
+        ],
+        "ball": [
+          6.43558563327903,
+          -1.3378414253327229
+        ],
+        "action": "recovering",
+        "error": "RuntimeError('API call failed, code = 400')"
+      }
+    ],
+    "keeper_waypoints_replayed": 16750,
+    "waypoint_max_error": 0,
+    "normal_targets_different_from_legacy": 12113,
+    "earlier_backstop_samples": 757
+  },
+  {
+    "match": "batch-02/match-08",
+    "ticks": 24667,
+    "dropped": 0,
+    "writer_errors": [],
+    "native_errors": [
+      {
+        "type": "native_stop_error",
+        "wall": 1795123598.0646813,
+        "now": 96215.411494179,
+        "robot": 2,
+        "thread": "soccer_runtime",
+        "reason": "recovering/stop/release_kick",
+        "pose": [
+          6.605585058591833,
+          2.407951054546627,
+          2.1386606186845523
+        ],
+        "ball": [
+          7.011608699397956,
+          1.7018355732994757
+        ],
+        "action": "recovering",
+        "error": "RuntimeError('API call failed, code = 400')"
+      },
+      {
+        "type": "native_stop_error",
+        "wall": 1795123598.2415445,
+        "now": 96215.58491829,
+        "robot": 3,
+        "thread": "soccer_runtime",
+        "reason": "recovering/stop/release_kick",
+        "pose": [
+          5.573546548233766,
+          1.1946663699718012,
+          0.1288869352994375
+        ],
+        "ball": [
+          7.011608699723925,
+          1.7018355738977167
+        ],
+        "action": "recovering",
+        "error": "RuntimeError('API call failed, code = 400')"
+      },
+      {
+        "type": "native_stop_error",
+        "wall": 1795123831.817709,
+        "now": 96449.15180987,
+        "robot": 2,
+        "thread": "soccer_runtime",
+        "reason": "recovering/stop/release_kick",
+        "pose": [
+          -3.5430666213255626,
+          -0.3679787692341722,
+          0.371934764190343
+        ],
+        "ball": [
+          -5.475363609811631,
+          -1.4673323291232914
+        ],
+        "action": "recovering",
+        "error": "RuntimeError('API call failed, code = 400')"
+      }
+    ],
+    "keeper_waypoints_replayed": 13850,
+    "waypoint_max_error": 0,
+    "normal_targets_different_from_legacy": 8598,
+    "earlier_backstop_samples": 302
+  }
+]

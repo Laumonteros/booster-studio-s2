@@ -141,6 +141,7 @@ KICK_TARGET_MARK_SIZE_M = 0.18
 
 KEEPER_ID = 1
 KEEPER_LINE_MARGIN_M = 0.4
+KEEPER_BALL_STANDOFF_M = 0.3   # Retreat behind close balls without crossing the goal line
 KEEPER_POST_MARGIN_M = 0.3
 SUPPORT_BACK_M = 1.9
 SUPPORT_OFFSET_M = 3.3
