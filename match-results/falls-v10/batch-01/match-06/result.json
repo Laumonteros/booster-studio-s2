@@ -1,0 +1,1095 @@
+{
+  "durationSeconds": 837.8377549648285,
+  "endReason": "time_expired",
+  "endedAtWallTime": 1795084817.5475485,
+  "eventsTotal": 202,
+  "finishedEventId": "batch-01-match-06:202",
+  "game": {
+    "drawPolicy": "allow_draw",
+    "droppedBall": false,
+    "extraTimeMaxSeconds": 12000.0,
+    "kickingSide": null,
+    "phase": "firstHalf",
+    "primaryTime": -0.003999998326889909,
+    "regularDurationSeconds": 600.0,
+    "secondaryTime": 0,
+    "setPlay": "noSetPlay",
+    "state": "finished",
+    "stopped": false,
+    "timeRemaining": -0.003999998326889909,
+    "timingStage": "regulation"
+  },
+  "isFinal": true,
+  "latestEventId": "batch-01-match-06:202",
+  "matchId": "batch-01-match-06",
+  "score": {
+    "away": 2,
+    "home": 2
+  },
+  "startedAtWallTime": 1795083979.7097936,
+  "status": "finished",
+  "teams": {
+    "away": {
+      "externalTeamId": null,
+      "score": 2,
+      "side": "away",
+      "stats": {
+        "ballResets": {
+          "byReason": {},
+          "events": [],
+          "total": 0
+        },
+        "discipline": {
+          "cautions": {
+            "events": [],
+            "total": 0
+          },
+          "sentOff": {
+            "events": [],
+            "total": 0
+          },
+          "warnings": {
+            "events": [],
+            "total": 0
+          }
+        },
+        "fouls": {
+          "byReason": {},
+          "byRobot": {},
+          "events": [],
+          "total": 0
+        },
+        "goals": {
+          "events": [
+            {
+              "actor": {
+                "externalTeamId": null,
+                "side": "away",
+                "teamName": "laumonteros_team_v1",
+                "teamNumber": 2
+              },
+              "eventId": "batch-01-match-06:62",
+              "reason": "ball_crossed_goal_line",
+              "timeRemaining": 0.0,
+              "timing": {
+                "extraTimeElapsedSeconds": 0.0,
+                "primaryTime": 431.62199999975644,
+                "stage": "regulation",
+                "timeRemaining": 431.62199999975644
+              },
+              "type": "goal"
+            },
+            {
+              "actor": {
+                "externalTeamId": null,
+                "side": "away",
+                "teamName": "laumonteros_team_v1",
+                "teamNumber": 2
+              },
+              "eventId": "batch-01-match-06:125",
+              "reason": "ball_crossed_goal_line",
+              "timeRemaining": 0.0,
+              "timing": {
+                "extraTimeElapsedSeconds": 0.0,
+                "primaryTime": 294.34399999910096,
+                "stage": "regulation",
+                "timeRemaining": 294.34399999910096
+              },
+              "type": "goal"
+            }
+          ],
+          "total": 2
+        },
+        "invalidGoals": {
+          "byReason": {},
+          "events": [],
+          "total": 0
+        },
+        "outOfBounds": {
+          "awarded": {
+            "cornerKick": 0,
+            "events": [
+              {
+                "actor": {
+                  "externalTeamId": null,
+                  "side": "away",
+                  "teamName": "laumonteros_team_v1",
+                  "teamNumber": 2
+                },
+                "eventId": "batch-01-match-06:10",
+                "evidence": {
+                  "measurements": [],
+                  "positions": {
+                    "from": [
+                      7.1389797105617365,
+                      1.5166416635825772,
+                      0.10972123296229135
+                    ],
+                    "target": [
+                      6.0,
+                      2.0,
+                      0.11
+                    ]
+                  },
+                  "ruleId": "ball_out",
+                  "ruleName": "Ball out of bounds",
+                  "summary": "Ball out of bounds, restart with goalKick."
+                },
+                "reason": "ball_out",
+                "timeRemaining": 0.0,
+                "timing": {
+                  "extraTimeElapsedSeconds": 0.0,
+                  "primaryTime": 585.4359999999954,
+                  "stage": "regulation",
+                  "timeRemaining": 585.4359999999954
+                },
+                "type": "goal_kick_setup"
+              },
+              {
+                "actor": {
+                  "externalTeamId": null,
+                  "side": "away",
+                  "teamName": "laumonteros_team_v1",
+                  "teamNumber": 2
+                },
+                "eventId": "batch-01-match-06:44",
+                "evidence": {
+                  "measurements": [],
+                  "positions": {
+                    "from": [
+                      0.357719306403366,
+                      -4.656173706502488,
+                      0.11002662131279191
+                    ],
+                    "target": [
+                      0.357719306403366,
+                      -4.45,
+                      0.11
+                    ]
+                  },
+                  "ruleId": "ball_out",
+                  "ruleName": "Ball out of bounds",
+                  "summary": "Ball out of bounds, restart with throwIn."
+                },
+                "reason": "ball_out",
+                "timeRemaining": 0.0,
+                "timing": {
+                  "extraTimeElapsedSeconds": 0.0,
+                  "primaryTime": 476.5159999999708,
+                  "stage": "regulation",
+                  "timeRemaining": 476.5159999999708
+                },
+                "type": "throw_in_setup"
+              },
+              {
+                "actor": {
+                  "externalTeamId": null,
+                  "side": "away",
+                  "teamName": "laumonteros_team_v1",
+                  "teamNumber": 2
+                },
+                "eventId": "batch-01-match-06:70",
+                "evidence": {
+                  "measurements": [],
+                  "positions": {
+                    "from": [
+                      7.142034691097899,
+                      2.03937598135792,
+                      0.1098866430234961
+                    ],
+                    "target": [
+                      6.0,
+                      2.0,
+                      0.11
+                    ]
+                  },
+                  "ruleId": "ball_out",
+                  "ruleName": "Ball out of bounds",
+                  "summary": "Ball out of bounds, restart with goalKick."
+                },
+                "reason": "ball_out",
+                "timeRemaining": 0.0,
+                "timing": {
+                  "extraTimeElapsedSeconds": 0.0,
+                  "primaryTime": 401.581999999613,
+                  "stage": "regulation",
+                  "timeRemaining": 401.581999999613
+                },
+                "type": "goal_kick_setup"
+              },
+              {
+                "actor": {
+                  "externalTeamId": null,
+                  "side": "away",
+                  "teamName": "laumonteros_team_v1",
+                  "teamNumber": 2
+                },
+                "eventId": "batch-01-match-06:98",
+                "evidence": {
+                  "measurements": [],
+                  "positions": {
+                    "from": [
+                      7.142688820884594,
+                      2.476133120544748,
+                      0.10993789930050314
+                    ],
+                    "target": [
+                      6.0,
+                      2.0,
+                      0.11
+                    ]
+                  },
+                  "ruleId": "ball_out",
+                  "ruleName": "Ball out of bounds",
+                  "summary": "Ball out of bounds, restart with goalKick."
+                },
+                "reason": "ball_out",
+                "timeRemaining": 0.0,
+                "timing": {
+                  "extraTimeElapsedSeconds": 0.0,
+                  "primaryTime": 328.8439999992657,
+                  "stage": "regulation",
+                  "timeRemaining": 328.8439999992657
+                },
+                "type": "goal_kick_setup"
+              },
+              {
+                "actor": {
+                  "externalTeamId": null,
+                  "side": "away",
+                  "teamName": "laumonteros_team_v1",
+                  "teamNumber": 2
+                },
+                "eventId": "batch-01-match-06:107",
+                "evidence": {
+                  "measurements": [],
+                  "positions": {
+                    "from": [
+                      6.011534211604654,
+                      2.016812845122301,
+                      0.12895969888158415
+                    ],
+                    "target": [
+                      5.998068433265254,
+                      1.7817701828232755,
+                      0.11
+                    ]
+                  },
+                  "ruleId": "defender_set_play_interference",
+                  "ruleName": "Defender set play interference",
+                  "summary": "Defender home:2 touched the ball before the kicking side, interfering with the goalKick."
+                },
+                "reason": "defender_set_play_interference",
+                "timeRemaining": 0.0,
+                "timing": {
+                  "extraTimeElapsedSeconds": 0.0,
+                  "primaryTime": 328.8039999992655,
+                  "stage": "regulation",
+                  "timeRemaining": 328.8039999992655
+                },
+                "type": "goal_kick_setup"
+              },
+              {
+                "actor": {
+                  "externalTeamId": null,
+                  "side": "away",
+                  "teamName": "laumonteros_team_v1",
+                  "teamNumber": 2
+                },
+                "eventId": "batch-01-match-06:134",
+                "evidence": {
+                  "measurements": [],
+                  "positions": {
+                    "from": [
+                      7.136305794381452,
+                      2.1965612033813837,
+                      0.10993691093834208
+                    ],
+                    "target": [
+                      6.0,
+                      2.0,
+                      0.11
+                    ]
+                  },
+                  "ruleId": "ball_out",
+                  "ruleName": "Ball out of bounds",
+                  "summary": "Ball out of bounds, restart with goalKick."
+                },
+                "reason": "ball_out",
+                "timeRemaining": 0.0,
+                "timing": {
+                  "extraTimeElapsedSeconds": 0.0,
+                  "primaryTime": 256.30599999891933,
+                  "stage": "regulation",
+                  "timeRemaining": 256.30599999891933
+                },
+                "type": "goal_kick_setup"
+              }
+            ],
+            "goalKick": 5,
+            "throwIn": 1,
+            "total": 6
+          },
+          "caused": {
+            "cornerKick": 0,
+            "events": [
+              {
+                "actor": {
+                  "externalTeamId": null,
+                  "side": "home",
+                  "teamName": "booster_champion_3v3",
+                  "teamNumber": 1
+                },
+                "eventId": "batch-01-match-06:29",
+                "evidence": {
+                  "measurements": [],
+                  "positions": {
+                    "from": [
+                      -7.136153082710225,
+                      -2.203502602042621,
+                      0.10987240326561597
+                    ],
+                    "target": [
+                      -6.0,
+                      -2.0,
+                      0.11
+                    ]
+                  },
+                  "ruleId": "ball_out",
+                  "ruleName": "Ball out of bounds",
+                  "summary": "Ball out of bounds, restart with goalKick."
+                },
+                "reason": "ball_out",
+                "timeRemaining": 0.0,
+                "timing": {
+                  "extraTimeElapsedSeconds": 0.0,
+                  "primaryTime": 500.31400000008443,
+                  "stage": "regulation",
+                  "timeRemaining": 500.31400000008443
+                },
+                "type": "goal_kick_setup"
+              },
+              {
+                "actor": {
+                  "externalTeamId": null,
+                  "side": "home",
+                  "teamName": "booster_champion_3v3",
+                  "teamNumber": 1
+                },
+                "eventId": "batch-01-match-06:87",
+                "evidence": {
+                  "measurements": [],
+                  "positions": {
+                    "from": [
+                      -7.13659607902748,
+                      -1.7512142044103491,
+                      0.10997520344750093
+                    ],
+                    "target": [
+                      -6.0,
+                      -2.0,
+                      0.11
+                    ]
+                  },
+                  "ruleId": "ball_out",
+                  "ruleName": "Ball out of bounds",
+                  "summary": "Ball out of bounds, restart with goalKick."
+                },
+                "reason": "ball_out",
+                "timeRemaining": 0.0,
+                "timing": {
+                  "extraTimeElapsedSeconds": 0.0,
+                  "primaryTime": 354.63399999938883,
+                  "stage": "regulation",
+                  "timeRemaining": 354.63399999938883
+                },
+                "type": "goal_kick_setup"
+              },
+              {
+                "actor": {
+                  "externalTeamId": null,
+                  "side": "home",
+                  "teamName": "booster_champion_3v3",
+                  "teamNumber": 1
+                },
+                "eventId": "batch-01-match-06:163",
+                "evidence": {
+                  "measurements": [],
+                  "positions": {
+                    "from": [
+                      -7.135765981247139,
+                      -1.7339787097642139,
+                      0.10825992972222653
+                    ],
+                    "target": [
+                      -6.0,
+                      -2.0,
+                      0.11
+                    ]
+                  },
+                  "ruleId": "ball_out",
+                  "ruleName": "Ball out of bounds",
+                  "summary": "Ball out of bounds, restart with goalKick."
+                },
+                "reason": "ball_out",
+                "timeRemaining": 0.0,
+                "timing": {
+                  "extraTimeElapsedSeconds": 0.0,
+                  "primaryTime": 132.8179999985323,
+                  "stage": "regulation",
+                  "timeRemaining": 132.8179999985323
+                },
+                "type": "goal_kick_setup"
+              },
+              {
+                "actor": {
+                  "externalTeamId": null,
+                  "side": "home",
+                  "teamName": "booster_champion_3v3",
+                  "teamNumber": 1
+                },
+                "eventId": "batch-01-match-06:177",
+                "evidence": {
+                  "measurements": [],
+                  "positions": {
+                    "from": [
+                      -7.137130578843632,
+                      -1.9981903078516094,
+                      0.1099534051895006
+                    ],
+                    "target": [
+                      -6.0,
+                      -2.0,
+                      0.11
+                    ]
+                  },
+                  "ruleId": "ball_out",
+                  "ruleName": "Ball out of bounds",
+                  "summary": "Ball out of bounds, restart with goalKick."
+                },
+                "reason": "ball_out",
+                "timeRemaining": 0.0,
+                "timing": {
+                  "extraTimeElapsedSeconds": 0.0,
+                  "primaryTime": 48.11400000053527,
+                  "stage": "regulation",
+                  "timeRemaining": 48.11400000053527
+                },
+                "type": "goal_kick_setup"
+              },
+              {
+                "actor": {
+                  "externalTeamId": null,
+                  "side": "home",
+                  "teamName": "booster_champion_3v3",
+                  "teamNumber": 1
+                },
+                "eventId": "batch-01-match-06:191",
+                "evidence": {
+                  "measurements": [],
+                  "positions": {
+                    "from": [
+                      1.0227786973219006,
+                      -4.647689452167011,
+                      0.12955641021398673
+                    ],
+                    "target": [
+                      1.0227786973219006,
+                      -4.45,
+                      0.11
+                    ]
+                  },
+                  "ruleId": "ball_out",
+                  "ruleName": "Ball out of bounds",
+                  "summary": "Ball out of bounds, restart with throwIn."
+                },
+                "reason": "ball_out",
+                "timeRemaining": 0.0,
+                "timing": {
+                  "extraTimeElapsedSeconds": 0.0,
+                  "primaryTime": 19.502000001211854,
+                  "stage": "regulation",
+                  "timeRemaining": 19.502000001211854
+                },
+                "type": "throw_in_setup"
+              }
+            ],
+            "goalKick": 4,
+            "throwIn": 1,
+            "total": 5
+          }
+        },
+        "removals": {
+          "byReason": {},
+          "byRobot": {},
+          "events": [],
+          "total": 0
+        }
+      },
+      "teamName": "laumonteros_team_v1",
+      "teamNumber": 2
+    },
+    "home": {
+      "externalTeamId": null,
+      "score": 2,
+      "side": "home",
+      "stats": {
+        "ballResets": {
+          "byReason": {},
+          "events": [],
+          "total": 0
+        },
+        "discipline": {
+          "cautions": {
+            "events": [],
+            "total": 0
+          },
+          "sentOff": {
+            "events": [],
+            "total": 0
+          },
+          "warnings": {
+            "events": [],
+            "total": 0
+          }
+        },
+        "fouls": {
+          "byReason": {
+            "defender_set_play_interference": 1
+          },
+          "byRobot": {
+            "robot2": 1
+          },
+          "events": [
+            {
+              "actor": {
+                "playerNumber": 2,
+                "robotName": "robot2",
+                "side": "home"
+              },
+              "eventId": "batch-01-match-06:104",
+              "evidence": {
+                "measurements": [],
+                "positions": {
+                  "robot": [
+                    6.011534211604654,
+                    2.016812845122301,
+                    0.12895969888158415
+                  ]
+                },
+                "ruleId": "defender_set_play_interference",
+                "ruleName": "Defender set play interference",
+                "subRuleId": "defender_touched_before_kick",
+                "summary": "Defender home:2 touched the ball before the kicking side, interfering with the goalKick."
+              },
+              "reason": "defender_set_play_interference",
+              "timeRemaining": 0.0,
+              "timing": {
+                "extraTimeElapsedSeconds": 0.0,
+                "primaryTime": 328.8039999992655,
+                "stage": "regulation",
+                "timeRemaining": 328.8039999992655
+              },
+              "type": "penalty"
+            }
+          ],
+          "total": 1
+        },
+        "goals": {
+          "events": [
+            {
+              "actor": {
+                "externalTeamId": null,
+                "side": "home",
+                "teamName": "booster_champion_3v3",
+                "teamNumber": 1
+              },
+              "eventId": "batch-01-match-06:20",
+              "reason": "ball_crossed_goal_line",
+              "timeRemaining": 0.0,
+              "timing": {
+                "extraTimeElapsedSeconds": 0.0,
+                "primaryTime": 530.3620000000546,
+                "stage": "regulation",
+                "timeRemaining": 530.3620000000546
+              },
+              "type": "goal"
+            },
+            {
+              "actor": {
+                "externalTeamId": null,
+                "side": "home",
+                "teamName": "booster_champion_3v3",
+                "teamNumber": 1
+              },
+              "eventId": "batch-01-match-06:200",
+              "reason": "ball_crossed_goal_line",
+              "timeRemaining": 0.0,
+              "timing": {
+                "extraTimeElapsedSeconds": 0.0,
+                "primaryTime": 0.2260000016676713,
+                "stage": "regulation",
+                "timeRemaining": 0.2260000016676713
+              },
+              "type": "goal"
+            }
+          ],
+          "total": 2
+        },
+        "invalidGoals": {
+          "byReason": {},
+          "events": [],
+          "total": 0
+        },
+        "outOfBounds": {
+          "awarded": {
+            "cornerKick": 0,
+            "events": [
+              {
+                "actor": {
+                  "externalTeamId": null,
+                  "side": "home",
+                  "teamName": "booster_champion_3v3",
+                  "teamNumber": 1
+                },
+                "eventId": "batch-01-match-06:29",
+                "evidence": {
+                  "measurements": [],
+                  "positions": {
+                    "from": [
+                      -7.136153082710225,
+                      -2.203502602042621,
+                      0.10987240326561597
+                    ],
+                    "target": [
+                      -6.0,
+                      -2.0,
+                      0.11
+                    ]
+                  },
+                  "ruleId": "ball_out",
+                  "ruleName": "Ball out of bounds",
+                  "summary": "Ball out of bounds, restart with goalKick."
+                },
+                "reason": "ball_out",
+                "timeRemaining": 0.0,
+                "timing": {
+                  "extraTimeElapsedSeconds": 0.0,
+                  "primaryTime": 500.31400000008443,
+                  "stage": "regulation",
+                  "timeRemaining": 500.31400000008443
+                },
+                "type": "goal_kick_setup"
+              },
+              {
+                "actor": {
+                  "externalTeamId": null,
+                  "side": "home",
+                  "teamName": "booster_champion_3v3",
+                  "teamNumber": 1
+                },
+                "eventId": "batch-01-match-06:87",
+                "evidence": {
+                  "measurements": [],
+                  "positions": {
+                    "from": [
+                      -7.13659607902748,
+                      -1.7512142044103491,
+                      0.10997520344750093
+                    ],
+                    "target": [
+                      -6.0,
+                      -2.0,
+                      0.11
+                    ]
+                  },
+                  "ruleId": "ball_out",
+                  "ruleName": "Ball out of bounds",
+                  "summary": "Ball out of bounds, restart with goalKick."
+                },
+                "reason": "ball_out",
+                "timeRemaining": 0.0,
+                "timing": {
+                  "extraTimeElapsedSeconds": 0.0,
+                  "primaryTime": 354.63399999938883,
+                  "stage": "regulation",
+                  "timeRemaining": 354.63399999938883
+                },
+                "type": "goal_kick_setup"
+              },
+              {
+                "actor": {
+                  "externalTeamId": null,
+                  "side": "home",
+                  "teamName": "booster_champion_3v3",
+                  "teamNumber": 1
+                },
+                "eventId": "batch-01-match-06:163",
+                "evidence": {
+                  "measurements": [],
+                  "positions": {
+                    "from": [
+                      -7.135765981247139,
+                      -1.7339787097642139,
+                      0.10825992972222653
+                    ],
+                    "target": [
+                      -6.0,
+                      -2.0,
+                      0.11
+                    ]
+                  },
+                  "ruleId": "ball_out",
+                  "ruleName": "Ball out of bounds",
+                  "summary": "Ball out of bounds, restart with goalKick."
+                },
+                "reason": "ball_out",
+                "timeRemaining": 0.0,
+                "timing": {
+                  "extraTimeElapsedSeconds": 0.0,
+                  "primaryTime": 132.8179999985323,
+                  "stage": "regulation",
+                  "timeRemaining": 132.8179999985323
+                },
+                "type": "goal_kick_setup"
+              },
+              {
+                "actor": {
+                  "externalTeamId": null,
+                  "side": "home",
+                  "teamName": "booster_champion_3v3",
+                  "teamNumber": 1
+                },
+                "eventId": "batch-01-match-06:177",
+                "evidence": {
+                  "measurements": [],
+                  "positions": {
+                    "from": [
+                      -7.137130578843632,
+                      -1.9981903078516094,
+                      0.1099534051895006
+                    ],
+                    "target": [
+                      -6.0,
+                      -2.0,
+                      0.11
+                    ]
+                  },
+                  "ruleId": "ball_out",
+                  "ruleName": "Ball out of bounds",
+                  "summary": "Ball out of bounds, restart with goalKick."
+                },
+                "reason": "ball_out",
+                "timeRemaining": 0.0,
+                "timing": {
+                  "extraTimeElapsedSeconds": 0.0,
+                  "primaryTime": 48.11400000053527,
+                  "stage": "regulation",
+                  "timeRemaining": 48.11400000053527
+                },
+                "type": "goal_kick_setup"
+              },
+              {
+                "actor": {
+                  "externalTeamId": null,
+                  "side": "home",
+                  "teamName": "booster_champion_3v3",
+                  "teamNumber": 1
+                },
+                "eventId": "batch-01-match-06:191",
+                "evidence": {
+                  "measurements": [],
+                  "positions": {
+                    "from": [
+                      1.0227786973219006,
+                      -4.647689452167011,
+                      0.12955641021398673
+                    ],
+                    "target": [
+                      1.0227786973219006,
+                      -4.45,
+                      0.11
+                    ]
+                  },
+                  "ruleId": "ball_out",
+                  "ruleName": "Ball out of bounds",
+                  "summary": "Ball out of bounds, restart with throwIn."
+                },
+                "reason": "ball_out",
+                "timeRemaining": 0.0,
+                "timing": {
+                  "extraTimeElapsedSeconds": 0.0,
+                  "primaryTime": 19.502000001211854,
+                  "stage": "regulation",
+                  "timeRemaining": 19.502000001211854
+                },
+                "type": "throw_in_setup"
+              }
+            ],
+            "goalKick": 4,
+            "throwIn": 1,
+            "total": 5
+          },
+          "caused": {
+            "cornerKick": 0,
+            "events": [
+              {
+                "actor": {
+                  "externalTeamId": null,
+                  "side": "away",
+                  "teamName": "laumonteros_team_v1",
+                  "teamNumber": 2
+                },
+                "eventId": "batch-01-match-06:10",
+                "evidence": {
+                  "measurements": [],
+                  "positions": {
+                    "from": [
+                      7.1389797105617365,
+                      1.5166416635825772,
+                      0.10972123296229135
+                    ],
+                    "target": [
+                      6.0,
+                      2.0,
+                      0.11
+                    ]
+                  },
+                  "ruleId": "ball_out",
+                  "ruleName": "Ball out of bounds",
+                  "summary": "Ball out of bounds, restart with goalKick."
+                },
+                "reason": "ball_out",
+                "timeRemaining": 0.0,
+                "timing": {
+                  "extraTimeElapsedSeconds": 0.0,
+                  "primaryTime": 585.4359999999954,
+                  "stage": "regulation",
+                  "timeRemaining": 585.4359999999954
+                },
+                "type": "goal_kick_setup"
+              },
+              {
+                "actor": {
+                  "externalTeamId": null,
+                  "side": "away",
+                  "teamName": "laumonteros_team_v1",
+                  "teamNumber": 2
+                },
+                "eventId": "batch-01-match-06:44",
+                "evidence": {
+                  "measurements": [],
+                  "positions": {
+                    "from": [
+                      0.357719306403366,
+                      -4.656173706502488,
+                      0.11002662131279191
+                    ],
+                    "target": [
+                      0.357719306403366,
+                      -4.45,
+                      0.11
+                    ]
+                  },
+                  "ruleId": "ball_out",
+                  "ruleName": "Ball out of bounds",
+                  "summary": "Ball out of bounds, restart with throwIn."
+                },
+                "reason": "ball_out",
+                "timeRemaining": 0.0,
+                "timing": {
+                  "extraTimeElapsedSeconds": 0.0,
+                  "primaryTime": 476.5159999999708,
+                  "stage": "regulation",
+                  "timeRemaining": 476.5159999999708
+                },
+                "type": "throw_in_setup"
+              },
+              {
+                "actor": {
+                  "externalTeamId": null,
+                  "side": "away",
+                  "teamName": "laumonteros_team_v1",
+                  "teamNumber": 2
+                },
+                "eventId": "batch-01-match-06:70",
+                "evidence": {
+                  "measurements": [],
+                  "positions": {
+                    "from": [
+                      7.142034691097899,
+                      2.03937598135792,
+                      0.1098866430234961
+                    ],
+                    "target": [
+                      6.0,
+                      2.0,
+                      0.11
+                    ]
+                  },
+                  "ruleId": "ball_out",
+                  "ruleName": "Ball out of bounds",
+                  "summary": "Ball out of bounds, restart with goalKick."
+                },
+                "reason": "ball_out",
+                "timeRemaining": 0.0,
+                "timing": {
+                  "extraTimeElapsedSeconds": 0.0,
+                  "primaryTime": 401.581999999613,
+                  "stage": "regulation",
+                  "timeRemaining": 401.581999999613
+                },
+                "type": "goal_kick_setup"
+              },
+              {
+                "actor": {
+                  "externalTeamId": null,
+                  "side": "away",
+                  "teamName": "laumonteros_team_v1",
+                  "teamNumber": 2
+                },
+                "eventId": "batch-01-match-06:98",
+                "evidence": {
+                  "measurements": [],
+                  "positions": {
+                    "from": [
+                      7.142688820884594,
+                      2.476133120544748,
+                      0.10993789930050314
+                    ],
+                    "target": [
+                      6.0,
+                      2.0,
+                      0.11
+                    ]
+                  },
+                  "ruleId": "ball_out",
+                  "ruleName": "Ball out of bounds",
+                  "summary": "Ball out of bounds, restart with goalKick."
+                },
+                "reason": "ball_out",
+                "timeRemaining": 0.0,
+                "timing": {
+                  "extraTimeElapsedSeconds": 0.0,
+                  "primaryTime": 328.8439999992657,
+                  "stage": "regulation",
+                  "timeRemaining": 328.8439999992657
+                },
+                "type": "goal_kick_setup"
+              },
+              {
+                "actor": {
+                  "externalTeamId": null,
+                  "side": "away",
+                  "teamName": "laumonteros_team_v1",
+                  "teamNumber": 2
+                },
+                "eventId": "batch-01-match-06:107",
+                "evidence": {
+                  "measurements": [],
+                  "positions": {
+                    "from": [
+                      6.011534211604654,
+                      2.016812845122301,
+                      0.12895969888158415
+                    ],
+                    "target": [
+                      5.998068433265254,
+                      1.7817701828232755,
+                      0.11
+                    ]
+                  },
+                  "ruleId": "defender_set_play_interference",
+                  "ruleName": "Defender set play interference",
+                  "summary": "Defender home:2 touched the ball before the kicking side, interfering with the goalKick."
+                },
+                "reason": "defender_set_play_interference",
+                "timeRemaining": 0.0,
+                "timing": {
+                  "extraTimeElapsedSeconds": 0.0,
+                  "primaryTime": 328.8039999992655,
+                  "stage": "regulation",
+                  "timeRemaining": 328.8039999992655
+                },
+                "type": "goal_kick_setup"
+              },
+              {
+                "actor": {
+                  "externalTeamId": null,
+                  "side": "away",
+                  "teamName": "laumonteros_team_v1",
+                  "teamNumber": 2
+                },
+                "eventId": "batch-01-match-06:134",
+                "evidence": {
+                  "measurements": [],
+                  "positions": {
+                    "from": [
+                      7.136305794381452,
+                      2.1965612033813837,
+                      0.10993691093834208
+                    ],
+                    "target": [
+                      6.0,
+                      2.0,
+                      0.11
+                    ]
+                  },
+                  "ruleId": "ball_out",
+                  "ruleName": "Ball out of bounds",
+                  "summary": "Ball out of bounds, restart with goalKick."
+                },
+                "reason": "ball_out",
+                "timeRemaining": 0.0,
+                "timing": {
+                  "extraTimeElapsedSeconds": 0.0,
+                  "primaryTime": 256.30599999891933,
+                  "stage": "regulation",
+                  "timeRemaining": 256.30599999891933
+                },
+                "type": "goal_kick_setup"
+              }
+            ],
+            "goalKick": 5,
+            "throwIn": 1,
+            "total": 6
+          }
+        },
+        "removals": {
+          "byReason": {},
+          "byRobot": {},
+          "events": [],
+          "total": 0
+        }
+      },
+      "teamName": "booster_champion_3v3",
+      "teamNumber": 1
+    }
+  },
+  "timing": {
+    "drawPolicy": "allow_draw",
+    "extraTimeElapsedSeconds": 0.003999998326889909,
+    "extraTimeMaxSeconds": 12000.0,
+    "primaryTime": -0.003999998326889909,
+    "regularDurationSeconds": 600.0,
+    "stage": "regulation",
+    "timeRemaining": -0.003999998326889909
+  },
+  "warnings": [
+    {
+      "eventId": "batch-01-match-06:106",
+      "outcome": {
+        "offendingActor": {
+          "playerNumber": 2,
+          "robotName": "robot2",
+          "side": "home"
+        },
+        "reason": "defender_set_play_interference",
+        "setPlay": "goalKick"
+      },
+      "type": "set_play_retake",
+      "wallTime": 1795084381.7723002
+    }
+  ],
+  "winner": "draw"
+}

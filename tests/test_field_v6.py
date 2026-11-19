@@ -11,10 +11,12 @@ from team.src import field_params, param
 
 
 class FieldV6Test(unittest.TestCase):
-    def test_sample_player_and_utils_exact_except_isolated_imports(self):
+    def test_sample_player_and_utils_exact_except_imports_and_velocity_hook(self):
         root=Path(__file__).parents[1]
         source=root/'sim-3v3-simple-framework/src'
         expected=(source/'player.py').read_text().replace('from .param import','from .field_params import').replace('from .utils.','from .field_utils.')
+        expected=expected.replace('from .field_params import *', 'from .field_params import *\nfrom .field_motion import limit_velocity')
+        expected=expected.replace('    def set_velocity(self, vx: float, vy: float, vyaw: float) -> None:\n', '    def set_velocity(self, vx: float, vy: float, vyaw: float) -> None:\n        vx, vy, vyaw = limit_velocity(self, vx, vy, vyaw)\n')
         self.assertEqual((root/'team/src/field_player.py').read_text(),expected)
         for p in (source/'utils').glob('*.py'):
             self.assertEqual((root/'team/src/field_utils'/p.name).read_text(),p.read_text().replace('from ..param import','from ..field_params import'))

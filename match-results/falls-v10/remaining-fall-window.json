@@ -1,0 +1,3799 @@
+{
+  "event": {
+    "eventId": "batch-01-match-01:23",
+    "sequence": 23,
+    "wallTime": 1795082440.6936884,
+    "simTime": 77.70000000000032,
+    "timing": {
+      "timeRemaining": 553.8720000000251,
+      "primaryTime": 553.8720000000251,
+      "stage": "regulation",
+      "extraTimeElapsedSeconds": 0.0
+    },
+    "source": "auto_referee",
+    "severity": "penalty",
+    "type": "penalty",
+    "message": {
+      "key": "event.penalty",
+      "fallback": "penalty"
+    },
+    "actor": {
+      "side": "home",
+      "robotName": "robot3",
+      "playerNumber": 3
+    },
+    "game": {
+      "phase": "firstHalf",
+      "state": "playing",
+      "setPlay": "noSetPlay",
+      "kickingSide": null,
+      "droppedBall": false,
+      "stopped": false,
+      "secondaryTime": 0
+    },
+    "score": {
+      "home": 0,
+      "away": 0
+    },
+    "evidence": {
+      "ruleId": "fallenRobot",
+      "ruleName": "Fallen robot",
+      "summary": "Robot remained fallen beyond the allowed duration.",
+      "measurements": [
+        {
+          "name": "upDot",
+          "value": -0.19171665884199984,
+          "threshold": 0.45,
+          "operator": "<="
+        },
+        {
+          "name": "height",
+          "value": 0.11705810401226355,
+          "unit": "m",
+          "threshold": 0.25,
+          "operator": "<="
+        },
+        {
+          "name": "fallenDuration",
+          "value": 10001.999999977532,
+          "unit": "ms",
+          "threshold": 10000.0,
+          "operator": ">="
+        }
+      ],
+      "positions": {
+        "robot": [
+          -0.6876894789018662,
+          0.24898001516866392,
+          0.11705810401226355
+        ],
+        "reference": [
+          -0.683557513149632,
+          0.23958599068732503,
+          0.09901305120119964
+        ]
+      }
+    },
+    "outcome": {
+      "reason": "fallenRobot",
+      "penalty": "incapableRobot",
+      "seconds": 30.0,
+      "discipline": {
+        "warning": false,
+        "caution": false,
+        "sentOff": false
+      }
+    }
+  },
+  "last_active": {
+    "type": "tick",
+    "wall": 1795082427.4851687,
+    "wall_end": 1795082427.4902775,
+    "now": 55044.824808536,
+    "dt": 0.033429984003305435,
+    "team": 1,
+    "dropped": 0,
+    "writer_error": null,
+    "game": {
+      "state": "PLAYING",
+      "set_play": "NONE",
+      "kicking_team": 255,
+      "stopped": false,
+      "remaining": 565,
+      "secondary": 0
+    },
+    "ball": [
+      1.4428047346087032,
+      -2.778880860532548
+    ],
+    "ball_seen": 55044.82137294,
+    "opponents": {
+      "1": [
+        -1.2911414071666318,
+        0.48737832747788484,
+        -2.750218024017865
+      ],
+      "2": [
+        6.498986086973713,
+        0.07921023459803175,
+        -2.767916131490772
+      ],
+      "3": [
+        1.270927572723583,
+        -0.34153372203134236,
+        -1.6491891121114362
+      ]
+    },
+    "players": [
+      {
+        "id": 1,
+        "role": "keeper",
+        "action": "keeper:track",
+        "pose": [
+          -6.57243950571659,
+          -0.06173716255251012,
+          0.08294391531993209
+        ],
+        "kicking": false,
+        "native_active": false,
+        "calls": [
+          {
+            "method": "walk_to",
+            "args": [
+              [
+                -6.6,
+                -0.11190824877283574
+              ]
+            ],
+            "kwargs": {
+              "face": 0.0
+            }
+          },
+          {
+            "method": "release_kick",
+            "args": [],
+            "kwargs": {}
+          },
+          {
+            "method": "stop",
+            "args": [],
+            "kwargs": {}
+          },
+          {
+            "method": "release_kick",
+            "args": [],
+            "kwargs": {}
+          }
+        ],
+        "commands": [
+          {
+            "kind": "velocity_body",
+            "velocity": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "accepted": true
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "role": "support",
+        "action": "support",
+        "pose": [
+          -3.374310339570272,
+          0.7511828732468738,
+          -1.1462263269243393
+        ],
+        "kicking": false,
+        "native_active": false,
+        "calls": [
+          {
+            "method": "move_to_position",
+            "args": [
+              [
+                -0.45693711549556726,
+                -2.15359620298656
+              ]
+            ],
+            "kwargs": {}
+          },
+          {
+            "method": "release_kick",
+            "args": [],
+            "kwargs": {}
+          },
+          {
+            "method": "walk_to",
+            "args": [
+              [
+                -0.45693711549556726,
+                -2.15359620298656
+              ]
+            ],
+            "kwargs": {
+              "face": -0.6324129751409889,
+              "avoid_ball": true,
+              "avoid_robots": true
+            }
+          },
+          {
+            "method": "release_kick",
+            "args": [],
+            "kwargs": {}
+          }
+        ],
+        "commands": [
+          {
+            "kind": "velocity_body",
+            "velocity": [
+              2.0,
+              0.0,
+              0.7259826062537265
+            ],
+            "accepted": true
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "role": "attacker",
+        "action": "attack",
+        "pose": [
+          -0.7523696019149398,
+          0.41479709299965334,
+          -1.3868361601265913
+        ],
+        "kicking": false,
+        "native_active": false,
+        "calls": [
+          {
+            "method": "attack",
+            "args": [],
+            "kwargs": {}
+          },
+          {
+            "method": "release_kick",
+            "args": [],
+            "kwargs": {}
+          },
+          {
+            "method": "walk_to",
+            "args": [
+              [
+                1.1270900686589997,
+                -2.9299578266930686
+              ]
+            ],
+            "kwargs": {}
+          },
+          {
+            "method": "release_kick",
+            "args": [],
+            "kwargs": {}
+          }
+        ],
+        "commands": [
+          {
+            "kind": "velocity_body",
+            "velocity": [
+              0.9058526891844,
+              0.0,
+              0.6559658142259778
+            ],
+            "accepted": true
+          }
+        ]
+      }
+    ]
+  },
+  "window": [
+    {
+      "type": "tick",
+      "wall": 1795082422.4865894,
+      "wall_end": 1795082422.4938817,
+      "now": 55039.83348223,
+      "dt": 0.03483210800186498,
+      "team": 1,
+      "dropped": 0,
+      "writer_error": null,
+      "game": {
+        "state": "PLAYING",
+        "set_play": "NONE",
+        "kicking_team": 255,
+        "stopped": false,
+        "remaining": 568,
+        "secondary": 0
+      },
+      "ball": [
+        -1.6134665448761736,
+        1.2462378381643855
+      ],
+      "ball_seen": 55039.832022844,
+      "opponents": {
+        "1": [
+          -1.1780968944353605,
+          1.2010647298970605,
+          3.141472652095635
+        ],
+        "2": [
+          6.509394791789884,
+          0.1207172100825696,
+          2.9783330178639624
+        ],
+        "3": [
+          1.2364660581872728,
+          0.8195644510782725,
+          3.062350954895324
+        ]
+      },
+      "players": [
+        {
+          "id": 1,
+          "role": "keeper",
+          "action": "keeper:track",
+          "pose": [
+            -6.574086397447504,
+            -0.03661466676301648,
+            0.100377398823671
+          ],
+          "kicking": false,
+          "native_active": false,
+          "calls": [
+            {
+              "method": "walk_to",
+              "args": [
+                [
+                  -6.6,
+                  0.0786629969916618
+                ]
+              ],
+              "kwargs": {
+                "face": 0.0
+              }
+            },
+            {
+              "method": "release_kick",
+              "args": [],
+              "kwargs": {}
+            }
+          ],
+          "commands": [
+            {
+              "kind": "velocity_body",
+              "velocity": [
+                0.0,
+                0.0,
+                -0.200754797647342
+              ],
+              "accepted": true
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "role": "support",
+          "action": "support",
+          "pose": [
+            -2.255086039396021,
+            0.6067767162141506,
+            -3.0749638409657525
+          ],
+          "kicking": false,
+          "native_active": false,
+          "calls": [
+            {
+              "method": "move_to_position",
+              "args": [
+                [
+                  -3.5619956642440727,
+                  0.7954227197673196
+                ]
+              ],
+              "kwargs": {}
+            },
+            {
+              "method": "release_kick",
+              "args": [],
+              "kwargs": {}
+            },
+            {
+              "method": "walk_to",
+              "args": [
+                [
+                  -3.5619956642440727,
+                  0.7954227197673196
+                ]
+              ],
+              "kwargs": {
+                "face": 0.7837133587882494,
+                "avoid_ball": true,
+                "avoid_robots": true
+              }
+            },
+            {
+              "method": "release_kick",
+              "args": [],
+              "kwargs": {}
+            }
+          ],
+          "commands": [
+            {
+              "kind": "velocity_body",
+              "velocity": [
+                1.9687007503790954,
+                0.0,
+                -0.22009150839513275
+              ],
+              "accepted": true
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "role": "attacker",
+          "action": "attack",
+          "pose": [
+            -1.7721247592026823,
+            1.3846749311102369,
+            -0.5035919204112732
+          ],
+          "kicking": true,
+          "native_active": true,
+          "calls": [
+            {
+              "method": "attack",
+              "args": [],
+              "kwargs": {}
+            },
+            {
+              "method": "kick",
+              "args": [
+                -0.13968816950631058,
+                5.0
+              ],
+              "kwargs": {}
+            }
+          ],
+          "commands": [
+            {
+              "kind": "kick_body",
+              "direction": 0.36390375090496263,
+              "power": 5.0,
+              "ball": [
+                0.2057677969666044,
+                -0.04468636713903851
+              ],
+              "mode": "walk"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "tick",
+      "wall": 1795082422.7989767,
+      "wall_end": 1795082422.804328,
+      "now": 55040.143075751,
+      "dt": 0.03561574600462336,
+      "team": 1,
+      "dropped": 0,
+      "writer_error": null,
+      "game": {
+        "state": "PLAYING",
+        "set_play": "NONE",
+        "kicking_team": 255,
+        "stopped": false,
+        "remaining": 568,
+        "secondary": 0
+      },
+      "ball": [
+        -1.4928307850538522,
+        1.197224750693539
+      ],
+      "ball_seen": 55040.135699972,
+      "opponents": {
+        "1": [
+          -1.276239690570053,
+          1.1966316346751216,
+          -3.1037884635517092
+        ],
+        "2": [
+          6.509532047380125,
+          0.12060609105207702,
+          2.9791961277841783
+        ],
+        "3": [
+          1.233917350498941,
+          0.8183648066201028,
+          3.0639497538773988
+        ]
+      },
+      "players": [
+        {
+          "id": 1,
+          "role": "keeper",
+          "action": "keeper:track",
+          "pose": [
+            -6.576966058126551,
+            -0.05500825207537912,
+            0.08368453029617591
+          ],
+          "kicking": false,
+          "native_active": false,
+          "calls": [
+            {
+              "method": "walk_to",
+              "args": [
+                [
+                  -6.6,
+                  0.07391391100369224
+                ]
+              ],
+              "kwargs": {
+                "face": 0.0
+              }
+            },
+            {
+              "method": "release_kick",
+              "args": [],
+              "kwargs": {}
+            },
+            {
+              "method": "stop",
+              "args": [],
+              "kwargs": {}
+            },
+            {
+              "method": "release_kick",
+              "args": [],
+              "kwargs": {}
+            }
+          ],
+          "commands": [
+            {
+              "kind": "velocity_body",
+              "velocity": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "accepted": true
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "role": "support",
+          "action": "support",
+          "pose": [
+            -2.43506895329004,
+            0.627490880772156,
+            -3.1148140644450226
+          ],
+          "kicking": false,
+          "native_active": false,
+          "calls": [
+            {
+              "method": "move_to_position",
+              "args": [
+                [
+                  -3.4471824777655664,
+                  0.7723607004435126
+                ]
+              ],
+              "kwargs": {}
+            },
+            {
+              "method": "release_kick",
+              "args": [],
+              "kwargs": {}
+            },
+            {
+              "method": "walk_to",
+              "args": [
+                [
+                  -3.4471824777655664,
+                  0.7723607004435126
+                ]
+              ],
+              "kwargs": {
+                "face": 0.5438390356793205,
+                "avoid_ball": true,
+                "avoid_robots": true
+              }
+            },
+            {
+              "method": "release_kick",
+              "args": [],
+              "kwargs": {}
+            }
+          ],
+          "commands": [
+            {
+              "kind": "velocity_body",
+              "velocity": [
+                1.5118075661006014,
+                0.0,
+                -0.3378977065404905
+              ],
+              "accepted": true
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "role": "attacker",
+          "action": "attack",
+          "pose": [
+            -1.6747072504560852,
+            1.3972621590887386,
+            -0.6580064975248018
+          ],
+          "kicking": true,
+          "native_active": true,
+          "calls": [
+            {
+              "method": "attack",
+              "args": [],
+              "kwargs": {}
+            },
+            {
+              "method": "kick",
+              "args": [
+                -0.13609143531882611,
+                5.0
+              ],
+              "kwargs": {}
+            }
+          ],
+          "commands": [
+            {
+              "kind": "kick_body",
+              "direction": 0.5219150622059756,
+              "power": 5.0,
+              "ball": [
+                0.26623404103094384,
+                -0.047047304078036686
+              ],
+              "mode": "walk"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "tick",
+      "wall": 1795082423.0711908,
+      "wall_end": 1795082423.0783029,
+      "now": 55040.419184816,
+      "dt": 0.03469455499725882,
+      "team": 1,
+      "dropped": 0,
+      "writer_error": null,
+      "game": {
+        "state": "PLAYING",
+        "set_play": "NONE",
+        "kicking_team": 255,
+        "stopped": false,
+        "remaining": 567,
+        "secondary": 0
+      },
+      "ball": [
+        -1.3118269198960681,
+        0.8478033699539265
+      ],
+      "ball_seen": 55040.399387893,
+      "opponents": {
+        "1": [
+          -1.4833264154836643,
+          1.1380210496584449,
+          3.0315416988496384
+        ],
+        "2": [
+          6.509761576836492,
+          0.12042926798962185,
+          2.9805938114990784
+        ],
+        "3": [
+          1.2327400593322986,
+          0.8186335887166157,
+          3.0661053906377216
+        ]
+      },
+      "players": [
+        {
+          "id": 1,
+          "role": "keeper",
+          "action": "keeper:track",
+          "pose": [
+            -6.575930754518083,
+            -0.05076305061312776,
+            0.09672835787102707
+          ],
+          "kicking": false,
+          "native_active": false,
+          "calls": [
+            {
+              "method": "walk_to",
+              "args": [
+                [
+                  -6.6,
+                  0.05067587461299054
+                ]
+              ],
+              "kwargs": {
+                "face": 0.0
+              }
+            },
+            {
+              "method": "release_kick",
+              "args": [],
+              "kwargs": {}
+            },
+            {
+              "method": "stop",
+              "args": [],
+              "kwargs": {}
+            },
+            {
+              "method": "release_kick",
+              "args": [],
+              "kwargs": {}
+            }
+          ],
+          "commands": [
+            {
+              "kind": "velocity_body",
+              "velocity": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "accepted": true
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "role": "support",
+          "action": "support",
+          "pose": [
+            -2.6168635541611263,
+            0.6579367945249416,
+            3.0967170671693487
+          ],
+          "kicking": false,
+          "native_active": false,
+          "calls": [
+            {
+              "method": "move_to_position",
+              "args": [
+                [
+                  -3.2899754095792555,
+                  0.5529668851625682
+                ]
+              ],
+              "kwargs": {}
+            },
+            {
+              "method": "release_kick",
+              "args": [],
+              "kwargs": {}
+            },
+            {
+              "method": "walk_to",
+              "args": [
+                [
+                  -3.2899754095792555,
+                  0.5529668851625682
+                ]
+              ],
+              "kwargs": {
+                "face": 0.14447389359197937,
+                "avoid_ball": true,
+                "avoid_robots": true
+              }
+            },
+            {
+              "method": "release_kick",
+              "args": [],
+              "kwargs": {}
+            }
+          ],
+          "commands": [
+            {
+              "kind": "velocity_body",
+              "velocity": [
+                1.001587801988328,
+                0.20259057580289352,
+                -2.0
+              ],
+              "accepted": true
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "role": "attacker",
+          "action": "attack",
+          "pose": [
+            -1.6303262098258477,
+            1.3843374753815303,
+            -0.6500462165734566
+          ],
+          "kicking": true,
+          "native_active": true,
+          "calls": [
+            {
+              "method": "attack",
+              "args": [],
+              "kwargs": {}
+            },
+            {
+              "method": "kick",
+              "args": [
+                -0.09869956494460913,
+                5.0
+              ],
+              "kwargs": {}
+            }
+          ],
+          "commands": [
+            {
+              "kind": "kick_body",
+              "direction": 0.5513466516288474,
+              "power": 5.0,
+              "ball": [
+                0.5782661027575058,
+                -0.23434794297031655
+              ],
+              "mode": "walk"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "tick",
+      "wall": 1795082423.3394384,
+      "wall_end": 1795082423.3513436,
+      "now": 55040.687862239,
+      "dt": 0.03345373299816856,
+      "team": 1,
+      "dropped": 0,
+      "writer_error": null,
+      "game": {
+        "state": "PLAYING",
+        "set_play": "NONE",
+        "kicking_team": 255,
+        "stopped": false,
+        "remaining": 567,
+        "secondary": 0
+      },
+      "ball": [
+        -1.0766074265515697,
+        0.5202922356202575
+      ],
+      "ball_seen": 55040.681837682,
+      "opponents": {
+        "1": [
+          -1.5559639991314937,
+          1.082544134442868,
+          2.738865910710996
+        ],
+        "2": [
+          6.50992300345018,
+          0.12031108533873539,
+          2.9815546021034605
+        ],
+        "3": [
+          1.2429717890975338,
+          0.8190250067968927,
+          3.0756629641211295
+        ]
+      },
+      "players": [
+        {
+          "id": 1,
+          "role": "keeper",
+          "action": "keeper:track",
+          "pose": [
+            -6.574324854932951,
+            -0.04094060025825309,
+            0.10213970594116065
+          ],
+          "kicking": false,
+          "native_active": false,
+          "calls": [
+            {
+              "method": "walk_to",
+              "args": [
+                [
+                  -6.6,
+                  0.029864534203563983
+                ]
+              ],
+              "kwargs": {
+                "face": 0.0
+              }
+            },
+            {
+              "method": "release_kick",
+              "args": [],
+              "kwargs": {}
+            }
+          ],
+          "commands": [
+            {
+              "kind": "velocity_body",
+              "velocity": [
+                0.0,
+                0.0,
+                -0.13419284399424214
+              ],
+              "accepted": true
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "role": "support",
+          "action": "support",
+          "pose": [
+            -2.801250974104461,
+            0.6597790978244581,
+            2.9691494786415054
+          ],
+          "kicking": false,
+          "native_active": false,
+          "calls": [
+            {
+              "method": "move_to_position",
+              "args": [
+                [
+                  -3.06893647109347,
+                  0.34529229769238823
+                ]
+              ],
+              "kwargs": {}
+            },
+            {
+              "method": "release_kick",
+              "args": [],
+              "kwargs": {}
+            },
+            {
+              "method": "walk_to",
+              "args": [
+                [
+                  -3.06893647109347,
+                  0.34529229769238823
+                ]
+              ],
+              "kwargs": {
+                "face": -0.08070299863739246,
+                "avoid_ball": true,
+                "avoid_robots": true
+              }
+            },
+            {
+              "method": "release_kick",
+              "args": [],
+              "kwargs": {}
+            }
+          ],
+          "commands": [
+            {
+              "kind": "velocity_body",
+              "velocity": [
+                0.3146288831276857,
+                0.5336318764858763,
+                -2.0
+              ],
+              "accepted": true
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "role": "attacker",
+          "action": "attack",
+          "pose": [
+            -1.6283641248621115,
+            1.3584961666975481,
+            -0.6498132873730653
+          ],
+          "kicking": true,
+          "native_active": true,
+          "calls": [
+            {
+              "method": "attack",
+              "args": [],
+              "kwargs": {}
+            },
+            {
+              "method": "kick",
+              "args": [
+                -0.0624043672726791,
+                5.0
+              ],
+              "kwargs": {}
+            }
+          ],
+          "commands": [
+            {
+              "kind": "kick_body",
+              "direction": 0.5874089201003863,
+              "power": 5.0,
+              "ball": [
+                0.9464519326510319,
+                -0.3335416366589037
+              ],
+              "mode": "walk"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "tick",
+      "wall": 1795082423.6406517,
+      "wall_end": 1795082423.645851,
+      "now": 55040.988362578,
+      "dt": 0.044505189995106775,
+      "team": 1,
+      "dropped": 0,
+      "writer_error": null,
+      "game": {
+        "state": "PLAYING",
+        "set_play": "NONE",
+        "kicking_team": 255,
+        "stopped": false,
+        "remaining": 567,
+        "secondary": 0
+      },
+      "ball": [
+        -0.9105131185131579,
+        0.26338990885826313
+      ],
+      "ball_seen": 55040.968317653,
+      "opponents": {
+        "1": [
+          -1.5559639991314937,
+          1.082544134442868,
+          2.738865910710996
+        ],
+        "2": [
+          6.50992300345018,
+          0.12031108533873539,
+          2.9815546021034605
+        ],
+        "3": [
+          1.2429717890975338,
+          0.8190250067968927,
+          3.0756629641211295
+        ]
+      },
+      "players": [
+        {
+          "id": 1,
+          "role": "keeper",
+          "action": "keeper:track",
+          "pose": [
+            -6.576026263683509,
+            -0.04547644145824144,
+            0.09231380890028199
+          ],
+          "kicking": false,
+          "native_active": false,
+          "calls": [
+            {
+              "method": "walk_to",
+              "args": [
+                [
+                  -6.6,
+                  0.014706094413975294
+                ]
+              ],
+              "kwargs": {
+                "face": 0.0
+              }
+            },
+            {
+              "method": "release_kick",
+              "args": [],
+              "kwargs": {}
+            },
+            {
+              "method": "stop",
+              "args": [],
+              "kwargs": {}
+            },
+            {
+              "method": "release_kick",
+              "args": [],
+              "kwargs": {}
+            }
+          ],
+          "commands": [
+            {
+              "kind": "velocity_body",
+              "velocity": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "accepted": true
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "role": "support",
+          "action": "support",
+          "pose": [
+            -2.945214448324047,
+            0.6550145328086091,
+            2.858480743898772
+          ],
+          "kicking": false,
+          "native_active": false,
+          "calls": [
+            {
+              "method": "move_to_position",
+              "args": [
+                [
+                  -2.908644898519549,
+                  0.17696427765726755
+                ]
+              ],
+              "kwargs": {}
+            },
+            {
+              "method": "release_kick",
+              "args": [],
+              "kwargs": {}
+            },
+            {
+              "method": "walk_to",
+              "args": [
+                [
+                  -2.908644898519549,
+                  0.17696427765726755
+                ]
+              ],
+              "kwargs": {
+                "face": -0.19014748435759696,
+                "avoid_ball": true,
+                "avoid_robots": true
+              }
+            },
+            {
+              "method": "release_kick",
+              "args": [],
+              "kwargs": {}
+            }
+          ],
+          "commands": [
+            {
+              "kind": "velocity_body",
+              "velocity": [
+                -0.2529820570478641,
+                0.6732058973775824,
+                -2.0
+              ],
+              "accepted": true
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "role": "attacker",
+          "action": "attack",
+          "pose": [
+            -1.6652017403880983,
+            1.3405751704818432,
+            -0.45203409050522836
+          ],
+          "kicking": true,
+          "native_active": true,
+          "calls": [
+            {
+              "method": "attack",
+              "args": [],
+              "kwargs": {}
+            },
+            {
+              "method": "kick",
+              "args": [
+                -0.03226494462447267,
+                5.0
+              ],
+              "kwargs": {}
+            }
+          ],
+          "commands": [
+            {
+              "kind": "kick_body",
+              "direction": 0.4197691458807557,
+              "power": 5.0,
+              "ball": [
+                1.1493985143440124,
+                -0.6393481516907155
+              ],
+              "mode": "walk"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "tick",
+      "wall": 1795082423.9122047,
+      "wall_end": 1795082423.9241767,
+      "now": 55041.261358922,
+      "dt": 0.03437580099853221,
+      "team": 1,
+      "dropped": 0,
+      "writer_error": null,
+      "game": {
+        "state": "PLAYING",
+        "set_play": "NONE",
+        "kicking_team": 255,
+        "stopped": false,
+        "remaining": 567,
+        "secondary": 0
+      },
+      "ball": [
+        -0.6983347295707577,
+        -0.07978454378526836
+      ],
+      "ball_seen": 55041.258108451,
+      "opponents": {
+        "1": [
+          -1.5885922559039387,
+          1.0929246962559174,
+          2.7116326895884937
+        ],
+        "2": [
+          6.510087932597402,
+          0.120196006230719,
+          2.9826383006236328
+        ],
+        "3": [
+          1.2615307952586758,
+          0.8146739158040387,
+          3.103787122958376
+        ]
+      },
+      "players": [
+        {
+          "id": 1,
+          "role": "keeper",
+          "action": "keeper:track",
+          "pose": [
+            -6.576538696164144,
+            -0.05271026530263007,
+            0.0937283902683033
+          ],
+          "kicking": false,
+          "native_active": false,
+          "calls": [
+            {
+              "method": "walk_to",
+              "args": [
+                [
+                  -6.6,
+                  -0.004304694667659412
+                ]
+              ],
+              "kwargs": {
+                "face": 0.0
+              }
+            },
+            {
+              "method": "release_kick",
+              "args": [],
+              "kwargs": {}
+            },
+            {
+              "method": "stop",
+              "args": [],
+              "kwargs": {}
+            },
+            {
+              "method": "release_kick",
+              "args": [],
+              "kwargs": {}
+            }
+          ],
+          "commands": [
+            {
+              "kind": "velocity_body",
+              "velocity": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "accepted": true
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "role": "support",
+          "action": "support",
+          "pose": [
+            -3.0979920665834304,
+            0.7184491613044205,
+            2.6616896315551193
+          ],
+          "kicking": false,
+          "native_active": false,
+          "calls": [
+            {
+              "method": "move_to_position",
+              "args": [
+                [
+                  -2.698174451294836,
+                  -0.05446483970797685
+                ]
+              ],
+              "kwargs": {}
+            },
+            {
+              "method": "release_kick",
+              "args": [],
+              "kwargs": {}
+            },
+            {
+              "method": "walk_to",
+              "args": [
+                [
+                  -2.698174451294836,
+                  -0.05446483970797685
+                ]
+              ],
+              "kwargs": {
+                "face": -0.3211308102903879,
+                "avoid_ball": true,
+                "avoid_robots": true
+              }
+            },
+            {
+              "method": "release_kick",
+              "args": [],
+              "kwargs": {}
+            }
+          ],
+          "commands": [
+            {
+              "kind": "velocity_body",
+              "velocity": [
+                -1.0672548017075276,
+                0.7515185225650394,
+                -2.0
+              ],
+              "accepted": true
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "role": "attacker",
+          "action": "attack",
+          "pose": [
+            -1.7189447031064204,
+            1.3193994955048274,
+            -0.46575284922737564
+          ],
+          "kicking": true,
+          "native_active": true,
+          "calls": [
+            {
+              "method": "attack",
+              "args": [],
+              "kwargs": {}
+            },
+            {
+              "method": "kick",
+              "args": [
+                0.010037557171768428,
+                5.0
+              ],
+              "kwargs": {}
+            }
+          ],
+          "commands": [
+            {
+              "kind": "kick_body",
+              "direction": 0.475790406399144,
+              "power": 5.0,
+              "ball": [
+                1.5402657710471952,
+                -0.791796721655883
+              ],
+              "mode": "walk"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "tick",
+      "wall": 1795082424.2183197,
+      "wall_end": 1795082424.2516327,
+      "now": 55041.556754876,
+      "dt": 0.0364176180009963,
+      "team": 1,
+      "dropped": 0,
+      "writer_error": null,
+      "game": {
+        "state": "PLAYING",
+        "set_play": "NONE",
+        "kicking_team": 255,
+        "stopped": false,
+        "remaining": 567,
+        "secondary": 0
+      },
+      "ball": [
+        -0.508638078036814,
+        -0.39724793872868275
+      ],
+      "ball_seen": 55041.530404934,
+      "opponents": {
+        "1": [
+          -1.5730749630720617,
+          1.1096924585883403,
+          3.0393911390456108
+        ],
+        "2": [
+          6.519251217125268,
+          0.1387174130835891,
+          3.0163938432542188
+        ],
+        "3": [
+          1.3117155675085839,
+          0.8216891165974867,
+          -3.110191741969968
+        ]
+      },
+      "players": [
+        {
+          "id": 1,
+          "role": "keeper",
+          "action": "keeper:track",
+          "pose": [
+            -6.574989427525012,
+            -0.040736286473481154,
+            0.10210872961867073
+          ],
+          "kicking": false,
+          "native_active": false,
+          "calls": [
+            {
+              "method": "walk_to",
+              "args": [
+                [
+                  -6.6,
+                  -0.020806773800543934
+                ]
+              ],
+              "kwargs": {
+                "face": 0.0
+              }
+            },
+            {
+              "method": "release_kick",
+              "args": [],
+              "kwargs": {}
+            }
+          ],
+          "commands": [
+            {
+              "kind": "velocity_body",
+              "velocity": [
+                0.0,
+                0.0,
+                -0.14593094799784012
+              ],
+              "accepted": true
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "role": "support",
+          "action": "support",
+          "pose": [
+            -3.199764015534966,
+            0.776492077854964,
+            2.4745377297353617
+          ],
+          "kicking": false,
+          "native_active": false,
+          "calls": [
+            {
+              "method": "move_to_position",
+              "args": [
+                [
+                  -2.5049035654963143,
+                  -0.27508369036573455
+                ]
+              ],
+              "kwargs": {}
+            },
+            {
+              "method": "release_kick",
+              "args": [],
+              "kwargs": {}
+            },
+            {
+              "method": "walk_to",
+              "args": [
+                [
+                  -2.5049035654963143,
+                  -0.27508369036573455
+                ]
+              ],
+              "kwargs": {
+                "face": -0.4112784633727373,
+                "avoid_ball": true,
+                "avoid_robots": true
+              }
+            },
+            {
+              "method": "release_kick",
+              "args": [],
+              "kwargs": {}
+            }
+          ],
+          "commands": [
+            {
+              "kind": "velocity_body",
+              "velocity": [
+                0.0,
+                0.0,
+                2.0
+              ],
+              "accepted": true
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "role": "attacker",
+          "action": "attack",
+          "pose": [
+            -1.7792009296134448,
+            1.2844443654681392,
+            -0.5203861218241654
+          ],
+          "kicking": true,
+          "native_active": true,
+          "calls": [
+            {
+              "method": "attack",
+              "args": [],
+              "kwargs": {}
+            },
+            {
+              "method": "kick",
+              "args": [
+                0.0511560597707541,
+                5.0
+              ],
+              "kwargs": {}
+            }
+          ],
+          "commands": [
+            {
+              "kind": "kick_body",
+              "direction": 0.5715421815949195,
+              "power": 5.0,
+              "ball": [
+                1.9385379136257141,
+                -0.8273389409649584
+              ],
+              "mode": "walk"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "tick",
+      "wall": 1795082424.6183956,
+      "wall_end": 1795082424.6265671,
+      "now": 55041.964908745,
+      "dt": 0.03484908300015377,
+      "team": 1,
+      "dropped": 0,
+      "writer_error": null,
+      "game": {
+        "state": "PLAYING",
+        "set_play": "NONE",
+        "kicking_team": 255,
+        "stopped": false,
+        "remaining": 567,
+        "secondary": 0
+      },
+      "ball": [
+        -0.312403896029848,
+        -0.7168797717147555
+      ],
+      "ball_seen": 55041.952495218,
+      "opponents": {
+        "1": [
+          -1.5592229946855096,
+          1.0209425408961827,
+          3.1062684856477225
+        ],
+        "2": [
+          6.51673141619484,
+          0.11856543414855322,
+          3.1298558870412436
+        ],
+        "3": [
+          1.3903314948584824,
+          0.8355068708230375,
+          -2.9350340368115813
+        ]
+      },
+      "players": [
+        {
+          "id": 1,
+          "role": "keeper",
+          "action": "keeper:track",
+          "pose": [
+            -6.577509726504037,
+            -0.05349939731915752,
+            0.08144291172678675
+          ],
+          "kicking": false,
+          "native_active": false,
+          "calls": [
+            {
+              "method": "walk_to",
+              "args": [
+                [
+                  -6.6,
+                  -0.03644644781079392
+                ]
+              ],
+              "kwargs": {
+                "face": 0.0
+              }
+            },
+            {
+              "method": "release_kick",
+              "args": [],
+              "kwargs": {}
+            },
+            {
+              "method": "stop",
+              "args": [],
+              "kwargs": {}
+            },
+            {
+              "method": "release_kick",
+              "args": [],
+              "kwargs": {}
+            }
+          ],
+          "commands": [
+            {
+              "kind": "velocity_body",
+              "velocity": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "accepted": true
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "role": "support",
+          "action": "support",
+          "pose": [
+            -3.3012757835108464,
+            0.763808407424096,
+            2.3379014814678047
+          ],
+          "kicking": false,
+          "native_active": false,
+          "calls": [
+            {
+              "method": "move_to_position",
+              "args": [
+                [
+                  -2.3010111258744783,
+                  -0.5037101551891678
+                ]
+              ],
+              "kwargs": {}
+            },
+            {
+              "method": "release_kick",
+              "args": [],
+              "kwargs": {}
+            },
+            {
+              "method": "walk_to",
+              "args": [
+                [
+                  -2.3010111258744783,
+                  -0.5037101551891678
+                ]
+              ],
+              "kwargs": {
+                "face": -0.4599611230455807,
+                "avoid_ball": true,
+                "avoid_robots": true
+              }
+            },
+            {
+              "method": "release_kick",
+              "args": [],
+              "kwargs": {}
+            }
+          ],
+          "commands": [
+            {
+              "kind": "velocity_body",
+              "velocity": [
+                0.0,
+                0.0,
+                2.0
+              ],
+              "accepted": true
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "role": "attacker",
+          "action": "attack",
+          "pose": [
+            -1.876582118852296,
+            1.1971130019968268,
+            -0.6181347993754067
+          ],
+          "kicking": true,
+          "native_active": true,
+          "calls": [
+            {
+              "method": "attack",
+              "args": [],
+              "kwargs": {}
+            },
+            {
+              "method": "kick",
+              "args": [
+                0.09451279770593678,
+                5.0
+              ],
+              "kwargs": {}
+            }
+          ],
+          "commands": [
+            {
+              "kind": "kick_body",
+              "direction": 0.7126475970813435,
+              "power": 5.0,
+              "ball": [
+                2.3839335516950904,
+                -0.6533625882116142
+              ],
+              "mode": "walk"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "tick",
+      "wall": 1795082424.899606,
+      "wall_end": 1795082424.9123356,
+      "now": 55042.245519556,
+      "dt": 0.033965667003940325,
+      "team": 1,
+      "dropped": 0,
+      "writer_error": null,
+      "game": {
+        "state": "PLAYING",
+        "set_play": "NONE",
+        "kicking_team": 255,
+        "stopped": false,
+        "remaining": 567,
+        "secondary": 0
+      },
+      "ball": [
+        -0.09541433671977013,
+        -1.0442569143491418
+      ],
+      "ball_seen": 55042.242608208,
+      "opponents": {
+        "1": [
+          -1.4468201626354222,
+          0.8103719581859332,
+          -3.008369687140623
+        ],
+        "2": [
+          6.520611520348431,
+          0.1407801146566557,
+          3.1389799656939052
+        ],
+        "3": [
+          1.5114320666131458,
+          0.8470018632571359,
+          -2.589048612304713
+        ]
+      },
+      "players": [
+        {
+          "id": 1,
+          "role": "keeper",
+          "action": "keeper:track",
+          "pose": [
+            -6.574741428060902,
+            -0.04715307449957686,
+            0.09406663140587726
+          ],
+          "kicking": false,
+          "native_active": false,
+          "calls": [
+            {
+              "method": "walk_to",
+              "args": [
+                [
+                  -6.6,
+                  -0.051421963343421306
+                ]
+              ],
+              "kwargs": {
+                "face": 0.0
+              }
+            },
+            {
+              "method": "release_kick",
+              "args": [],
+              "kwargs": {}
+            },
+            {
+              "method": "stop",
+              "args": [],
+              "kwargs": {}
+            },
+            {
+              "method": "release_kick",
+              "args": [],
+              "kwargs": {}
+            }
+          ],
+          "commands": [
+            {
+              "kind": "velocity_body",
+              "velocity": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "accepted": true
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "role": "support",
+          "action": "support",
+          "pose": [
+            -3.32772961977996,
+            0.7608546576469499,
+            2.29649299516444
+          ],
+          "kicking": false,
+          "native_active": false,
+          "calls": [
+            {
+              "method": "move_to_position",
+              "args": [
+                [
+                  -2.0729255527478134,
+                  -0.7451760047556168
+                ]
+              ],
+              "kwargs": {}
+            },
+            {
+              "method": "release_kick",
+              "args": [],
+              "kwargs": {}
+            },
+            {
+              "method": "walk_to",
+              "args": [
+                [
+                  -2.0729255527478134,
+                  -0.7451760047556168
+                ]
+              ],
+              "kwargs": {
+                "face": -0.5093134985880913,
+                "avoid_ball": true,
+                "avoid_robots": true
+              }
+            },
+            {
+              "method": "release_kick",
+              "args": [],
+              "kwargs": {}
+            }
+          ],
+          "commands": [
+            {
+              "kind": "velocity_body",
+              "velocity": [
+                0.0,
+                0.0,
+                2.0
+              ],
+              "accepted": true
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "role": "attacker",
+          "action": "attack",
+          "pose": [
+            -1.9013277293189264,
+            1.1485547554025246,
+            -0.6416812540288456
+          ],
+          "kicking": false,
+          "native_active": false,
+          "calls": [
+            {
+              "method": "attack",
+              "args": [],
+              "kwargs": {}
+            },
+            {
+              "method": "release_kick",
+              "args": [],
+              "kwargs": {}
+            },
+            {
+              "method": "walk_to",
+              "args": [
+                [
+                  -0.44193018289693164,
+                  -1.093519154940955
+                ]
+              ],
+              "kwargs": {}
+            },
+            {
+              "method": "release_kick",
+              "args": [],
+              "kwargs": {}
+            }
+          ],
+          "commands": [
+            {
+              "kind": "velocity_body",
+              "velocity": [
+                0.987570867835247,
+                0.0,
+                -0.704195023385485
+              ],
+              "accepted": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "tick",
+      "wall": 1795082425.169749,
+      "wall_end": 1795082425.2020772,
+      "now": 55042.517038591,
+      "dt": 0.03386120600043796,
+      "team": 1,
+      "dropped": 0,
+      "writer_error": null,
+      "game": {
+        "state": "PLAYING",
+        "set_play": "NONE",
+        "kicking_team": 255,
+        "stopped": false,
+        "remaining": 566,
+        "secondary": 0
+      },
+      "ball": [
+        0.10402853732415207,
+        -1.3179505226358934
+      ],
+      "ball_seen": 55042.508030875,
+      "opponents": {
+        "1": [
+          -1.3122813575400851,
+          0.6174709365053908,
+          -2.8545240199421733
+        ],
+        "2": [
+          6.513838209097439,
+          0.14658011529917525,
+          -3.070074520325683
+        ],
+        "3": [
+          1.5851783491892795,
+          0.8224202274796024,
+          -1.986438770091416
+        ]
+      },
+      "players": [
+        {
+          "id": 1,
+          "role": "keeper",
+          "action": "keeper:track",
+          "pose": [
+            -6.5736930381076,
+            -0.04026278761447984,
+            0.0987416765181758
+          ],
+          "kicking": false,
+          "native_active": false,
+          "calls": [
+            {
+              "method": "walk_to",
+              "args": [
+                [
+                  -6.6,
+                  -0.06307733356389207
+                ]
+              ],
+              "kwargs": {
+                "face": 0.0
+              }
+            },
+            {
+              "method": "release_kick",
+              "args": [],
+              "kwargs": {}
+            },
+            {
+              "method": "stop",
+              "args": [],
+              "kwargs": {}
+            },
+            {
+              "method": "release_kick",
+              "args": [],
+              "kwargs": {}
+            }
+          ],
+          "commands": [
+            {
+              "kind": "velocity_body",
+              "velocity": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "accepted": true
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "role": "support",
+          "action": "support",
+          "pose": [
+            -3.29145132025673,
+            0.7897192507957607,
+            2.396647110892522
+          ],
+          "kicking": false,
+          "native_active": false,
+          "calls": [
+            {
+              "method": "move_to_position",
+              "args": [
+                [
+                  -1.8624169337181407,
+                  -0.9531324728943065
+                ]
+              ],
+              "kwargs": {}
+            },
+            {
+              "method": "release_kick",
+              "args": [],
+              "kwargs": {}
+            },
+            {
+              "method": "walk_to",
+              "args": [
+                [
+                  -1.8624169337181407,
+                  -0.9531324728943065
+                ]
+              ],
+              "kwargs": {
+                "face": -0.5555214903942691,
+                "avoid_ball": true,
+                "avoid_robots": true
+              }
+            },
+            {
+              "method": "release_kick",
+              "args": [],
+              "kwargs": {}
+            }
+          ],
+          "commands": [
+            {
+              "kind": "velocity_body",
+              "velocity": [
+                0.0,
+                0.0,
+                2.0
+              ],
+              "accepted": true
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "role": "attacker",
+          "action": "attack",
+          "pose": [
+            -1.8865367353443903,
+            1.1078975063841794,
+            -0.7736153573662912
+          ],
+          "kicking": false,
+          "native_active": false,
+          "calls": [
+            {
+              "method": "attack",
+              "args": [],
+              "kwargs": {}
+            },
+            {
+              "method": "release_kick",
+              "args": [],
+              "kwargs": {}
+            },
+            {
+              "method": "walk_to",
+              "args": [
+                [
+                  -0.24016644876303544,
+                  -1.3814313193577428
+                ]
+              ],
+              "kwargs": {}
+            },
+            {
+              "method": "release_kick",
+              "args": [],
+              "kwargs": {}
+            }
+          ],
+          "commands": [
+            {
+              "kind": "velocity_body",
+              "velocity": [
+                1.661334979129212,
+                0.0,
+                -0.4257069068034545
+              ],
+              "accepted": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "tick",
+      "wall": 1795082425.45596,
+      "wall_end": 1795082425.4603846,
+      "now": 55042.804810621,
+      "dt": 0.033411984994017985,
+      "team": 1,
+      "dropped": 0,
+      "writer_error": null,
+      "game": {
+        "state": "PLAYING",
+        "set_play": "NONE",
+        "kicking_team": 255,
+        "stopped": false,
+        "remaining": 566,
+        "secondary": 0
+      },
+      "ball": [
+        0.29527145917078945,
+        -1.5573165535453533
+      ],
+      "ball_seen": 55042.792881292,
+      "opponents": {
+        "1": [
+          -1.2826335490172094,
+          0.5047042416453015,
+          -2.701428046916114
+        ],
+        "2": [
+          6.513076043500322,
+          0.13776344302225205,
+          -3.039180718183798
+        ],
+        "3": [
+          1.5487777745160638,
+          0.8020307073942701,
+          -1.8883699898900441
+        ]
+      },
+      "players": [
+        {
+          "id": 1,
+          "role": "keeper",
+          "action": "keeper:track",
+          "pose": [
+            -6.575026757806447,
+            -0.0593084787955461,
+            0.09042602595753008
+          ],
+          "kicking": false,
+          "native_active": false,
+          "calls": [
+            {
+              "method": "walk_to",
+              "args": [
+                [
+                  -6.6,
+                  -0.07257956488237435
+                ]
+              ],
+              "kwargs": {
+                "face": 0.0
+              }
+            },
+            {
+              "method": "release_kick",
+              "args": [],
+              "kwargs": {}
+            },
+            {
+              "method": "stop",
+              "args": [],
+              "kwargs": {}
+            },
+            {
+              "method": "release_kick",
+              "args": [],
+              "kwargs": {}
+            }
+          ],
+          "commands": [
+            {
+              "kind": "velocity_body",
+              "velocity": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "accepted": true
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "role": "support",
+          "action": "support",
+          "pose": [
+            -3.323041768999584,
+            0.7639211478615907,
+            2.5590815947880894
+          ],
+          "kicking": false,
+          "native_active": false,
+          "calls": [
+            {
+              "method": "move_to_position",
+              "args": [
+                [
+                  -1.6606599292120212,
+                  -1.1397852326376983
+                ]
+              ],
+              "kwargs": {}
+            },
+            {
+              "method": "release_kick",
+              "args": [],
+              "kwargs": {}
+            },
+            {
+              "method": "walk_to",
+              "args": [
+                [
+                  -1.6606599292120212,
+                  -1.1397852326376983
+                ]
+              ],
+              "kwargs": {
+                "face": -0.5703941737684253,
+                "avoid_ball": true,
+                "avoid_robots": true
+              }
+            },
+            {
+              "method": "release_kick",
+              "args": [],
+              "kwargs": {}
+            }
+          ],
+          "commands": [
+            {
+              "kind": "velocity_body",
+              "velocity": [
+                0.0,
+                0.0,
+                2.0
+              ],
+              "accepted": true
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "role": "attacker",
+          "action": "attack",
+          "pose": [
+            -1.8410672251281932,
+            1.0578301128304568,
+            -0.8451985110968415
+          ],
+          "kicking": false,
+          "native_active": false,
+          "calls": [
+            {
+              "method": "attack",
+              "args": [],
+              "kwargs": {}
+            },
+            {
+              "method": "release_kick",
+              "args": [],
+              "kwargs": {}
+            },
+            {
+              "method": "walk_to",
+              "args": [
+                [
+                  -0.046270626711321095,
+                  -1.6337953321136398
+                ]
+              ],
+              "kwargs": {}
+            },
+            {
+              "method": "release_kick",
+              "args": [],
+              "kwargs": {}
+            }
+          ],
+          "commands": [
+            {
+              "kind": "velocity_body",
+              "velocity": [
+                1.7714294801642574,
+                0.0,
+                -0.27499514660648394
+              ],
+              "accepted": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "tick",
+      "wall": 1795082425.7295105,
+      "wall_end": 1795082425.740959,
+      "now": 55043.077455943,
+      "dt": 0.03373368400207255,
+      "team": 1,
+      "dropped": 0,
+      "writer_error": null,
+      "game": {
+        "state": "PLAYING",
+        "set_play": "NONE",
+        "kicking_team": 255,
+        "stopped": false,
+        "remaining": 566,
+        "secondary": 0
+      },
+      "ball": [
+        0.4798117801802925,
+        -1.7712662288232977
+      ],
+      "ball_seen": 55043.068698415,
+      "opponents": {
+        "1": [
+          -1.2863526094464335,
+          0.5063244535661463,
+          -2.739033691875994
+        ],
+        "2": [
+          6.517054044820342,
+          0.11183180122766599,
+          -2.9782061655916525
+        ],
+        "3": [
+          1.5380360242163886,
+          0.7629024165040225,
+          -1.8184754433536876
+        ]
+      },
+      "players": [
+        {
+          "id": 1,
+          "role": "keeper",
+          "action": "keeper:track",
+          "pose": [
+            -6.572806497618217,
+            -0.048027799561672364,
+            0.10214271963405384
+          ],
+          "kicking": false,
+          "native_active": false,
+          "calls": [
+            {
+              "method": "walk_to",
+              "args": [
+                [
+                  -6.6,
+                  -0.08051412729337491
+                ]
+              ],
+              "kwargs": {
+                "face": 0.0
+              }
+            },
+            {
+              "method": "release_kick",
+              "args": [],
+              "kwargs": {}
+            }
+          ],
+          "commands": [
+            {
+              "kind": "velocity_body",
+              "velocity": [
+                0.0,
+                0.0,
+                -0.0674673680041451
+              ],
+              "accepted": true
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "role": "support",
+          "action": "support",
+          "pose": [
+            -3.3289446631630115,
+            0.7565379693296985,
+            2.8212633974661387
+          ],
+          "kicking": false,
+          "native_active": false,
+          "calls": [
+            {
+              "method": "move_to_position",
+              "args": [
+                [
+                  -1.4663644399056044,
+                  -1.3103995231781944
+                ]
+              ],
+              "kwargs": {}
+            },
+            {
+              "method": "release_kick",
+              "args": [],
+              "kwargs": {}
+            },
+            {
+              "method": "walk_to",
+              "args": [
+                [
+                  -1.4663644399056044,
+                  -1.3103995231781944
+                ]
+              ],
+              "kwargs": {
+                "face": -0.5859336497464548,
+                "avoid_ball": true,
+                "avoid_robots": true
+              }
+            },
+            {
+              "method": "release_kick",
+              "args": [],
+              "kwargs": {}
+            }
+          ],
+          "commands": [
+            {
+              "kind": "velocity_body",
+              "velocity": [
+                0.0,
+                0.0,
+                2.0
+              ],
+              "accepted": true
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "role": "attacker",
+          "action": "attack",
+          "pose": [
+            -1.7156960909619787,
+            0.9907962726160747,
+            -0.8731985853007925
+          ],
+          "kicking": false,
+          "native_active": false,
+          "calls": [
+            {
+              "method": "attack",
+              "args": [],
+              "kwargs": {}
+            },
+            {
+              "method": "release_kick",
+              "args": [],
+              "kwargs": {}
+            },
+            {
+              "method": "walk_to",
+              "args": [
+                [
+                  0.14120848907202016,
+                  -1.8598541018683514
+                ]
+              ],
+              "kwargs": {}
+            },
+            {
+              "method": "release_kick",
+              "args": [],
+              "kwargs": {}
+            }
+          ],
+          "commands": [
+            {
+              "kind": "velocity_body",
+              "velocity": [
+                1.2762134387685973,
+                0.0,
+                -0.24048240492397444
+              ],
+              "accepted": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "tick",
+      "wall": 1795082426.0060484,
+      "wall_end": 1795082426.020312,
+      "now": 55043.355229939,
+      "dt": 0.033415931997296866,
+      "team": 1,
+      "dropped": 0,
+      "writer_error": null,
+      "game": {
+        "state": "PLAYING",
+        "set_play": "NONE",
+        "kicking_team": 255,
+        "stopped": false,
+        "remaining": 566,
+        "secondary": 0
+      },
+      "ball": [
+        0.6831916323925429,
+        -1.9947726727253137
+      ],
+      "ball_seen": 55043.339647656,
+      "opponents": {
+        "1": [
+          -1.2851383767900222,
+          0.50504483901278,
+          -2.7418981422149935
+        ],
+        "2": [
+          6.502558643476452,
+          0.13865398297513684,
+          -2.952159932949363
+        ],
+        "3": [
+          1.5455105820729582,
+          0.6790194186798761,
+          -1.808594573891171
+        ]
+      },
+      "players": [
+        {
+          "id": 1,
+          "role": "keeper",
+          "action": "keeper:track",
+          "pose": [
+            -6.575068687796687,
+            -0.058722246130274804,
+            0.08256933675225002
+          ],
+          "kicking": false,
+          "native_active": false,
+          "calls": [
+            {
+              "method": "walk_to",
+              "args": [
+                [
+                  -6.6,
+                  -0.088273564057312
+                ]
+              ],
+              "kwargs": {
+                "face": 0.0
+              }
+            },
+            {
+              "method": "release_kick",
+              "args": [],
+              "kwargs": {}
+            },
+            {
+              "method": "stop",
+              "args": [],
+              "kwargs": {}
+            },
+            {
+              "method": "release_kick",
+              "args": [],
+              "kwargs": {}
+            }
+          ],
+          "commands": [
+            {
+              "kind": "velocity_body",
+              "velocity": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "accepted": true
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "role": "support",
+          "action": "support",
+          "pose": [
+            -3.3337710881827136,
+            0.811742016756001,
+            -3.033082520884005
+          ],
+          "kicking": false,
+          "native_active": false,
+          "calls": [
+            {
+              "method": "move_to_position",
+              "args": [
+                [
+                  -1.2526285796903849,
+                  -1.4921792918584265
+                ]
+              ],
+              "kwargs": {}
+            },
+            {
+              "method": "release_kick",
+              "args": [],
+              "kwargs": {}
+            },
+            {
+              "method": "walk_to",
+              "args": [
+                [
+                  -1.2526285796903849,
+                  -1.4921792918584265
+                ]
+              ],
+              "kwargs": {
+                "face": -0.6098300030287899,
+                "avoid_ball": true,
+                "avoid_robots": true
+              }
+            },
+            {
+              "method": "release_kick",
+              "args": [],
+              "kwargs": {}
+            }
+          ],
+          "commands": [
+            {
+              "kind": "velocity_body",
+              "velocity": [
+                0.0,
+                0.0,
+                2.0
+              ],
+              "accepted": true
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "role": "attacker",
+          "action": "attack",
+          "pose": [
+            -1.5826609061156554,
+            0.843875729492604,
+            -0.936897097640873
+          ],
+          "kicking": false,
+          "native_active": false,
+          "calls": [
+            {
+              "method": "attack",
+              "args": [],
+              "kwargs": {}
+            },
+            {
+              "method": "release_kick",
+              "args": [],
+              "kwargs": {}
+            },
+            {
+              "method": "walk_to",
+              "args": [
+                [
+                  0.34830154130966606,
+                  -2.0965008738030013
+                ]
+              ],
+              "kwargs": {}
+            },
+            {
+              "method": "release_kick",
+              "args": [],
+              "kwargs": {}
+            }
+          ],
+          "commands": [
+            {
+              "kind": "velocity_body",
+              "velocity": [
+                0.75,
+                0.0,
+                -0.10564866076600389
+              ],
+              "accepted": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "tick",
+      "wall": 1795082426.2815802,
+      "wall_end": 1795082426.2868757,
+      "now": 55043.630848098,
+      "dt": 0.033405025002139155,
+      "team": 1,
+      "dropped": 0,
+      "writer_error": null,
+      "game": {
+        "state": "PLAYING",
+        "set_play": "NONE",
+        "kicking_team": 255,
+        "stopped": false,
+        "remaining": 565,
+        "secondary": 0
+      },
+      "ball": [
+        0.8643400179339598,
+        -2.186919101358923
+      ],
+      "ball_seen": 55043.60656658,
+      "opponents": {
+        "1": [
+          -1.2851703895970057,
+          0.504717165469746,
+          -2.7421032516329826
+        ],
+        "2": [
+          6.509265954990399,
+          0.11479518663235443,
+          -2.896482869239893
+        ],
+        "3": [
+          1.4379901143493006,
+          0.4737994331115904,
+          -1.829240263346201
+        ]
+      },
+      "players": [
+        {
+          "id": 1,
+          "role": "keeper",
+          "action": "keeper:track",
+          "pose": [
+            -6.5718733278728925,
+            -0.05137840098954056,
+            0.09475155216599225
+          ],
+          "kicking": false,
+          "native_active": false,
+          "calls": [
+            {
+              "method": "walk_to",
+              "args": [
+                [
+                  -6.6,
+                  -0.09454734825381729
+                ]
+              ],
+              "kwargs": {
+                "face": 0.0
+              }
+            },
+            {
+              "method": "release_kick",
+              "args": [],
+              "kwargs": {}
+            },
+            {
+              "method": "stop",
+              "args": [],
+              "kwargs": {}
+            },
+            {
+              "method": "release_kick",
+              "args": [],
+              "kwargs": {}
+            }
+          ],
+          "commands": [
+            {
+              "kind": "velocity_body",
+              "velocity": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "accepted": true
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "role": "support",
+          "action": "support",
+          "pose": [
+            -3.343997709553523,
+            0.784148882248435,
+            -2.657483581717222
+          ],
+          "kicking": false,
+          "native_active": false,
+          "calls": [
+            {
+              "method": "move_to_position",
+              "args": [
+                [
+                  -1.0625453330070522,
+                  -1.6510899827689265
+                ]
+              ],
+              "kwargs": {}
+            },
+            {
+              "method": "release_kick",
+              "args": [],
+              "kwargs": {}
+            },
+            {
+              "method": "walk_to",
+              "args": [
+                [
+                  -1.0625453330070522,
+                  -1.6510899827689265
+                ]
+              ],
+              "kwargs": {
+                "face": -0.614738543367046,
+                "avoid_ball": true,
+                "avoid_robots": true
+              }
+            },
+            {
+              "method": "release_kick",
+              "args": [],
+              "kwargs": {}
+            }
+          ],
+          "commands": [
+            {
+              "kind": "velocity_body",
+              "velocity": [
+                0.0,
+                0.0,
+                2.0
+              ],
+              "accepted": true
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "role": "attacker",
+          "action": "attack",
+          "pose": [
+            -1.442555716733274,
+            0.669663861301173,
+            -0.9308492437069223
+          ],
+          "kicking": false,
+          "native_active": false,
+          "calls": [
+            {
+              "method": "attack",
+              "args": [],
+              "kwargs": {}
+            },
+            {
+              "method": "release_kick",
+              "args": [],
+              "kwargs": {}
+            },
+            {
+              "method": "walk_to",
+              "args": [
+                [
+                  0.533219980315762,
+                  -2.3003189280242373
+                ]
+              ],
+              "kwargs": {}
+            },
+            {
+              "method": "release_kick",
+              "args": [],
+              "kwargs": {}
+            }
+          ],
+          "commands": [
+            {
+              "kind": "velocity_body",
+              "velocity": [
+                0.75,
+                0.0,
+                -0.10585427940418413
+              ],
+              "accepted": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "tick",
+      "wall": 1795082426.566673,
+      "wall_end": 1795082426.5884671,
+      "now": 55043.914217981,
+      "dt": 0.0335318260040367,
+      "team": 1,
+      "dropped": 0,
+      "writer_error": null,
+      "game": {
+        "state": "PLAYING",
+        "set_play": "NONE",
+        "kicking_team": 255,
+        "stopped": false,
+        "remaining": 565,
+        "secondary": 0
+      },
+      "ball": [
+        0.9901493556088709,
+        -2.317791623132738
+      ],
+      "ball_seen": 55043.884708945,
+      "opponents": {
+        "1": [
+          -1.2820433494098955,
+          0.503463219003953,
+          -2.745735670244509
+        ],
+        "2": [
+          6.493842344338813,
+          0.14593467058658685,
+          -2.8631344104961354
+        ],
+        "3": [
+          1.4133875528384126,
+          0.2839594625474391,
+          -1.8105799148668646
+        ]
+      },
+      "players": [
+        {
+          "id": 1,
+          "role": "keeper",
+          "action": "keeper:track",
+          "pose": [
+            -6.570058012235806,
+            -0.04481884082405182,
+            0.10443595749834304
+          ],
+          "kicking": false,
+          "native_active": false,
+          "calls": [
+            {
+              "method": "walk_to",
+              "args": [
+                [
+                  -6.6,
+                  -0.09862758714415538
+                ]
+              ],
+              "kwargs": {
+                "face": 0.0
+              }
+            },
+            {
+              "method": "release_kick",
+              "args": [],
+              "kwargs": {}
+            }
+          ],
+          "commands": [
+            {
+              "kind": "velocity_body",
+              "velocity": [
+                0.0,
+                0.0,
+                -0.2088719149966861
+              ],
+              "accepted": true
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "role": "support",
+          "action": "support",
+          "pose": [
+            -3.342782174299215,
+            0.7836314900655188,
+            -2.330928037959456
+          ],
+          "kicking": false,
+          "native_active": false,
+          "calls": [
+            {
+              "method": "move_to_position",
+              "args": [
+                [
+                  -0.9306672255626328,
+                  -1.760598962110882
+                ]
+              ],
+              "kwargs": {}
+            },
+            {
+              "method": "release_kick",
+              "args": [],
+              "kwargs": {}
+            },
+            {
+              "method": "walk_to",
+              "args": [
+                [
+                  -0.9306672255626328,
+                  -1.760598962110882
+                ]
+              ],
+              "kwargs": {
+                "face": -0.6212378468970564,
+                "avoid_ball": true,
+                "avoid_robots": true
+              }
+            },
+            {
+              "method": "release_kick",
+              "args": [],
+              "kwargs": {}
+            }
+          ],
+          "commands": [
+            {
+              "kind": "velocity_body",
+              "velocity": [
+                0.0,
+                0.0,
+                2.0
+              ],
+              "accepted": true
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "role": "attacker",
+          "action": "attack",
+          "pose": [
+            -1.384734224859188,
+            0.5658530864811016,
+            -0.8120001667561026
+          ],
+          "kicking": false,
+          "native_active": false,
+          "calls": [
+            {
+              "method": "attack",
+              "args": [],
+              "kwargs": {}
+            },
+            {
+              "method": "release_kick",
+              "args": [],
+              "kwargs": {}
+            },
+            {
+              "method": "walk_to",
+              "args": [
+                [
+                  0.6619258221805646,
+                  -2.4393206818135225
+                ]
+              ],
+              "kwargs": {}
+            },
+            {
+              "method": "release_kick",
+              "args": [],
+              "kwargs": {}
+            }
+          ],
+          "commands": [
+            {
+              "kind": "velocity_body",
+              "velocity": [
+                0.75,
+                0.0,
+                -0.3218098687258313
+              ],
+              "accepted": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "tick",
+      "wall": 1795082426.8433137,
+      "wall_end": 1795082426.8673458,
+      "now": 55044.192351532,
+      "dt": 0.03342173500277568,
+      "team": 1,
+      "dropped": 0,
+      "writer_error": null,
+      "game": {
+        "state": "PLAYING",
+        "set_play": "NONE",
+        "kicking_team": 255,
+        "stopped": false,
+        "remaining": 565,
+        "secondary": 0
+      },
+      "ball": [
+        1.163652552507484,
+        -2.4959227751550284
+      ],
+      "ball_seen": 55044.187275786,
+      "opponents": {
+        "1": [
+          -1.2846279600697221,
+          0.49236052609299796,
+          -2.7397770660492227
+        ],
+        "2": [
+          6.482124713847266,
+          0.18589607817760342,
+          -2.835277644589447
+        ],
+        "3": [
+          1.3665388500437674,
+          0.09625933646450296,
+          -1.737000178015595
+        ]
+      },
+      "players": [
+        {
+          "id": 1,
+          "role": "keeper",
+          "action": "keeper:track",
+          "pose": [
+            -6.572256108654883,
+            -0.06340100319992707,
+            0.08816953454153931
+          ],
+          "kicking": false,
+          "native_active": false,
+          "calls": [
+            {
+              "method": "walk_to",
+              "args": [
+                [
+                  -6.6,
+                  -0.10395025242617119
+                ]
+              ],
+              "kwargs": {
+                "face": 0.0
+              }
+            },
+            {
+              "method": "release_kick",
+              "args": [],
+              "kwargs": {}
+            },
+            {
+              "method": "stop",
+              "args": [],
+              "kwargs": {}
+            },
+            {
+              "method": "release_kick",
+              "args": [],
+              "kwargs": {}
+            }
+          ],
+          "commands": [
+            {
+              "kind": "velocity_body",
+              "velocity": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "accepted": true
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "role": "support",
+          "action": "support",
+          "pose": [
+            -3.3760221049396195,
+            0.797775800552773,
+            -1.864003521734041
+          ],
+          "kicking": false,
+          "native_active": false,
+          "calls": [
+            {
+              "method": "move_to_position",
+              "args": [
+                [
+                  -0.7489540957188467,
+                  -1.9111699990517923
+                ]
+              ],
+              "kwargs": {}
+            },
+            {
+              "method": "release_kick",
+              "args": [],
+              "kwargs": {}
+            },
+            {
+              "method": "walk_to",
+              "args": [
+                [
+                  -0.7489540957188467,
+                  -1.9111699990517923
+                ]
+              ],
+              "kwargs": {
+                "face": -0.6276596050025504,
+                "avoid_ball": true,
+                "avoid_robots": true
+              }
+            },
+            {
+              "method": "release_kick",
+              "args": [],
+              "kwargs": {}
+            }
+          ],
+          "commands": [
+            {
+              "kind": "velocity_body",
+              "velocity": [
+                0.0,
+                0.0,
+                2.0
+              ],
+              "accepted": true
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "role": "attacker",
+          "action": "attack",
+          "pose": [
+            -1.2379668258232688,
+            0.4746559432319261,
+            -0.5186688932581475
+          ],
+          "kicking": false,
+          "native_active": false,
+          "calls": [
+            {
+              "method": "attack",
+              "args": [],
+              "kwargs": {}
+            },
+            {
+              "method": "release_kick",
+              "args": [],
+              "kwargs": {}
+            },
+            {
+              "method": "walk_to",
+              "args": [
+                [
+                  0.8398241035923566,
+                  -2.6287201232958055
+                ]
+              ],
+              "kwargs": {}
+            },
+            {
+              "method": "release_kick",
+              "args": [],
+              "kwargs": {}
+            }
+          ],
+          "commands": [
+            {
+              "kind": "velocity_body",
+              "velocity": [
+                0.75,
+                0.0,
+                -0.9242958216146638
+              ],
+              "accepted": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "tick",
+      "wall": 1795082427.121611,
+      "wall_end": 1795082427.1271365,
+      "now": 55044.470792241,
+      "dt": 0.03341755400469992,
+      "team": 1,
+      "dropped": 0,
+      "writer_error": null,
+      "game": {
+        "state": "PLAYING",
+        "set_play": "NONE",
+        "kicking_team": 255,
+        "stopped": false,
+        "remaining": 565,
+        "secondary": 0
+      },
+      "ball": [
+        1.2858094170896412,
+        -2.6201671149328445
+      ],
+      "ball_seen": 55044.461426024,
+      "opponents": {
+        "1": [
+          -1.2835031560905408,
+          0.4894041978122635,
+          -2.7299275719389007
+        ],
+        "2": [
+          6.469975678006031,
+          0.14716394667070665,
+          -2.7957055423311497
+        ],
+        "3": [
+          1.2925735946066437,
+          -0.09182900625890747,
+          -1.7013996157906293
+        ]
+      },
+      "players": [
+        {
+          "id": 1,
+          "role": "keeper",
+          "action": "keeper:track",
+          "pose": [
+            -6.570598889417058,
+            -0.053456854899631735,
+            0.10031228992857212
+          ],
+          "kicking": false,
+          "native_active": false,
+          "calls": [
+            {
+              "method": "walk_to",
+              "args": [
+                [
+                  -6.6,
+                  -0.10751596787149821
+                ]
+              ],
+              "kwargs": {
+                "face": 0.0
+              }
+            },
+            {
+              "method": "release_kick",
+              "args": [],
+              "kwargs": {}
+            }
+          ],
+          "commands": [
+            {
+              "kind": "velocity_body",
+              "velocity": [
+                0.0,
+                0.0,
+                -0.06683510800939985
+              ],
+              "accepted": true
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "role": "support",
+          "action": "support",
+          "pose": [
+            -3.3465643010726445,
+            0.7804527676842906,
+            -1.5562777638565546
+          ],
+          "kicking": false,
+          "native_active": false,
+          "calls": [
+            {
+              "method": "move_to_position",
+              "args": [
+                [
+                  -0.621118135709692,
+                  -2.017151934050351
+                ]
+              ],
+              "kwargs": {}
+            },
+            {
+              "method": "release_kick",
+              "args": [],
+              "kwargs": {}
+            },
+            {
+              "method": "walk_to",
+              "args": [
+                [
+                  -0.621118135709692,
+                  -2.017151934050351
+                ]
+              ],
+              "kwargs": {
+                "face": -0.633246413154616,
+                "avoid_ball": true,
+                "avoid_robots": true
+              }
+            },
+            {
+              "method": "release_kick",
+              "args": [],
+              "kwargs": {}
+            }
+          ],
+          "commands": [
+            {
+              "kind": "velocity_body",
+              "velocity": [
+                0.0,
+                0.0,
+                1.5156307321205862
+              ],
+              "accepted": true
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "role": "attacker",
+          "action": "attack",
+          "pose": [
+            -1.044745263825487,
+            0.4272699425752091,
+            -0.35321112395657833
+          ],
+          "kicking": false,
+          "native_active": false,
+          "calls": [
+            {
+              "method": "attack",
+              "args": [],
+              "kwargs": {}
+            },
+            {
+              "method": "release_kick",
+              "args": [],
+              "kwargs": {}
+            },
+            {
+              "method": "walk_to",
+              "args": [
+                [
+                  0.9653684655473193,
+                  -2.7609421005469486
+                ]
+              ],
+              "kwargs": {}
+            },
+            {
+              "method": "release_kick",
+              "args": [],
+              "kwargs": {}
+            }
+          ],
+          "commands": [
+            {
+              "kind": "velocity_body",
+              "velocity": [
+                0.0,
+                0.0,
+                -1.3101054314209404
+              ],
+              "accepted": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "tick",
+      "wall": 1795082427.4010618,
+      "wall_end": 1795082427.41444,
+      "now": 55044.749215619,
+      "dt": 0.03473013999609975,
+      "team": 1,
+      "dropped": 0,
+      "writer_error": null,
+      "game": {
+        "state": "PLAYING",
+        "set_play": "NONE",
+        "kicking_team": 255,
+        "stopped": false,
+        "remaining": 565,
+        "secondary": 0
+      },
+      "ball": [
+        1.4035517934348107,
+        -2.7392808298423152
+      ],
+      "ball_seen": 55044.738821296,
+      "opponents": {
+        "1": [
+          -1.2911414071666318,
+          0.48737832747788484,
+          -2.750218024017865
+        ],
+        "2": [
+          6.4966098667366445,
+          0.09568601093751225,
+          -2.7585160920774574
+        ],
+        "3": [
+          1.270927572723583,
+          -0.34153372203134236,
+          -1.6491891121114362
+        ]
+      },
+      "players": [
+        {
+          "id": 1,
+          "role": "keeper",
+          "action": "keeper:track",
+          "pose": [
+            -6.572399625509389,
+            -0.05910308180601514,
+            0.08698852959270358
+          ],
+          "kicking": false,
+          "native_active": false,
+          "calls": [
+            {
+              "method": "walk_to",
+              "args": [
+                [
+                  -6.6,
+                  -0.1108287906161296
+                ]
+              ],
+              "kwargs": {
+                "face": 0.0
+              }
+            },
+            {
+              "method": "release_kick",
+              "args": [],
+              "kwargs": {}
+            },
+            {
+              "method": "stop",
+              "args": [],
+              "kwargs": {}
+            },
+            {
+              "method": "release_kick",
+              "args": [],
+              "kwargs": {}
+            }
+          ],
+          "commands": [
+            {
+              "kind": "velocity_body",
+              "velocity": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "accepted": true
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "role": "support",
+          "action": "support",
+          "pose": [
+            -3.368912434106439,
+            0.7566957113914335,
+            -1.2203196696702368
+          ],
+          "kicking": false,
+          "native_active": false,
+          "calls": [
+            {
+              "method": "move_to_position",
+              "args": [
+                [
+                  -0.4979750885433134,
+                  -2.1194457573314467
+                ]
+              ],
+              "kwargs": {}
+            },
+            {
+              "method": "release_kick",
+              "args": [],
+              "kwargs": {}
+            },
+            {
+              "method": "walk_to",
+              "args": [
+                [
+                  -0.4979750885433134,
+                  -2.1194457573314467
+                ]
+              ],
+              "kwargs": {
+                "face": -0.6322266888132622,
+                "avoid_ball": true,
+                "avoid_robots": true
+              }
+            },
+            {
+              "method": "release_kick",
+              "args": [],
+              "kwargs": {}
+            }
+          ],
+          "commands": [
+            {
+              "kind": "velocity_body",
+              "velocity": [
+                2.0,
+                0.0,
+                0.8680319631740596
+              ],
+              "accepted": true
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "role": "attacker",
+          "action": "attack",
+          "pose": [
+            -0.8109928908888479,
+            0.4059181957748211,
+            -1.4985314771278395
+          ],
+          "kicking": false,
+          "native_active": false,
+          "calls": [
+            {
+              "method": "attack",
+              "args": [],
+              "kwargs": {}
+            },
+            {
+              "method": "release_kick",
+              "args": [],
+              "kwargs": {}
+            },
+            {
+              "method": "walk_to",
+              "args": [
+                [
+                  1.0866153004987127,
+                  -2.8877774946040757
+                ]
+              ],
+              "kwargs": {}
+            },
+            {
+              "method": "release_kick",
+              "args": [],
+              "kwargs": {}
+            }
+          ],
+          "commands": [
+            {
+              "kind": "velocity_body",
+              "velocity": [
+                0.75,
+                0.0,
+                0.9008416294741823
+              ],
+              "accepted": true
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -24,6 +24,7 @@ from .framework.types import Context, Penalty, Pose2D
 from .framework import debugdraw
 
 from .field_params import *
+from .field_motion import limit_velocity
 from .field_utils.geom import (
     angle_to,
     clamp,
@@ -179,6 +180,7 @@ class Player:
     # ------------------------------------------------------------------
 
     def set_velocity(self, vx: float, vy: float, vyaw: float) -> None:
+        vx, vy, vyaw = limit_velocity(self, vx, vy, vyaw)
         if self._backend is None:
             _log.debug(
                 "player %d set_velocity vx=%.3f vy=%.3f vyaw=%.3f (no backend)",
