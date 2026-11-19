@@ -4,6 +4,7 @@ import sys
 import unittest
 from types import ModuleType, SimpleNamespace
 from unittest.mock import patch
+from team.src.field_player import Player as FieldPlayer
 
 from team.src.framework.types import (
     ADULT_FIELD_DIMENSIONS as FIELD, BallState, Context,
@@ -16,6 +17,7 @@ class FakePlayer:
         self.id = player_id
         self.pose = Pose2D(*pose) if pose is not None else None
         self.is_penalized = False
+        self.is_fallen = False
         self.ready = True
         self.calls = []
 
@@ -31,8 +33,17 @@ class FakePlayer:
     def move_to_position(self, target):
         self.calls.append(('support', target))
 
-    def attack(self, target, **kwargs):
-        self.calls.append(('attack', target, kwargs))
+    def attack(self, target=None, **kwargs):
+        if self.context.ball is None:
+            self.stop()
+        else:
+            self.calls.append(('attack', target, kwargs))
+
+    def support(self):
+        FieldPlayer.support(self)
+
+    def kick(self, direction, power):
+        self.calls.append(('kick', direction, power))
 
 
 class DispatchTest(unittest.TestCase):
@@ -52,6 +63,8 @@ class DispatchTest(unittest.TestCase):
 
     def play(self, state=GameState.PLAYING, ball=(0, 0), **kwargs):
         context = Context(0, .03, 1, FIELD, game=GameControlState(state=state, **kwargs), ball=BallState(*ball) if ball is not None else None)
+        for p in self.players:
+            p.context = context
         self.Agent.play(context, self.players, self.store)
 
     def test_normal_fixed_keeper_and_two_roamers(self):
@@ -89,12 +102,10 @@ class DispatchTest(unittest.TestCase):
         self.assertEqual(self.store.attacker, 3)
         self.assertEqual(self.players[1].calls[-1], ('stop',))
 
-    def test_keeper_clears_and_roamers_space_out(self):
+    def test_keeper_clears_while_field_roles_follow_sample(self):
         self.store.keeper_motion = ((-6.5, 0), -.1, (0, 0))
         self.play(ball=(-6.5, 0))
-        self.assertEqual([p.calls[-1][0] for p in self.players], ['attack', 'support', 'support'])
-        targets = [p.calls[-1][1] for p in self.players[1:]]
-        self.assertNotEqual(targets[0], targets[1])
+        self.assertEqual([p.calls[-1][0] for p in self.players], ['attack', 'support', 'attack'])
 
     def test_keeper_waits_for_velocity_before_clearing(self):
         self.play(ball=(-6.5, 0))
@@ -129,13 +140,12 @@ class DispatchTest(unittest.TestCase):
 
     def test_restart_origin_persists_after_referee_releases(self):
         self.play(kicking_team=1, secondary_time=10)
-        self.assertEqual(self.players[1].calls[-1][2]['power'], 1.5)
+        self.assertEqual(self.players[1].calls[-1], ('kick', .1, 5.0))
         self.play(ball=(.4, 0))
         self.assertEqual(self.store.restart_origin, (0, 0))
-        self.assertEqual(self.players[1].calls[-1][2]['power'], 1.5)
+        self.assertEqual(self.players[1].calls[-1], ('attack', None, {}))
         self.play(ball=(1.5, 0))
-        self.assertIsNone(self.players[1].calls[-1][2]['power'])
-        self.assertGreater(self.players[1].calls[-1][1][0], 7)
+        self.assertEqual(self.players[1].calls[-1], ('attack', None, {}))
 
     def test_restart_taker_locked_until_release(self):
         self.play(kicking_team=1, secondary_time=10)
