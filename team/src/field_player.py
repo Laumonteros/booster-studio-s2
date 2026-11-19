@@ -24,6 +24,7 @@ from .framework.types import Context, Penalty, Pose2D
 from .framework import debugdraw
 
 from .field_params import *
+from .field_shooting import shot_target
 from .field_utils.geom import (
     angle_to,
     clamp,
@@ -240,7 +241,7 @@ class Player:
     def plan_kick(self) -> tuple[float, float] | None:
         """Calculate kick direction and power.
 
-        Aim from the current ball position toward the opponent's goal center.
+        Aim from the current ball position toward the selected goal-mouth point.
         Return ``(kick_direction, kick_power)``, or None when the ball or context
         is unavailable.
         """
@@ -249,7 +250,7 @@ class Player:
         if ctx is None or ball is None:
             return None
 
-        kick_target = opponent_goal(ctx)
+        kick_target = shot_target(self) or opponent_goal(ctx)
         kick_direction = angle_to(ball.x, ball.y, *kick_target)
         kick_target = self._goal_target_for_direction(kick_direction)
         kick_power = (
