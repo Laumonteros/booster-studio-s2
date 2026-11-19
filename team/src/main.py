@@ -1,5 +1,6 @@
 """One fixed deep keeper and two roaming attackers."""
 import math
+from types import SimpleNamespace
 
 from booster_agent_framework import AgentBase
 
@@ -9,8 +10,9 @@ from .param import (
     KEEPER_ID, OMNI_DIST, READY_TAKER_POSITION, READY_WAITING_POSITIONS,
     RESTART_PASS_POWER, RESTART_SHOOT_DISTANCE_M,
 )
-from .player import Player
-from .telemetry import instrument_player, trace_play
+from .roster import PlayerRoster
+from .telemetry import trace_play
+from .field_logic import run as run_fields
 from .tactics import (
     keeper_can_clear, keeper_target, keeper_tracking_target, phase, retreat_target,
     keeper_velocity_update, keeper_intercept, keeper_waypoint, keeper_trace,
@@ -19,7 +21,7 @@ from .tactics import (
 
 
 class SoccerSimAgent(SoccerAgentMixin, AgentBase):
-    player_class = instrument_player(Player)
+    player_class = PlayerRoster
 
     def init_store(self, store):
         store.attacker = None
@@ -27,6 +29,8 @@ class SoccerSimAgent(SoccerAgentMixin, AgentBase):
         store.restart_origin = None
         store.restart_taker = None
         store.keeper_direction = 1
+        store.fields = SimpleNamespace(cur_phase=None, prev_phase=None,
+                                       normal_attacker=None, kickoff_taker=None)
 
     @staticmethod
     @trace_play
@@ -44,6 +48,7 @@ class SoccerSimAgent(SoccerAgentMixin, AgentBase):
                 player.action = "stopped"
                 player.stop()
             store.phase = current
+            run_fields(context, [], store.fields)
             keeper_trace(context, players, store, current)
             return
 
@@ -64,6 +69,8 @@ class SoccerSimAgent(SoccerAgentMixin, AgentBase):
         if current == "their_restart":
             store.restart_origin = None
             for player in active:
+                if player.id != KEEPER_ID:
+                    continue
                 target = retreat_target(context.field, positions[player.id], ball, keeper=player.id == KEEPER_ID)
                 player.action = "restart:clearance"
                 if target is None:
@@ -77,6 +84,8 @@ class SoccerSimAgent(SoccerAgentMixin, AgentBase):
         elif current == "ready":
             store.restart_origin = None
             for player in active:
+                if player.id != KEEPER_ID:
+                    continue
                 target = keeper_target(context.field, None) if player.id == KEEPER_ID else (
                     READY_TAKER_POSITION if player.id == 2 and context.game.kicking_team == context.team_id
                     else READY_WAITING_POSITIONS[player.id]
@@ -107,22 +116,8 @@ class SoccerSimAgent(SoccerAgentMixin, AgentBase):
                         target, store.keeper_direction = keeper_tracking_target(context.field, positions[player.id], ball, store.keeper_direction, keeper_velocity)
                         store.keeper_target = target
                         player.walk_to(keeper_waypoint(positions[player.id], target), face=0.0)
-                elif ball is None:
-                    player.action = "ball:unknown"
-                    player.stop()
-                elif player.id == keeper or (player.id == attacker and not clearing):
-                    player.action = "keeper:clear" if player.id == keeper else "roamer:attack"
-                    restricted = store.restart_origin is not None and math.dist(ball, store.restart_origin) <= RESTART_SHOOT_DISTANCE_M
-                    player.attack(shot_target(context.field, ball, store.restart_origin), power=RESTART_PASS_POWER if restricted else None)
-                else:
-                    player.action = "roamer:support"
-                    if current == "our_restart" and store.restart_origin is not None and math.dist(ball, store.restart_origin) <= RESTART_SHOOT_DISTANCE_M:
-                        target = support_target(context.field, store.restart_origin)
-                    else:
-                        target = support_target(context.field, ball)
-                    if clearing and player.id == support:
-                        target = target[0], -target[1]
-                    player.move_to_position(target)
+
+        store.attacker = run_fields(context, [p for p in active if p.id != KEEPER_ID], store.fields)
 
         store.phase = current
         keeper_trace(context, players, store, current)
