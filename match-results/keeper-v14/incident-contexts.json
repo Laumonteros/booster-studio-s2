@@ -1,0 +1,1792 @@
+[
+  {
+    "match": "batch-01/match-01",
+    "events": [
+      {
+        "eventId": "batch-01-match-01:46",
+        "sequence": 46,
+        "wallTime": 1795117074.5626678,
+        "simTime": 173.2860000000993,
+        "timing": {
+          "timeRemaining": 471.7839999998809,
+          "primaryTime": 471.7839999998809,
+          "stage": "regulation",
+          "extraTimeElapsedSeconds": 0.0
+        },
+        "source": "auto_referee",
+        "severity": "penalty",
+        "type": "penalty",
+        "message": {
+          "key": "event.penalty",
+          "fallback": "penalty"
+        },
+        "actor": {
+          "side": "home",
+          "robotName": "robot3",
+          "playerNumber": 3
+        },
+        "game": {
+          "phase": "firstHalf",
+          "state": "playing",
+          "setPlay": "throwIn",
+          "kickingSide": "home",
+          "droppedBall": false,
+          "stopped": false,
+          "secondaryTime": 37.15399999996254
+        },
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "evidence": {
+          "ruleId": "fallenRobot",
+          "ruleName": "Fallen robot",
+          "summary": "Robot remained fallen beyond the allowed duration.",
+          "measurements": [
+            {
+              "name": "upDot",
+              "value": -0.21869435186866107,
+              "threshold": 0.45,
+              "operator": "<="
+            },
+            {
+              "name": "height",
+              "value": 0.21857654133401824,
+              "unit": "m",
+              "threshold": 0.25,
+              "operator": "<="
+            },
+            {
+              "name": "fallenDuration",
+              "value": 10010.000000045664,
+              "unit": "ms",
+              "threshold": 10000.0,
+              "operator": ">="
+            }
+          ],
+          "positions": {
+            "robot": [
+              0.1298749608106192,
+              0.48306800917391635,
+              0.21857654133401824
+            ],
+            "reference": [
+              0.2667085637377748,
+              1.2140307314391354,
+              0.5495042105097604
+            ]
+          }
+        },
+        "outcome": {
+          "reason": "fallenRobot",
+          "penalty": "incapableRobot",
+          "seconds": 30.0,
+          "discipline": {
+            "warning": false,
+            "caution": false,
+            "sentOff": false
+          }
+        }
+      },
+      {
+        "eventId": "batch-01-match-01:159",
+        "sequence": 159,
+        "wallTime": 1795117518.6442187,
+        "simTime": 556.9000000006548,
+        "timing": {
+          "timeRemaining": 109.22199999942592,
+          "primaryTime": 109.22199999942592,
+          "stage": "regulation",
+          "extraTimeElapsedSeconds": 0.0
+        },
+        "source": "auto_referee",
+        "severity": "penalty",
+        "type": "penalty",
+        "message": {
+          "key": "event.penalty",
+          "fallback": "penalty"
+        },
+        "actor": {
+          "side": "home",
+          "robotName": "robot3",
+          "playerNumber": 3
+        },
+        "game": {
+          "phase": "firstHalf",
+          "state": "playing",
+          "setPlay": "noSetPlay",
+          "kickingSide": null,
+          "droppedBall": false,
+          "stopped": false,
+          "secondaryTime": 0
+        },
+        "score": {
+          "home": 2,
+          "away": 0
+        },
+        "evidence": {
+          "ruleId": "inactiveRobot",
+          "ruleName": "Inactive robot",
+          "summary": "Robot stayed inactive near the ball beyond the allowed duration.",
+          "measurements": [
+            {
+              "name": "inactiveDuration",
+              "value": 19.99999999953434,
+              "unit": "ms",
+              "threshold": 10000.0,
+              "operator": ">="
+            },
+            {
+              "name": "ballDistance",
+              "value": 1.3221275701667947,
+              "unit": "m",
+              "threshold": 3.0,
+              "operator": "<="
+            }
+          ],
+          "positions": {
+            "robot": [
+              -6.842823687451571,
+              0.054878830228043955,
+              0.5461223312729009
+            ],
+            "reference": [
+              -6.8384282212718395,
+              0.05474842141047475,
+              0.5464269986052548
+            ],
+            "ball": [
+              -6.7250211318472015,
+              -1.2619901342814217,
+              0.10987403472180965
+            ]
+          }
+        },
+        "outcome": {
+          "reason": "inactiveRobot",
+          "penalty": "incapableRobot",
+          "seconds": 30.0,
+          "discipline": {
+            "warning": false,
+            "caution": false,
+            "sentOff": false
+          }
+        }
+      }
+    ],
+    "contexts": [
+      {
+        "event_id": "batch-01-match-01:46",
+        "wall": 1795117074.551211,
+        "phase": "our_restart",
+        "ball": [
+          -0.41613349702424834,
+          -4.45
+        ],
+        "players": [
+          {
+            "id": 1,
+            "role": "keeper",
+            "action": "keeper:track",
+            "pose": [
+              -6.584270289367249,
+              -0.30026762921734984,
+              0.10155987956570792
+            ],
+            "kicking": false,
+            "native_active": false,
+            "calls": [
+              {
+                "method": "walk_to",
+                "args": [
+                  [
+                    -6.6,
+                    -0.2298041734771141
+                  ]
+                ],
+                "kwargs": {
+                  "face": 0.0
+                }
+              },
+              {
+                "method": "release_kick",
+                "args": [],
+                "kwargs": {}
+              }
+            ],
+            "commands": [
+              {
+                "kind": "velocity_body",
+                "velocity": [
+                  0.0,
+                  0.0,
+                  -0.13615973200649023
+                ],
+                "accepted": true
+              }
+            ]
+          },
+          {
+            "id": 2,
+            "role": "support",
+            "action": "restart:missing_partner",
+            "pose": [
+              -2.0455162057764715,
+              -3.459962278683258,
+              -0.584278145025067
+            ],
+            "kicking": false,
+            "native_active": false,
+            "calls": [
+              {
+                "method": "move_to_position",
+                "args": [
+                  [
+                    -2.073143113051414,
+                    -3.330036102191903
+                  ]
+                ],
+                "kwargs": {}
+              },
+              {
+                "method": "release_kick",
+                "args": [],
+                "kwargs": {}
+              },
+              {
+                "method": "walk_to",
+                "args": [
+                  [
+                    -2.073143113051414,
+                    -3.330036102191903
+                  ]
+                ],
+                "kwargs": {
+                  "face": -0.5460001143960491,
+                  "avoid_ball": true,
+                  "avoid_robots": true
+                }
+              },
+              {
+                "method": "release_kick",
+                "args": [],
+                "kwargs": {}
+              },
+              {
+                "method": "stop",
+                "args": [],
+                "kwargs": {}
+              },
+              {
+                "method": "release_kick",
+                "args": [],
+                "kwargs": {}
+              }
+            ],
+            "commands": [
+              {
+                "kind": "velocity_body",
+                "velocity": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "accepted": true
+              }
+            ]
+          },
+          {
+            "id": 3,
+            "role": "support",
+            "action": "recovering",
+            "pose": [
+              0.1281199008519846,
+              0.48489381505764,
+              2.122433442492038
+            ],
+            "kicking": false,
+            "native_active": false,
+            "calls": [
+              {
+                "method": "stop",
+                "args": [],
+                "kwargs": {}
+              },
+              {
+                "method": "release_kick",
+                "args": [],
+                "kwargs": {}
+              }
+            ],
+            "commands": [
+              {
+                "kind": "velocity_body",
+                "velocity": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "accepted": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "event_id": "batch-01-match-01:159",
+        "wall": 1795117518.621641,
+        "phase": "normal",
+        "ball": [
+          -6.7250211318472015,
+          -1.2619901342814217
+        ],
+        "players": [
+          {
+            "id": 1,
+            "role": "keeper",
+            "action": "keeper:track",
+            "pose": [
+              -6.897440517171012,
+              -0.3880770824447458,
+              -0.01943568896726249
+            ],
+            "kicking": false,
+            "native_active": false,
+            "calls": [
+              {
+                "method": "walk_to",
+                "args": [
+                  [
+                    -6.85,
+                    -1.0
+                  ]
+                ],
+                "kwargs": {
+                  "face": 0.0
+                }
+              },
+              {
+                "method": "release_kick",
+                "args": [],
+                "kwargs": {}
+              }
+            ],
+            "commands": [
+              {
+                "kind": "velocity_body",
+                "velocity": [
+                  0.07138265339558117,
+                  -0.1427852265356444,
+                  0.03887137793452498
+                ],
+                "accepted": true
+              }
+            ]
+          },
+          {
+            "id": 2,
+            "role": "attacker",
+            "action": "attack",
+            "pose": [
+              -7.363698399991892,
+              -1.0550806427748687,
+              -0.6516954752677322
+            ],
+            "kicking": true,
+            "native_active": true,
+            "calls": [
+              {
+                "method": "attack",
+                "args": [],
+                "kwargs": {}
+              },
+              {
+                "method": "kick",
+                "args": [
+                  0.09005900125679485,
+                  5.0
+                ],
+                "kwargs": {}
+              }
+            ],
+            "commands": [
+              {
+                "kind": "kick_body",
+                "direction": 0.7417544765245271,
+                "power": 5.0,
+                "ball": [
+                  0.6332824675908237,
+                  0.22287554096926612
+                ],
+                "mode": "walk"
+              }
+            ]
+          },
+          {
+            "id": 3,
+            "role": "support",
+            "action": "support",
+            "pose": [
+              -6.8384282212718395,
+              0.05474842141047475,
+              -1.4050744764314413
+            ],
+            "kicking": false,
+            "native_active": false,
+            "calls": [
+              {
+                "method": "move_to_position",
+                "args": [
+                  [
+                    -6.7,
+                    0.0
+                  ]
+                ],
+                "kwargs": {}
+              },
+              {
+                "method": "release_kick",
+                "args": [],
+                "kwargs": {}
+              },
+              {
+                "method": "walk_to",
+                "args": [
+                  [
+                    -6.7,
+                    0.0
+                  ]
+                ],
+                "kwargs": {
+                  "face": -1.4848810810913255,
+                  "avoid_ball": true,
+                  "avoid_robots": true
+                }
+              },
+              {
+                "method": "release_kick",
+                "args": [],
+                "kwargs": {}
+              },
+              {
+                "method": "stop",
+                "args": [],
+                "kwargs": {}
+              },
+              {
+                "method": "release_kick",
+                "args": [],
+                "kwargs": {}
+              }
+            ],
+            "commands": [
+              {
+                "kind": "velocity_body",
+                "velocity": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "accepted": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "event_id": "batch-01-match-01:159",
+        "wall": 1795117518.6550472,
+        "phase": "normal",
+        "ball": [
+          -6.7250211318472015,
+          -1.2619901342814217
+        ],
+        "players": [
+          {
+            "id": 1,
+            "role": "keeper",
+            "action": "keeper:track",
+            "pose": [
+              -6.897503495499309,
+              -0.38507588100127493,
+              -0.01602845982168383
+            ],
+            "kicking": false,
+            "native_active": false,
+            "calls": [
+              {
+                "method": "walk_to",
+                "args": [
+                  [
+                    -6.85,
+                    -1.0
+                  ]
+                ],
+                "kwargs": {
+                  "face": 0.0
+                }
+              },
+              {
+                "method": "release_kick",
+                "args": [],
+                "kwargs": {}
+              }
+            ],
+            "commands": [
+              {
+                "kind": "velocity_body",
+                "velocity": [
+                  0.06886084575939269,
+                  -0.20355633872038315,
+                  0.03205691964336766
+                ],
+                "accepted": true
+              }
+            ]
+          },
+          {
+            "id": 2,
+            "role": "attacker",
+            "action": "attack",
+            "pose": [
+              -7.362545509620933,
+              -1.0545837908169085,
+              -0.6654438325065924
+            ],
+            "kicking": true,
+            "native_active": true,
+            "calls": [
+              {
+                "method": "attack",
+                "args": [],
+                "kwargs": {}
+              },
+              {
+                "method": "kick",
+                "args": [
+                  0.09005900125679485,
+                  5.0
+                ],
+                "kwargs": {}
+              }
+            ],
+            "commands": [
+              {
+                "kind": "kick_body",
+                "direction": 0.7555028337633873,
+                "power": 5.0,
+                "ball": [
+                  0.629558389412681,
+                  0.230458147795243
+                ],
+                "mode": "walk"
+              }
+            ]
+          },
+          {
+            "id": 3,
+            "role": "support",
+            "action": "support",
+            "pose": [
+              -6.842823687451571,
+              0.054878830228043955,
+              -1.4069244932481335
+            ],
+            "kicking": false,
+            "native_active": false,
+            "calls": [
+              {
+                "method": "move_to_position",
+                "args": [
+                  [
+                    -6.7,
+                    0.0
+                  ]
+                ],
+                "kwargs": {}
+              },
+              {
+                "method": "release_kick",
+                "args": [],
+                "kwargs": {}
+              },
+              {
+                "method": "walk_to",
+                "args": [
+                  [
+                    -6.7,
+                    0.0
+                  ]
+                ],
+                "kwargs": {
+                  "face": -1.481577261201131,
+                  "avoid_ball": true,
+                  "avoid_robots": true
+                }
+              },
+              {
+                "method": "release_kick",
+                "args": [],
+                "kwargs": {}
+              }
+            ],
+            "commands": [
+              {
+                "kind": "velocity_body",
+                "velocity": [
+                  0.11616568269330196,
+                  0.1979360768011729,
+                  -0.14930553590599516
+                ],
+                "accepted": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "match": "batch-01/match-02",
+    "events": [
+      {
+        "eventId": "batch-01-match-02:133",
+        "sequence": 133,
+        "wallTime": 1795117361.4756465,
+        "simTime": 431.5380000013324,
+        "timing": {
+          "timeRemaining": 206.22399999867434,
+          "primaryTime": 206.22399999867434,
+          "stage": "regulation",
+          "extraTimeElapsedSeconds": 0.0
+        },
+        "source": "auto_referee",
+        "severity": "penalty",
+        "type": "penalty",
+        "message": {
+          "key": "event.penalty",
+          "fallback": "penalty"
+        },
+        "actor": {
+          "side": "away",
+          "robotName": "robot6",
+          "playerNumber": 3
+        },
+        "game": {
+          "phase": "firstHalf",
+          "state": "playing",
+          "setPlay": "noSetPlay",
+          "kickingSide": null,
+          "droppedBall": false,
+          "stopped": false,
+          "secondaryTime": 0
+        },
+        "score": {
+          "home": 0,
+          "away": 2
+        },
+        "evidence": {
+          "ruleId": "inactiveRobot",
+          "ruleName": "Inactive robot",
+          "summary": "Robot stayed inactive near the ball beyond the allowed duration.",
+          "measurements": [
+            {
+              "name": "inactiveDuration",
+              "value": 18.000000000058208,
+              "unit": "ms",
+              "threshold": 10000.0,
+              "operator": ">="
+            },
+            {
+              "name": "ballDistance",
+              "value": 1.7883690556879612,
+              "unit": "m",
+              "threshold": 3.0,
+              "operator": "<="
+            }
+          ],
+          "positions": {
+            "robot": [
+              6.782571479082696,
+              0.11127853318228313,
+              0.5451829421735701
+            ],
+            "reference": [
+              6.783520613891598,
+              0.11151245538952406,
+              0.545135469525282
+            ],
+            "ball": [
+              5.893251662944307,
+              1.6628500410303204,
+              0.10988889951894007
+            ]
+          }
+        },
+        "outcome": {
+          "reason": "inactiveRobot",
+          "penalty": "incapableRobot",
+          "seconds": 30.0,
+          "discipline": {
+            "warning": false,
+            "caution": false,
+            "sentOff": false
+          }
+        }
+      }
+    ],
+    "contexts": [
+      {
+        "event_id": "batch-01-match-02:133",
+        "wall": 1795117361.4794383,
+        "phase": "normal",
+        "ball": [
+          -5.893251662944307,
+          -1.6628500410303204
+        ],
+        "players": [
+          {
+            "id": 1,
+            "role": "keeper",
+            "action": "keeper:track",
+            "pose": [
+              -6.552392359362704,
+              -0.8254747266157473,
+              0.006669570677733105
+            ],
+            "kicking": false,
+            "native_active": false,
+            "calls": [
+              {
+                "method": "walk_to",
+                "args": [
+                  [
+                    -6.6,
+                    -1.0
+                  ]
+                ],
+                "kwargs": {
+                  "face": 0.0
+                }
+              },
+              {
+                "method": "release_kick",
+                "args": [],
+                "kwargs": {}
+              }
+            ],
+            "commands": [
+              {
+                "kind": "velocity_body",
+                "velocity": [
+                  -0.07315587268180368,
+                  -0.26130580726456165,
+                  -0.01333914135546621
+                ],
+                "accepted": true
+              }
+            ]
+          },
+          {
+            "id": 2,
+            "role": "attacker",
+            "action": "attack",
+            "pose": [
+              -7.002070298401047,
+              -0.4981775384597574,
+              -1.0847699808396598
+            ],
+            "kicking": true,
+            "native_active": true,
+            "calls": [
+              {
+                "method": "attack",
+                "args": [],
+                "kwargs": {}
+              },
+              {
+                "method": "kick",
+                "args": [
+                  0.1258487708274146,
+                  5.0
+                ],
+                "kwargs": {}
+              }
+            ],
+            "commands": [
+              {
+                "kind": "kick_body",
+                "direction": 1.2106187516670743,
+                "power": 5.0,
+                "ball": [
+                  1.5477457914661654,
+                  0.4363757206569804
+                ],
+                "mode": "walk"
+              }
+            ]
+          },
+          {
+            "id": 3,
+            "role": "support",
+            "action": "support",
+            "pose": [
+              -6.778978801249468,
+              -0.11023209454476465,
+              -0.9540449209296344
+            ],
+            "kicking": false,
+            "native_active": false,
+            "calls": [
+              {
+                "method": "move_to_position",
+                "args": [
+                  [
+                    -6.7,
+                    0.0
+                  ]
+                ],
+                "kwargs": {}
+              },
+              {
+                "method": "release_kick",
+                "args": [],
+                "kwargs": {}
+              },
+              {
+                "method": "walk_to",
+                "args": [
+                  [
+                    -6.7,
+                    0.0
+                  ]
+                ],
+                "kwargs": {
+                  "face": -1.0523706099745385,
+                  "avoid_ball": true,
+                  "avoid_robots": true
+                }
+              },
+              {
+                "method": "release_kick",
+                "args": [],
+                "kwargs": {}
+              },
+              {
+                "method": "stop",
+                "args": [],
+                "kwargs": {}
+              },
+              {
+                "method": "release_kick",
+                "args": [],
+                "kwargs": {}
+              }
+            ],
+            "commands": [
+              {
+                "kind": "velocity_body",
+                "velocity": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "accepted": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "match": "batch-01/match-03",
+    "events": [
+      {
+        "eventId": "batch-01-match-03:34",
+        "sequence": 34,
+        "wallTime": 1795117809.9392004,
+        "simTime": 140.98399999994507,
+        "timing": {
+          "timeRemaining": 488.7060000000446,
+          "primaryTime": 488.7060000000446,
+          "stage": "regulation",
+          "extraTimeElapsedSeconds": 0.0
+        },
+        "source": "auto_referee",
+        "severity": "penalty",
+        "type": "penalty",
+        "message": {
+          "key": "event.penalty",
+          "fallback": "penalty"
+        },
+        "actor": {
+          "side": "home",
+          "robotName": "robot3",
+          "playerNumber": 3
+        },
+        "game": {
+          "phase": "firstHalf",
+          "state": "playing",
+          "setPlay": "noSetPlay",
+          "kickingSide": null,
+          "droppedBall": false,
+          "stopped": false,
+          "secondaryTime": 0
+        },
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "evidence": {
+          "ruleId": "inactiveRobot",
+          "ruleName": "Inactive robot",
+          "summary": "Robot stayed inactive near the ball beyond the allowed duration.",
+          "measurements": [
+            {
+              "name": "inactiveDuration",
+              "value": 20.00000000008731,
+              "unit": "ms",
+              "threshold": 10000.0,
+              "operator": ">="
+            },
+            {
+              "name": "ballDistance",
+              "value": 1.9145181014574124,
+              "unit": "m",
+              "threshold": 3.0,
+              "operator": "<="
+            }
+          ],
+          "positions": {
+            "robot": [
+              -5.633815360127393,
+              -0.39675433047214403,
+              0.5455613807152041
+            ],
+            "reference": [
+              -5.633810028420235,
+              -0.39675355272616447,
+              0.5455616931641016
+            ],
+            "ball": [
+              -3.778523051651044,
+              -0.8692688920642657,
+              0.10996218217624673
+            ]
+          }
+        },
+        "outcome": {
+          "reason": "inactiveRobot",
+          "penalty": "incapableRobot",
+          "seconds": 30.0,
+          "discipline": {
+            "warning": false,
+            "caution": false,
+            "sentOff": false
+          }
+        }
+      }
+    ],
+    "contexts": [
+      {
+        "event_id": "batch-01-match-03:34",
+        "wall": 1795117809.941697,
+        "phase": "normal",
+        "ball": [
+          -3.778523051651044,
+          -0.8692688920642657
+        ],
+        "players": [
+          {
+            "id": 1,
+            "role": "keeper",
+            "action": "keeper:track",
+            "pose": [
+              -6.6503835424969875,
+              -0.03469955269876643,
+              -0.023332605283631493
+            ],
+            "kicking": false,
+            "native_active": false,
+            "calls": [
+              {
+                "method": "walk_to",
+                "args": [
+                  [
+                    -6.6,
+                    0.14093884985038851
+                  ]
+                ],
+                "kwargs": {
+                  "face": 0.0
+                }
+              },
+              {
+                "method": "release_kick",
+                "args": [],
+                "kwargs": {}
+              }
+            ],
+            "commands": [
+              {
+                "kind": "velocity_body",
+                "velocity": [
+                  0.06940814815092297,
+                  0.2651491015080577,
+                  0.046665210567262985
+                ],
+                "accepted": true
+              }
+            ]
+          },
+          {
+            "id": 2,
+            "role": "attacker",
+            "action": "attack",
+            "pose": [
+              -3.6638538636175713,
+              -1.915288242526102,
+              -3.006357050006096
+            ],
+            "kicking": true,
+            "native_active": true,
+            "calls": [
+              {
+                "method": "attack",
+                "args": [],
+                "kwargs": {}
+              },
+              {
+                "method": "kick",
+                "args": [
+                  0.07865744377663321,
+                  5.0
+                ],
+                "kwargs": {}
+              }
+            ],
+            "commands": [
+              {
+                "kind": "kick_body",
+                "direction": 3.0850144937827295,
+                "power": 5.0,
+                "ball": [
+                  -0.02740605760501036,
+                  -1.0519289007491945
+                ],
+                "mode": "walk"
+              }
+            ]
+          },
+          {
+            "id": 3,
+            "role": "support",
+            "action": "support",
+            "pose": [
+              -5.633848760142829,
+              -0.396759236109497,
+              -0.18050205301941002
+            ],
+            "kicking": false,
+            "native_active": false,
+            "calls": [
+              {
+                "method": "move_to_position",
+                "args": [
+                  [
+                    -5.7094611220175056,
+                    -0.3482332230266779
+                  ]
+                ],
+                "kwargs": {}
+              },
+              {
+                "method": "release_kick",
+                "args": [],
+                "kwargs": {}
+              },
+              {
+                "method": "walk_to",
+                "args": [
+                  [
+                    -5.7094611220175056,
+                    -0.3482332230266779
+                  ]
+                ],
+                "kwargs": {
+                  "face": -0.24937611893371192,
+                  "avoid_ball": true,
+                  "avoid_robots": true
+                }
+              },
+              {
+                "method": "release_kick",
+                "args": [],
+                "kwargs": {}
+              },
+              {
+                "method": "stop",
+                "args": [],
+                "kwargs": {}
+              },
+              {
+                "method": "release_kick",
+                "args": [],
+                "kwargs": {}
+              }
+            ],
+            "commands": [
+              {
+                "kind": "velocity_body",
+                "velocity": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "accepted": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "match": "batch-01/match-04",
+    "events": [],
+    "contexts": []
+  },
+  {
+    "match": "batch-01/match-05",
+    "events": [],
+    "contexts": []
+  },
+  {
+    "match": "batch-01/match-06",
+    "events": [],
+    "contexts": []
+  },
+  {
+    "match": "batch-01/match-07",
+    "events": [],
+    "contexts": []
+  },
+  {
+    "match": "batch-01/match-08",
+    "events": [],
+    "contexts": []
+  },
+  {
+    "match": "batch-02/match-01",
+    "events": [],
+    "contexts": []
+  },
+  {
+    "match": "batch-02/match-02",
+    "events": [],
+    "contexts": []
+  },
+  {
+    "match": "batch-02/match-03",
+    "events": [],
+    "contexts": []
+  },
+  {
+    "match": "batch-02/match-04",
+    "events": [],
+    "contexts": []
+  },
+  {
+    "match": "batch-02/match-05",
+    "events": [],
+    "contexts": []
+  },
+  {
+    "match": "batch-02/match-06",
+    "events": [
+      {
+        "eventId": "batch-02-match-06:134",
+        "sequence": 134,
+        "wallTime": 1795122761.782603,
+        "simTime": 459.80000000146737,
+        "timing": {
+          "timeRemaining": 181.40799999856762,
+          "primaryTime": 181.40799999856762,
+          "stage": "regulation",
+          "extraTimeElapsedSeconds": 0.0
+        },
+        "source": "auto_referee",
+        "severity": "warning",
+        "type": "kickoff_offense_retake",
+        "message": {
+          "key": "event.kickoff_offense_retake",
+          "fallback": "kickoff_offense_retake"
+        },
+        "actor": {
+          "side": "away",
+          "teamNumber": 2,
+          "teamName": "laumonteros_team_v1",
+          "externalTeamId": null
+        },
+        "game": {
+          "phase": "firstHalf",
+          "state": "playing",
+          "setPlay": "noSetPlay",
+          "kickingSide": null,
+          "droppedBall": false,
+          "stopped": false,
+          "secondaryTime": 0
+        },
+        "score": {
+          "home": 1,
+          "away": 2
+        },
+        "evidence": null,
+        "outcome": {
+          "reason": "kickoff_goal_not_allowed"
+        }
+      }
+    ],
+    "contexts": [
+      {
+        "event_id": "batch-02-match-06:134",
+        "wall": 1795122761.7862055,
+        "phase": "normal",
+        "ball": [
+          7.146851720801957,
+          1.1143229588046077
+        ],
+        "players": [
+          {
+            "id": 1,
+            "role": "keeper",
+            "action": "keeper:track",
+            "pose": [
+              -6.618502629339698,
+              -0.0398212511568364,
+              0.08733993470925983
+            ],
+            "kicking": false,
+            "native_active": false,
+            "calls": [
+              {
+                "method": "walk_to",
+                "args": [
+                  [
+                    -6.6,
+                    0.04051944688495191
+                  ]
+                ],
+                "kwargs": {
+                  "face": 0.0
+                }
+              },
+              {
+                "method": "release_kick",
+                "args": [],
+                "kwargs": {}
+              },
+              {
+                "method": "stop",
+                "args": [],
+                "kwargs": {}
+              },
+              {
+                "method": "release_kick",
+                "args": [],
+                "kwargs": {}
+              }
+            ],
+            "commands": [
+              {
+                "kind": "velocity_body",
+                "velocity": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "accepted": true
+              }
+            ]
+          },
+          {
+            "id": 2,
+            "role": "attacker",
+            "action": "attack",
+            "pose": [
+              1.9547428608997277,
+              0.2927109929858326,
+              0.17089415723655632
+            ],
+            "kicking": false,
+            "native_active": false,
+            "calls": [
+              {
+                "method": "attack",
+                "args": [],
+                "kwargs": {}
+              },
+              {
+                "method": "release_kick",
+                "args": [],
+                "kwargs": {}
+              },
+              {
+                "method": "walk_to",
+                "args": [
+                  [
+                    7.11459157947651,
+                    1.462833049450004
+                  ]
+                ],
+                "kwargs": {}
+              },
+              {
+                "method": "release_kick",
+                "args": [],
+                "kwargs": {}
+              }
+            ],
+            "commands": [
+              {
+                "kind": "velocity_body",
+                "velocity": [
+                  2.0,
+                  0.0,
+                  0.10421725215039401
+                ],
+                "accepted": true
+              }
+            ]
+          },
+          {
+            "id": 3,
+            "role": "support",
+            "action": "support",
+            "pose": [
+              0.9945151755405034,
+              1.9697510460760481,
+              -0.29578826990402973
+            ],
+            "kicking": false,
+            "native_active": false,
+            "calls": [
+              {
+                "method": "move_to_position",
+                "args": [
+                  [
+                    5.153027437468365,
+                    0.957272880201337
+                  ]
+                ],
+                "kwargs": {}
+              },
+              {
+                "method": "release_kick",
+                "args": [],
+                "kwargs": {}
+              },
+              {
+                "method": "walk_to",
+                "args": [
+                  [
+                    5.153027437468365,
+                    0.957272880201337
+                  ]
+                ],
+                "kwargs": {
+                  "face": -0.13815542225585034,
+                  "avoid_ball": true,
+                  "avoid_robots": true
+                }
+              },
+              {
+                "method": "release_kick",
+                "args": [],
+                "kwargs": {}
+              }
+            ],
+            "commands": [
+              {
+                "kind": "velocity_body",
+                "velocity": [
+                  2.0,
+                  0.0,
+                  0.7508613137995505
+                ],
+                "accepted": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "match": "batch-02/match-07",
+    "events": [],
+    "contexts": []
+  },
+  {
+    "match": "batch-02/match-08",
+    "events": [
+      {
+        "eventId": "batch-02-match-08:3",
+        "sequence": 3,
+        "wallTime": 1795123051.2355728,
+        "simTime": 10.696000000000241,
+        "timing": {
+          "timeRemaining": 600.0,
+          "primaryTime": 600.0,
+          "stage": "regulation",
+          "extraTimeElapsedSeconds": 0.0
+        },
+        "source": "auto_referee",
+        "severity": "penalty",
+        "type": "penalty",
+        "message": {
+          "key": "event.penalty",
+          "fallback": "penalty"
+        },
+        "actor": {
+          "side": "away",
+          "robotName": "robot6",
+          "playerNumber": 3
+        },
+        "game": {
+          "phase": "firstHalf",
+          "state": "ready",
+          "setPlay": "kickOff",
+          "kickingSide": "home",
+          "droppedBall": false,
+          "stopped": false,
+          "secondaryTime": 34.30399999999942
+        },
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "evidence": {
+          "ruleId": "fallenRobot",
+          "ruleName": "Fallen robot",
+          "summary": "Robot remained fallen beyond the allowed duration.",
+          "measurements": [
+            {
+              "name": "upDot",
+              "value": 0.15958154449348683,
+              "threshold": 0.45,
+              "operator": "<="
+            },
+            {
+              "name": "height",
+              "value": 0.15057107213899687,
+              "unit": "m",
+              "threshold": 0.25,
+              "operator": "<="
+            },
+            {
+              "name": "fallenDuration",
+              "value": 10018.000000000384,
+              "unit": "ms",
+              "threshold": 10000.0,
+              "operator": ">="
+            }
+          ],
+          "positions": {
+            "robot": [
+              6.197511627802833,
+              -4.932352832189276,
+              0.15057107213899687
+            ],
+            "reference": [
+              6.000012620239011,
+              -4.998119546717696,
+              0.551195193689038
+            ]
+          }
+        },
+        "outcome": {
+          "reason": "fallenRobot",
+          "penalty": "incapableRobot",
+          "seconds": 30.0,
+          "discipline": {
+            "warning": false,
+            "caution": false,
+            "sentOff": false
+          }
+        }
+      }
+    ],
+    "contexts": [
+      {
+        "event_id": "batch-02-match-08:3",
+        "wall": 1795123051.216527,
+        "phase": "ready",
+        "ball": [
+          -0.0,
+          -0.0
+        ],
+        "players": [
+          {
+            "id": 1,
+            "role": "keeper",
+            "action": "ready",
+            "pose": [
+              -5.405104428835266,
+              0.7813148838125449,
+              -2.543274186150583
+            ],
+            "kicking": false,
+            "native_active": false,
+            "calls": [
+              {
+                "method": "walk_to",
+                "args": [
+                  [
+                    -6.6,
+                    0.0
+                  ]
+                ],
+                "kwargs": {
+                  "face": 0.0,
+                  "avoid_ball": true,
+                  "avoid_robots": true
+                }
+              },
+              {
+                "method": "release_kick",
+                "args": [],
+                "kwargs": {}
+              }
+            ],
+            "commands": [
+              {
+                "kind": "velocity_body",
+                "velocity": [
+                  1.477282351143726,
+                  0.0,
+                  -0.038445001456027576
+                ],
+                "accepted": true
+              }
+            ]
+          },
+          {
+            "id": 2,
+            "role": "support",
+            "action": "ready",
+            "pose": [
+              -2.502580237562012,
+              0.4695112010328872,
+              -0.8550889897114509
+            ],
+            "kicking": false,
+            "native_active": false,
+            "calls": [
+              {
+                "method": "walk_to",
+                "args": [
+                  [
+                    -2.0,
+                    0.0
+                  ]
+                ],
+                "kwargs": {
+                  "face": 0.0,
+                  "avoid_ball": true,
+                  "avoid_robots": true
+                }
+              },
+              {
+                "method": "release_kick",
+                "args": [],
+                "kwargs": {}
+              }
+            ],
+            "commands": [
+              {
+                "kind": "velocity_body",
+                "velocity": [
+                  1.026113428538296,
+                  0.10678704842187842,
+                  1.710177979422902
+                ],
+                "accepted": true
+              }
+            ]
+          },
+          {
+            "id": 3,
+            "role": "support",
+            "action": "recovering",
+            "pose": [
+              -6.197511627802833,
+              4.932352832189276,
+              -1.7703863844538006
+            ],
+            "kicking": false,
+            "native_active": false,
+            "calls": [
+              {
+                "method": "stop",
+                "args": [],
+                "kwargs": {}
+              },
+              {
+                "method": "release_kick",
+                "args": [],
+                "kwargs": {}
+              }
+            ],
+            "commands": [
+              {
+                "kind": "velocity_body",
+                "velocity": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "accepted": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "event_id": "batch-02-match-08:3",
+        "wall": 1795123051.2485602,
+        "phase": "ready",
+        "ball": [
+          -0.0,
+          -0.0
+        ],
+        "players": [
+          {
+            "id": 1,
+            "role": "keeper",
+            "action": "ready",
+            "pose": [
+              -5.42462837523235,
+              0.7713665894434132,
+              -2.5459745077687526
+            ],
+            "kicking": false,
+            "native_active": false,
+            "calls": [
+              {
+                "method": "walk_to",
+                "args": [
+                  [
+                    -6.6,
+                    0.0
+                  ]
+                ],
+                "kwargs": {
+                  "face": 0.0,
+                  "avoid_ball": true,
+                  "avoid_robots": true
+                }
+              },
+              {
+                "method": "release_kick",
+                "args": [],
+                "kwargs": {}
+              }
+            ],
+            "commands": [
+              {
+                "kind": "velocity_body",
+                "velocity": [
+                  1.4823955800888757,
+                  0.0,
+                  -0.02968913990904642
+                ],
+                "accepted": true
+              }
+            ]
+          },
+          {
+            "id": 2,
+            "role": "support",
+            "action": "ready",
+            "pose": [
+              -2.4849410885991206,
+              0.45386965074625957,
+              -0.8512750156116748
+            ],
+            "kicking": false,
+            "native_active": false,
+            "calls": [
+              {
+                "method": "walk_to",
+                "args": [
+                  [
+                    -2.0,
+                    0.0
+                  ]
+                ],
+                "kwargs": {
+                  "face": 0.0,
+                  "avoid_ball": true,
+                  "avoid_robots": true
+                }
+              },
+              {
+                "method": "release_kick",
+                "args": [],
+                "kwargs": {}
+              }
+            ],
+            "commands": [
+              {
+                "kind": "velocity_body",
+                "velocity": [
+                  0.9914297804745288,
+                  0.09843479450249804,
+                  1.7025500312233497
+                ],
+                "accepted": true
+              }
+            ]
+          },
+          {
+            "id": 3,
+            "role": "support",
+            "action": "recovering",
+            "pose": [
+              -6.197510250689692,
+              4.932357665621556,
+              -1.7703613303908048
+            ],
+            "kicking": false,
+            "native_active": false,
+            "calls": [
+              {
+                "method": "stop",
+                "args": [],
+                "kwargs": {}
+              },
+              {
+                "method": "release_kick",
+                "args": [],
+                "kwargs": {}
+              }
+            ],
+            "commands": [
+              {
+                "kind": "velocity_body",
+                "velocity": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "accepted": false
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]
