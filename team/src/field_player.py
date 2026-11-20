@@ -47,6 +47,13 @@ __all__ = ["Player"]
 
 _log = logging.getLogger(__name__)
 
+def _movement_ball(player) -> tuple[float, float]:
+    predictor = getattr(player, "_ball_predictor", None)
+    ctx = player.context
+    if predictor is None:
+        return (ctx.ball.x, ctx.ball.y)
+    return predictor.target(ctx.ball, player.pose, ctx.field)
+
 def _heading_clearance(
     px: float, py: float, heading: float, obstacles: list,
 ) -> float:
@@ -620,8 +627,15 @@ class Player:
             self.kick(kick_direction, kick_power)
         else:
             self.release_kick()
+            bx, by = _movement_ball(self)
+            target = _behind_ball(bx, by, kick_target, CHASE_BEHIND_M)
+            if (bx, by) != (ball.x, ball.y):
+                target = (
+                    clamp(target[0], -ctx.field.length / 2 + BALL_PRED_MARGIN_M, ctx.field.length / 2 - BALL_PRED_MARGIN_M),
+                    clamp(target[1], -ctx.field.width / 2 + BALL_PRED_MARGIN_M, ctx.field.width / 2 - BALL_PRED_MARGIN_M),
+                )
             self.walk_to(
-                _behind_ball(ball.x, ball.y, kick_target, CHASE_BEHIND_M)
+                target
             )
 
     def guard(self) -> None:
@@ -664,7 +678,7 @@ class Player:
             return
 
         gx, gy = own_goal(ctx)
-        bx, by = (ball.x, ball.y)
+        bx, by = _movement_ball(self)
         dx, dy = gx - bx, gy - by
         d = math.hypot(dx, dy)
         if d < 1e-6:
