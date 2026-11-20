@@ -1,0 +1,28 @@
+{
+  "match": "match-01",
+  "side": "home",
+  "status": "failed",
+  "error": "Both team activation and referee readiness required within 240s",
+  "runner_tail": [
+    "\u001b[34m[team_1]\u001b[0m [0000.0s/INFO/SUPERVISOR] argv=['/tmp/booster_agent/3v3_runner/supervisor.py', 'laumonteros_team_v1']",
+    "\u001b[34m[team_1]\u001b[0m [0000.0s/INFO/SUPERVISOR] supervisor start agent_id=laumonteros_team_v1 team_id=1 robot_names=robot1,robot2,robot3",
+    "\u001b[34m[team_1]\u001b[0m [0000.0s/INFO/SUPERVISOR] SOCCER_TEAM_ID=1",
+    "\u001b[34m[team_1]\u001b[0m [0000.0s/INFO/SUPERVISOR] SOCCER_ROBOT_NAMES=robot1,robot2,robot3",
+    "\u001b[31m[team_2]\u001b[0m [0000.0s/INFO/SUPERVISOR] argv=['/tmp/booster_agent/3v3_runner/supervisor.py', 'booster_champion_3v3']",
+    "\u001b[31m[team_2]\u001b[0m [0000.0s/INFO/SUPERVISOR] supervisor start agent_id=booster_champion_3v3 team_id=2 robot_names=robot4,robot5,robot6",
+    "\u001b[31m[team_2]\u001b[0m [0000.0s/INFO/SUPERVISOR] SOCCER_TEAM_ID=2",
+    "\u001b[31m[team_2]\u001b[0m [0000.0s/INFO/SUPERVISOR] SOCCER_ROBOT_NAMES=robot4,robot5,robot6",
+    "\u001b[34m[team_1]\u001b[0m [0000.6s/INFO/SUPERVISOR] agent_state uds server connected",
+    "\u001b[34m[team_1]\u001b[0m [0000.6s/INFO/SUPERVISOR] recv agent_state_change: =>Inactive",
+    "\u001b[34m[team_1]\u001b[0m [0000.6s/INFO/SUPERVISOR] recv agent_event: agent_ui_components_changed",
+    "\u001b[34m[team_1]\u001b[0m [0000.7s/INFO/SUPERVISOR] recv agent_event: agent_ui_components_changed",
+    "\u001b[34m[team_1]\u001b[0m [0000.7s/INFO/SUPERVISOR] recv agent_event: agent_ui_components_changed",
+    "\u001b[31m[team_2]\u001b[0m [0000.7s/INFO/SUPERVISOR] agent_state uds server connected",
+    "\u001b[31m[team_2]\u001b[0m [0000.7s/INFO/SUPERVISOR] recv agent_state_change: =>Inactive",
+    "\u001b[31m[team_2]\u001b[0m [0000.7s/INFO/SUPERVISOR] recv agent_event: agent_ui_components_changed",
+    "\u001b[31m[team_2]\u001b[0m [0000.9s/INFO/SUPERVISOR] recv agent_event: agent_ui_components_changed",
+    "\u001b[31m[team_2]\u001b[0m [0000.9s/INFO/SUPERVISOR] recv agent_event: agent_ui_components_changed",
+    "\u001b[34m[team_1]\u001b[0m [0003.5s/INFO/SUPERVISOR] recv agent_state_change: Inactive=>Active",
+    "\u001b[31m[team_2]\u001b[0m [0011.8s/ERROR/SUPERVISOR] agent_state uds server failed: uds connection closed"
+  ]
+}
